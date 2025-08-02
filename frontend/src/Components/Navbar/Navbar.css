@@ -1,0 +1,73 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 4rem;
+    background-color: rgba(0, 0, 0, 0.3); /* Transparent background to show image behind */
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.navbar-logo img {
+    height: 45px;
+}
+
+.navbar-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    margin: 0 15px;
+}
+
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-links a.has-dropdown::after {
+    content: '▼';
+    margin-left: 8px;
+    font-size: 0.8rem;
+    color: #00bfff;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+}
+
+.report-store-btn {
+    background-color: #00bfff;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+.search-icon {
+    cursor: pointer;
+    background-color: rgba(13, 36, 61, 0.8);
+    border-radius: 50%;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-icon svg {
+    stroke: white;
+}
