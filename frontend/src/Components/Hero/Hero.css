@@ -1,0 +1,194 @@
+/* Hero Container */
+.hero-container {
+  position: relative;
+  height: 100vh;
+  background-image: url('../../assets/bg.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  color: white;
+  overflow: hidden;
+  padding-top: 80px;
+}
+
+/* Hero Overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.2) 100%);
+  z-index: 1;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 600px;
+  margin-left: 4rem;
+  margin-bottom: 6rem;
+}
+
+/* Hero Title */
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Hero Subtitle with underline */
+.hero-subtitle {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-underline {
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 120px;
+  height: 4px;
+  background: linear-gradient(90deg, #ADFF2F 0%, #7FFF00 100%);
+  border-radius: 2px;
+}
+
+/* CTA Button */
+.hero-cta-button {
+  background-color: #ADFF2F;
+  color: #000;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  margin-top: 2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(173, 255, 47, 0.3);
+}
+
+.hero-cta-button:hover {
+  background-color: #7FFF00;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(173, 255, 47, 0.4);
+}
+
+.arrow-icon {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Bottom Buttons Container */
+.hero-bottom-buttons {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+/* Consultation Buttons */
+.consultation-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.consultation-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.consultation-btn:not(.active) {
+  background: rgba(128, 128, 128, 0.3);
+  color: white;
+}
+
+.consultation-btn:hover {
+  transform: translateY(-2px);
+}
+
+.consultation-btn.active:hover {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.consultation-btn:not(.active):hover {
+  background: rgba(128, 128, 128, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-bottom: 6rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-bottom-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 90%;
+    max-width: 300px;
+  }
+  
+  .consultation-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content {
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .hero-underline {
+    width: 80px;
+    height: 3px;
+  }
+  
+  .hero-cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-title {
+    font-size: 5rem;
+  }
+  
+  .hero-content {
+    margin-left: 6rem;
+  }
+}
