@@ -1,15 +1,14 @@
-
-import Navbar from '../Components/Navbar/Navbar'
+ import React from 'react'
 import Hero from '../Components/Hero/Hero'
-
-const Home = () => {
-  return (
-    <div>
-        <Navbar /> 
-        <Hero />
-        
-    </div>
-  )
-}
-
-export default Home
+import Card from '../Components/Card/Card'
+ 
+ const Home = () => {
+   return (
+     <div>
+        <Hero/>
+        <Card/>
+     </div>
+   )
+ }
+ 
+ export default Home

@@ -1,7 +1,7 @@
 /* Hero Container */
 .hero-container {
   position: relative;
-  height: 100vh;
+  height: auto;
   background-image: url('../../assets/bg.png');
   background-size: cover;
   background-position: center;
@@ -12,7 +12,7 @@
   align-items: flex-start;
   color: white;
   overflow: hidden;
-  padding-top: 80px;
+  padding: 120px 0;
 }
 
 /* Hero Overlay */
