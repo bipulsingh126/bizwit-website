@@ -1,0 +1,98 @@
+.trending-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px 0;
+    
+  }
+  
+  .trending-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: #FF4040;
+    border: 1px solid #E5E5E5;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 30px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .trending-card {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 24.51px;
+    overflow: hidden;
+    
+    /* margin is now handled by slick-slide padding */
+    border: 0.82px solid #727272;
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  .trending-card:hover {
+    border-color: #0B7492; /* Teal color from image */
+  }
+
+  /* Add padding to the slick-slider items to create a gap */
+  .trending-container .slick-slide {
+    padding: 0 5px;
+  } 
+  
+  .trending-card img {
+    width: 100%;
+    display: block;
+  }
+  
+  .year-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+  }
+  
+  .card-content {
+    position: absolute;
+    width: 240px;
+    height: 100px;
+    top: 158.42px;
+    left: 1.9px;
+    background: rgba(239, 241, 243, 0.8);
+    backdrop-filter: blur(5px);
+    color: #0B7492;
+    padding: 15px;
+    box-sizing: border-box;
+    border-top-left-radius: 10.62px;
+    border-top-right-radius: 10.62px;
+    border-bottom-right-radius: 21.24px;
+    border-bottom-left-radius: 21.24px;
+  }
+  
+  .card-content p {
+    margin: 0;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0;
+    vertical-align: middle;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+    color: black;
+  }
+  
+  .slick-prev {
+    left: -25px;
+  }
+  
+  .slick-next {
+    right: -25px;
+  }
