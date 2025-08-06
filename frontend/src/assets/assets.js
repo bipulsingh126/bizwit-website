@@ -25,6 +25,34 @@ import str7 from '../assets/str7.png';
 import Star8 from '../assets/Star8.png';
 import Star9 from '../assets/Star9.png';
 import Star10 from '../assets/Star10.png';
+import vector1 from '../assets/vector1.png';
+import vector2 from '../assets/vector2.png';
+import vector3 from '../assets/vector3.png';
+import vector4 from '../assets/vector4.png';
+import client1 from '../assets/client1.png';
+import client2 from '../assets/client2.png';
+import client3 from '../assets/client3.png';
+import client4 from '../assets/client4.png';
+import client5 from '../assets/client5.png';
+import client6 from '../assets/client6.png';
+import client7 from '../assets/client7.png';
+import client8 from '../assets/client8.png';
+import client9 from '../assets/client9.png';
+
+
+
+export const clients = [
+  client1,
+  client2,
+  client3,
+  client4,
+  client5,
+  client6,
+  client7,
+  client8,
+  client9,
+
+];
 
 export {
   logo,
@@ -54,4 +82,17 @@ export {
   Star8,
   Star9,
   Star10,
+  vector1,
+  vector2,
+  vector3,
+  vector4,
+  client1,
+  client2,
+  client3,
+  client4,
+  client5,
+  client6,
+  client7,
+  client8,
+  client9,
 };

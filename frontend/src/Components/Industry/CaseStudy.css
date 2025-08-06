@@ -1,0 +1,128 @@
+.casestudy-container {
+  background-color: #0d6f81;
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  font-family: sans-serif;
+}
+
+.casestudy-header {
+  margin-bottom: 30px;
+}
+
+.casestudy-tag {
+  border: 1px solid white;
+  padding: 5px 15px;
+  border-radius: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+.casestudy-title {
+  font-size: 28px;
+  font-weight: bold;
+  max-width: 500px;
+}
+
+.casestudy-cards-container {
+  display: flex;
+  align-items: center;
+}
+
+.casestudy-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  flex-grow: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+.casestudy-cards::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, and Opera */
+}
+
+.casestudy-card {
+  background-color: #fff;
+  border-radius: 20px;
+  width: 280px;
+  flex-shrink: 0;
+  overflow: hidden; /* Hide the overflow */
+  position: relative;
+  padding-top: 100px; /* Adjust as needed */
+}
+
+.casestudy-card-image-wrapper {
+  position: absolute;
+  top: -60px;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 242px;
+  height: 242px;
+  background-color: #88c0c5;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 42.46px;
+  box-sizing: border-box;
+}
+
+.casestudy-card-image {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.casestudy-card-content {
+  padding: 20px;
+  padding-top: 120px; /* Adjust to clear the image */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 150px;
+}
+
+.casestudy-card-content p {
+  color: #0d6f81;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-bottom: 1rem;
+}
+
+.casestudy-card-arrow {
+  background-color: #88c0c5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-self: flex-end;
+}
+
+.casestudy-arrow {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+}
+
+.left-arrow {
+  margin-right: 20px;
+}
+
+.right-arrow {
+  margin-left: 20px;
+}
