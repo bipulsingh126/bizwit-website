@@ -38,6 +38,9 @@ import client6 from '../assets/client6.png';
 import client7 from '../assets/client7.png';
 import client8 from '../assets/client8.png';
 import client9 from '../assets/client9.png';
+import Testimonials from '../assets/Testimonials.png';
+import Testimonial from '../assets/Testimonial.png';
+import connect from '../assets/connect.png';
 
 
 
@@ -51,7 +54,9 @@ export const clients = [
   client7,
   client8,
   client9,
-
+  client7,
+  client4,
+  client5,
 ];
 
 export {
@@ -95,4 +100,7 @@ export {
   client7,
   client8,
   client9,
+  Testimonials,
+  Testimonial,
+  connect
 };

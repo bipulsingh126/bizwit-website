@@ -7,6 +7,8 @@ import Trending from '../Components/Trending/Trending'
 import Industry from '../Components/Industry/Industry'
 import CaseStudy from '../Components/Industry/CaseStudy'
 import OurClient from '../Components/OurClient/OurClient'
+import Testimonials from '../Components/Testimonials/Testimonials'
+import Connect from '../Components/Connect/Connect'
 
  
  const Home = () => {
@@ -20,6 +22,8 @@ import OurClient from '../Components/OurClient/OurClient'
         <Industry/>
         <CaseStudy/>
         <OurClient/>
+        <Testimonials/>
+        <Connect/>
      </div>
    )
  }

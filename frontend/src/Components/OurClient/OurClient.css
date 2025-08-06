@@ -3,6 +3,7 @@
   flex-direction: column;
   align-items: center;
   padding: 40px 20px;
+  overflow: hidden;
 }
 
 .our-client-header {
@@ -19,18 +20,33 @@
 
 .our-client-logos {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 120px;
   margin-top: 60px;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  max-width: 1200px;
+  animation: slide-left-infinite 8s linear infinite;
+}
+
+.our-client-logo {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
 .our-client-logo img {
   max-width: 150px;
-  filter: grayscale(100%);
-  transition: filter 0.3s ease;
+  height: auto;
+  display: block;
 }
 
-.our-client-logo img:hover {
-  filter: grayscale(0%);
+@keyframes slide-left-infinite {
+  0% {
+    transform: translateX(100%);
+  } 
+  100% {
+    transform: translateX(-200%);
+  }
 }
