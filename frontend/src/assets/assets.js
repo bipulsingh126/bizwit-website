@@ -41,7 +41,15 @@ import client9 from '../assets/client9.png';
 import Testimonials from '../assets/Testimonials.png';
 import Testimonial from '../assets/Testimonial.png';
 import connect from '../assets/connect.png';
-
+import footer1 from '../assets/footer1.png';
+import footer2 from '../assets/footer2.png';
+import footer3 from '../assets/footer3.png';
+import footer4 from '../assets/footer4.png';
+import footer5 from '../assets/footer5.png';
+import footer6 from '../assets/footer6.png';
+import footer7 from '../assets/footer7.png';
+import footer8 from '../assets/footer8.png';
+import footer9 from '../assets/footer9.png';
 
 
 export const clients = [
@@ -102,5 +110,14 @@ export {
   client9,
   Testimonials,
   Testimonial,
-  connect
+  connect,
+  footer1,
+  footer2,
+  footer3,
+  footer4,
+  footer5,
+  footer6,
+  footer7,
+  footer8,
+  footer9,
 };

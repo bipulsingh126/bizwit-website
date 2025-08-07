@@ -1,0 +1,36 @@
+.copyright-footer {
+    background-color: #104D72; /* Dark blue background */
+    color: #ffffff;
+    padding: 15px 50px;
+    font-family: 'Inter', sans-serif;
+    margin-top: -40px;
+}
+
+.copyright-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.copyright-text {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #bbdefb; /* Lighter blue for hover */
+}
