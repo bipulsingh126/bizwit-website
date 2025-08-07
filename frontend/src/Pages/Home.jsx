@@ -12,20 +12,22 @@ import Connect from '../Components/Connect/Connect'
 
 
  
- const Home = () => {
-   return (
-     <div>
-        <Hero/>
-        <Card/>
-        <Megatrends/>
-        <Bizcronicles/>
-        <Trending/>
-        <Industry/>
-        <CaseStudy/>
-        <OurClient/>
-        <Testimonials/>
-        <Connect/>
-     </div>
+const Home = ({ heroRef }) => {
+  return (
+    <div>
+      <div ref={heroRef}>
+        <Hero />
+      </div>
+      <Card />
+      <Megatrends />
+      <Bizcronicles />
+      <Trending />
+      <Industry />
+      <CaseStudy />
+      <OurClient />
+      <Testimonials />
+      <Connect />
+    </div>
    )
  }
  

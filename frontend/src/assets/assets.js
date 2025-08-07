@@ -50,6 +50,9 @@ import footer6 from '../assets/footer6.png';
 import footer7 from '../assets/footer7.png';
 import footer8 from '../assets/footer8.png';
 import footer9 from '../assets/footer9.png';
+import bg1 from '../assets/bg1.png';
+import bg2 from '../assets/bg2.png';
+import bg3 from '../assets/bg3.png';
 
 
 export const clients = [
@@ -120,4 +123,7 @@ export {
   footer7,
   footer8,
   footer9,
+  bg1,
+  bg2,
+  bg3,
 };

@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Hero.css';
+import { bg1, bg2, bg3, hero } from '../../assets/assets';
+
+const bgImages = [ hero ,bg1, bg2, bg3 ];
 
 const Hero = () => {
+  const [bgIndex, setBgIndex] = useState(0);
+
+  const handleBgChange = (index) => {
+    setBgIndex(index);
+  };
+
   return (
-    <div className="hero-container">
+    <div
+      className="hero-container"
+      style={{ backgroundImage: `url(${bgImages[bgIndex]})` }}
+    >
       <div className="hero-overlay"></div>
       <div className="hero-content">
         <h1 className="hero-title">
@@ -19,10 +31,15 @@ const Hero = () => {
         </div>
       </div>
       <div className="hero-bottom-buttons">
-        <button className="consultation-btn active">Consultation</button>
-        <button className="consultation-btn">Consultation</button>
-        <button className="consultation-btn">Consultation</button>
-        <button className="consultation-btn">Consultation</button>
+        {[3, 1, 2, 0].map((idx) => (
+          <button
+            key={idx}
+            className={`consultation-btn${bgIndex === idx ? ' active' : ''}`}
+            onClick={() => handleBgChange(idx)}
+          >
+            Consultation
+          </button>
+        ))}
       </div>
     </div>
   );
