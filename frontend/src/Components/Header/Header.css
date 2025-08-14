@@ -130,8 +130,7 @@
     transition: background-color 0.3s ease;
 }
 
-.dropdown-menu a:hover {
-    background-color: #f5f5f5;
+.dropdown-section a:hover {
     color: #104D72;
 }
 
