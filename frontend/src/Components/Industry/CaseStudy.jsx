@@ -1,22 +1,26 @@
 import React from 'react';
 import './CaseStudy.css';
+import Vector from '../../assets/Vector.png';
+import Vector2 from '../../assets/Vector-2.png';
+import Vector3 from '../../assets/Vector-3.png';
+import Vector4 from '../../assets/Vector-4.png';
 
 // Sample data for the cards
 const caseStudies = [
   {
-    image: '/src/assets/trend1.png',
+    image: Vector,
     title: 'Global Erythropoietin Drugs Market to Reach USD 7.7 Billion',
   },
   {
-    image: '/src/assets/trend2.png',
+    image: Vector2,
     title: 'Global Ear Infection Treatment Market to Reach USD 8.29 Billion',
   },
   {
-    image: '/src/assets/trend3.png',
+    image: Vector3,
     title: 'Global Albumin ELISA Test Market to Reach USD 61.62 Billion',
   },
   {
-    image: '/src/assets/trend4.png',
+    image: Vector4,
     title: 'Global Cellular IoT Market to Reach USD 23.66 Billion',
   },
 ];

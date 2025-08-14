@@ -37,6 +37,7 @@ const Bizcronicles = () => {
         <button className="carousel-arrow next-arrow"><FaArrowRight /></button>
       </div>
     </div>
+   
   );
 };
 

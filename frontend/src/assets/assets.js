@@ -25,10 +25,10 @@ import str7 from '../assets/str7.png';
 import Star8 from '../assets/Star8.png';
 import Star9 from '../assets/Star9.png';
 import Star10 from '../assets/Star10.png';
-import vector1 from '../assets/vector1.png';
-import vector2 from '../assets/vector2.png';
-import vector3 from '../assets/vector3.png';
-import vector4 from '../assets/vector4.png';
+import vector from '../assets/vector.png';
+import vector2 from '../assets/vector-2.png';
+import vector3 from '../assets/vector-3.png';
+import vector4 from '../assets/vector-4.png';
 import client1 from '../assets/client1.png';
 import client2 from '../assets/client2.png';
 import client3 from '../assets/client3.png';
@@ -53,6 +53,10 @@ import footer9 from '../assets/footer9.png';
 import bg1 from '../assets/bg1.png';
 import bg2 from '../assets/bg2.png';
 import bg3 from '../assets/bg3.png';
+import report from '../assets/report.png'
+import reportDetail from '../assets/reportdetail1.png'
+import reportDetail2 from '../assets/reportdetail2.png'
+import reportpdf from '../assets/reportpdf.png'
 
 
 export const clients = [
@@ -98,7 +102,7 @@ export {
   Star8,
   Star9,
   Star10,
-  vector1,
+  vector,
   vector2,
   vector3,
   vector4,
@@ -126,4 +130,8 @@ export {
   bg1,
   bg2,
   bg3,
+  report,
+  reportDetail,
+  reportDetail2,
+  reportpdf
 };

@@ -2,10 +2,7 @@
     background-color: #ffffff;
     font-family: 'Inter', sans-serif;
     width: 1480px;
-    max-width: 95%; /* Ensures footer scales down on smaller screens */
     height: 350px;
-    border-radius: 20px;
-    border: 1px solid #e0e0e0;
     margin: 40px auto; /* Centers the footer and adds vertical spacing */
     padding: 40px;
     box-sizing: border-box;
@@ -14,7 +11,7 @@
 }
 
 .footer-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     padding: 0 40px;
     display: flex;
