@@ -448,6 +448,381 @@
   position: relative;
 }
 
+/* Related Reports Title */
+.related-reports-title {
+  width: 245px;
+  height: 56px;
+  margin: 0 auto;
+  border-radius: 54px;
+  border: 2px solid #E5E5E5;
+  padding: 15px 20px;
+  gap: 10px;
+  opacity: 1;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #FF4040;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+/* ================================== */
+/* RESPONSIVE DESIGN                  */
+/* ================================== */
+
+/* Large Desktop (1400px and above) - Default styles already handle this */
+
+/* Medium Desktop and Laptop (1200px - 1399px) */
+@media (max-width: 1399px) {
+  .report-details-container,
+  .report-details-bottom-container {
+    width: 90%;
+    left: 5%;
+    max-width: 1200px;
+  }
+  
+  .report-details-right-title {
+    width: 100%;
+    left: 0;
+    font-size: 22px;
+  }
+  
+  .report-details-right-subtitle,
+  .report-details-left-button {
+    left: 0;
+  }
+  
+  .report-details-right-button {
+    left: 20px;
+  }
+}
+
+/* Small Desktop and Large Tablet (992px - 1199px) */
+@media (max-width: 1199px) {
+  .report-details-container {
+    width: 95%;
+    left: 2.5%;
+    grid-template-columns: 250px 1fr;
+    gap: 30px;
+    padding: 25px;
+  }
+  
+  .report-details-left-img {
+    width: 100px;
+    height: 150px;
+  }
+  
+  .report-details-right-title {
+    font-size: 20px;
+  }
+  
+  .report-details-right-subtitle {
+    font-size: 18px;
+  }
+  
+  .report-details-left-button,
+  .report-details-right-button {
+    width: 200px;
+    height: 36px;
+    font-size: 13px;
+  }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+  .report-details {
+    padding: 15px 0;
+    margin-top: 90px;
+  }
+  
+  .report-details-container {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding: 20px;
+    gap: 25px;
+    top: 30px;
+  }
+  
+  .report-details-left {
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  
+  .report-details-left-img {
+    width: 120px;
+    height: 180px;
+  }
+  
+  .report-details-right-title {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .report-details-right-subtitle {
+    text-align: center;
+    margin: 15px auto;
+    font-size: 18px;
+  }
+  
+  .report-details-left-button,
+  .report-details-right-button {
+    width: 220px;
+    height: 40px;
+    font-size: 14px;
+    margin: 10px auto;
+    display: block;
+    left: 0;
+    top: 0;
+  }
+  
+  .report-details-right-bottom {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 20px;
+    left: 0;
+    top: 20px;
+    margin: 20px 0;
+  }
+  
+  .report-details-right-bottom-content {
+    margin-left: 0;
+    justify-content: center;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .report-details-right-bottom-content-text {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+  
+  .report-details-bottom {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .report-details-bottom-tabs,
+  .report-details-bottom-buttons {
+    top: 0;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    left: 0;
+  }
+  
+  .report-details-bottom-title {
+    width: auto;
+    min-width: 200px;
+    left: 0;
+    font-size: 18px;
+  }
+  
+  .talk-to-analyst,
+  .download-sample {
+    width: 150px;
+    font-size: 12px;
+  }
+  
+  .features-boxes-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .features-boxes-row > div {
+    max-width: 80%;
+    top: 0;
+  }
+  
+  .report-details-bottom-down-down,
+  .features-container {
+    top: -50px;
+    margin-bottom: -50px;
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) {
+  .report-details {
+    margin-top: 80px;
+    padding: 10px 0;
+  }
+  
+  .report-details-container {
+    padding: 15px;
+    top: 20px;
+  }
+  
+  .report-details-left-img {
+    width: 100px;
+    height: 150px;
+  }
+  
+  .report-details-right-title {
+    font-size: 20px;
+    line-height: 120%;
+  }
+  
+  .report-details-right-subtitle {
+    font-size: 16px;
+  }
+  
+  .report-details-left-button,
+  .report-details-right-button {
+    width: 100%;
+    max-width: 280px;
+    height: 42px;
+    font-size: 13px;
+    margin: 8px auto;
+  }
+  
+  .report-details-right-bottom {
+    padding: 15px;
+    gap: 15px;
+  }
+  
+  .report-details-right-bottom-img {
+    width: 80px;
+  }
+  
+  .report-details-right-bottom-content-text {
+    font-size: 12px;
+  }
+  
+  .report-details-right-bottom-content-text-span {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+  
+  .vertical-line1 {
+    display: none;
+  }
+  
+  .report-details-bottom-down p {
+    font-size: 16px;
+    line-height: 140%;
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  
+  .report-details-bottom-title {
+    font-size: 16px;
+    padding: 8px 16px;
+    min-width: 180px;
+  }
+  
+  .talk-to-analyst,
+  .download-sample {
+    width: 140px;
+    height: 30px;
+    font-size: 11px;
+  }
+  
+  .features-boxes-row > div {
+    max-width: 100%;
+    width: 100%;
+  }
+  
+  .report-details-bottom-down-down-left,
+  .report-details-bottom-down-down-right {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
+  
+  .report-details-bottom-down-down-left-title,
+  .report-details-bottom-down-down-right-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .report-details-bottom-down-down-left-img,
+  .report-details-bottom-down-down-right-img {
+    width: 60px;
+    height: 55px;
+    left: 0;
+    top: 10px;
+    margin: 0 auto 15px;
+    display: block;
+  }
+  
+  .report-details-bottom-down-down-left-text,
+  .report-details-bottom-down-down-right-text {
+    font-size: 16px;
+    line-height: 130%;
+    top: 0;
+    margin-top: 10px;
+  }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media (max-width: 575px) {
+  .report-details-container,
+  .report-details-bottom-container {
+    width: 95%;
+    left: 2.5%;
+    padding: 12px;
+  }
+  
+  .report-details-right-title {
+    font-size: 18px;
+  }
+  
+  .report-details-right-subtitle {
+    font-size: 14px;
+  }
+  
+  .report-details-left-button,
+  .report-details-right-button {
+    height: 40px;
+    font-size: 12px;
+  }
+  
+  .report-details-bottom-title {
+    font-size: 14px;
+    padding: 6px 12px;
+    min-width: 150px;
+  }
+  
+  .talk-to-analyst,
+  .download-sample {
+    width: 120px;
+    height: 28px;
+    font-size: 10px;
+  }
+  
+  .report-details-bottom-down p {
+    font-size: 14px;
+  }
+  
+  .features-container-title {
+    width: auto;
+    font-size: 16px;
+    padding: 8px 16px;
+  }
+  
+  .report-details-bottom-down-down-left-title,
+  .report-details-bottom-down-down-right-title {
+    font-size: 18px;
+  }
+  
+  .report-details-bottom-down-down-left-text,
+  .report-details-bottom-down-down-right-text {
+    font-size: 14px;
+  }
+}
+
 /* Responsive Design */
 @media (max-width: 1024px) {
   .report-details-container {

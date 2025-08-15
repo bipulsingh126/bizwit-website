@@ -56,28 +56,169 @@
 }
 
 
-@media (max-width: 992px) {
-    .custom-banner-content {
-        flex-direction: column;
-        text-align: center;
-    }
+/* ================================== */
+/* RESPONSIVE DESIGN                  */
+/* ================================== */
 
+/* Large Desktop (1400px and above) - Default styles handle this */
+
+/* Medium Desktop and Laptop (1200px - 1399px) */
+@media (max-width: 1399px) {
+    .custom-banner-container {
+        width: 95%;
+        max-width: 1200px;
+        padding: 20px 35px;
+    }
+    
+    .custom-banner-content {
+        margin-left: 150px;
+        gap: 35px;
+    }
+    
     .custom-banner-text {
-        margin-bottom: 20px;
+        font-size: 19px;
+    }
+    
+    .custom-banner-button {
+        width: 270px;
+        height: 38px;
+        font-size: 13px;
     }
 }
 
-@media (max-width: 576px) {
+/* Small Desktop and Large Tablet (992px - 1199px) */
+@media (max-width: 1199px) {
     .custom-banner-container {
-        padding: 20px;
+        width: 90%;
+        height: 90px;
+        padding: 18px 30px;
     }
-
+    
+    .custom-banner-content {
+        margin-left: 100px;
+        gap: 30px;
+    }
+    
     .custom-banner-text {
         font-size: 18px;
     }
-
+    
     .custom-banner-button {
-        padding: 12px 24px;
-        font-size: 13px;
+        width: 250px;
+        height: 36px;
+        font-size: 12px;
+    }
+}
+
+/* Tablet Portrait (768px - 991px) */
+@media (max-width: 991px) {
+    .custom-banner-container {
+        width: 95%;
+        height: auto;
+        min-height: 80px;
+        padding: 20px;
+        justify-content: center;
+    }
+    
+    .custom-banner-content {
+        margin-left: 0;
+        gap: 25px;
+        justify-content: center;
+        text-align: center;
+        flex-wrap: wrap;
+    }
+    
+    .custom-banner-text {
+        font-size: 18px;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    .custom-banner-button {
+        width: 240px;
+        height: 38px;
+        font-size: 12px;
+    }
+}
+
+/* Mobile Landscape (576px - 767px) */
+@media (max-width: 767px) {
+    .custom-banner-container {
+        width: 95%;
+        height: auto;
+        padding: 18px 15px;
+        margin: 30px auto;
+    }
+    
+    .custom-banner-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .custom-banner-text {
+        font-size: 17px;
+        line-height: 1.2;
+        margin-bottom: 10px;
+    }
+    
+    .custom-banner-button {
+        width: 100%;
+        max-width: 280px;
+        height: 40px;
+        font-size: 12px;
+        margin: 0 auto;
+    }
+}
+
+/* Mobile Portrait (up to 575px) */
+@media (max-width: 575px) {
+    .custom-banner-container {
+        width: 95%;
+        padding: 15px 12px;
+        margin: 25px auto;
+        border-radius: 8px;
+    }
+    
+    .custom-banner-content {
+        gap: 18px;
+    }
+    
+    .custom-banner-text {
+        font-size: 16px;
+        line-height: 1.3;
+    }
+    
+    .custom-banner-button {
+        width: 100%;
+        max-width: 260px;
+        height: 38px;
+        font-size: 11px;
+        border-radius: 20px;
+    }
+}
+
+/* Extra Small Mobile (up to 400px) */
+@media (max-width: 400px) {
+    .custom-banner-container {
+        width: 98%;
+        padding: 12px 10px;
+        margin: 20px auto;
+    }
+    
+    .custom-banner-content {
+        gap: 15px;
+    }
+    
+    .custom-banner-text {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    
+    .custom-banner-button {
+        width: 100%;
+        height: 36px;
+        font-size: 10px;
+        letter-spacing: 0.3px;
     }
 }

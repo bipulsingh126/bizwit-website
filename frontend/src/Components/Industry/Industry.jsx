@@ -1,6 +1,6 @@
 import React from 'react';
 import './Industry.css';
-import { trend1, trend2, trend3, trend4, trend5, bicro1, bicro2, mega1, mega2 } from '../../assets/assets';
+import { trend1, trend2, trend3, trend4, trend5, Bicro1, Bicro2, mega1, mega2 } from '../../assets/assets';
 
 const Industry = () => {
   const industries = [
@@ -9,12 +9,12 @@ const Industry = () => {
     { name: 'Green Energy', image: trend3 },
     { name: 'Sports & Fitness', image: trend4 },
     { name: 'Biotechnology', image: trend5 },
-    { name: 'Industry 4.0', image: bicro1 },
-    { name: 'Digital Agriculture', image: bicro2 },
+    { name: 'Industry 4.0', image: Bicro1 },
+    { name: 'Digital Agriculture', image: Bicro2 },
     { name: 'Semiconductor', image: mega1 },
     { name: 'Cyber Security', image: mega2 },
       { name: 'Green Energy', image: trend3 },
-       { name: 'Digital Agriculture', image: bicro2 },
+       { name: 'Digital Agriculture', image: Bicro2 },
         { name: 'AI in Healthcare', image: trend2 },
         { name: 'Green Energy', image: trend3 },
   ];

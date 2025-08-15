@@ -55,8 +55,31 @@
     background-color: white;
 }
 
+.logo {
+    margin-left: 80px;
+    margin-bottom: -40px;
+}
+
 .logo img {
     height: 45px;
+}
+
+.logo .storelogo {
+    width: 140px;
+    height: 100px;
+    opacity: 1;
+    position: relative;
+    top: -25px;
+}
+
+.logo .detaillogo {
+    position: relative;
+    top: -25px;
+}
+
+.logo .alllogo {
+    position: relative;
+    top: -25px;
 }
 
 .nav-links {
@@ -98,21 +121,26 @@
     font-weight: 500;
     font-size: 14px;
     transition: background-color 0.3s ease;
+    margin-right: 30px;
 }
 
 .report-store-button:hover {
     background-color: #0d3e5d;
 }
 
-.search-icon {
-    font-size: 18px;
-    color: #333;
+.search-ico {
     cursor: pointer;
-    transition: color 0.3s ease;
+    border: 1px solid #E5E7EB;
+    border-radius: 18px;
+    padding: 8px; /* Add some padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.search-icon:hover {
-    color: #104D72;
+.search {
+    width: 16.56px;
+    height: 16.56px;
 }
 
 

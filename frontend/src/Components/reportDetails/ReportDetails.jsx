@@ -207,9 +207,16 @@ const ReportDetails = () => {
           )}
         </div>
       </div>
-      <div className="report-details-bottom-down-down">
-        <Custome/>
-      </div>
+      {(activeTab === "contents" || activeTab === "segments") && (
+        <div className="report-details-bottom-down-down">
+          <Custome />
+        </div>
+      )}
+      {(activeTab === "contents" || activeTab === "segments") && (
+        <div className="report-details-bottom-down-down">
+          <p className="related-reports-title">RELATED REPORTS</p>
+        </div>
+      )}
       <div className="report-details-bottom-down-down">
         <Trending showTitle={false} />
       </div>
@@ -218,8 +225,14 @@ const ReportDetails = () => {
         <div className="features-boxes-row">
           {/* left side */}
           <div className="report-details-bottom-down-down-left">
-            <p className="report-details-bottom-down-down-left-title">Quality Over Quantity</p>
-            <img className="report-details-bottom-down-down-left-img" src={reportdetail3} alt="" />
+            <p className="report-details-bottom-down-down-left-title">
+              Quality Over Quantity
+            </p>
+            <img
+              className="report-details-bottom-down-down-left-img"
+              src={reportdetail3}
+              alt=""
+            />
             <p className="report-details-bottom-down-down-left-text">
               Backed by 60+ paid data sources our reports deliver crisp insights
               with no compromise quality.{" "}
@@ -227,14 +240,28 @@ const ReportDetails = () => {
           </div>
           {/* right side */}
           <div className="report-details-bottom-down-down-right">
-            <p className="report-details-bottom-down-down-right-title">Analyst Support</p>
-            <img className="report-details-bottom-down-down-right-img" src={reportdetail4} alt="" />
-            <p className="report-details-bottom-down-down-right-text">24x7 Chat Support plus free analyst hours with every purchase </p>
+            <p className="report-details-bottom-down-down-right-title">
+              Analyst Support
+            </p>
+            <img
+              className="report-details-bottom-down-down-right-img"
+              src={reportdetail4}
+              alt=""
+            />
+            <p className="report-details-bottom-down-down-right-text">
+              24x7 Chat Support plus free analyst hours with every purchase{" "}
+            </p>
           </div>
           {/* right side */}
           <div className="report-details-bottom-down-down-right">
-            <p className="report-details-bottom-down-down-right-title">Flawless Methodology</p>
-            <img className="report-details-bottom-down-down-right-img" src={reportdetail5} alt="" />
+            <p className="report-details-bottom-down-down-right-title">
+              Flawless Methodology
+            </p>
+            <img
+              className="report-details-bottom-down-down-right-img"
+              src={reportdetail5}
+              alt=""
+            />
             <p className="report-details-bottom-down-down-right-text">
               Our 350-degree approach of market study, research methods leave
               stores unturned.

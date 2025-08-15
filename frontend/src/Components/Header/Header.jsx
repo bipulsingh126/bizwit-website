@@ -1,11 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import logo from '../../assets/BIZWITLOGO.png';
-import { FaSearch } from 'react-icons/fa';
-import { Link, Links, useNavigate } from 'react-router-dom';
+import { Link,  useNavigate, useLocation } from 'react-router-dom';
+import { logo1, logo3, sricon } from '../../assets/assets';
+import SearchPopup from '../SearchPopup/SearchPopup';
 
 const Header = () => {
+  const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
+  const location = useLocation();
   
   return (
     <header className="header-container">
@@ -18,8 +21,15 @@ const Header = () => {
       </div>
       <div className="main-header">
         <div className="logo">
-          <img src={logo} alt="Bizwit Research" />
+          {location.pathname === '/ReportStore' ? (
+            <img className='storelogo' src={logo3} alt="Bizwit Research" />
+          ) : location.pathname === '/reportDetails' ? (
+            <img className='detaillogo' src={logo1} alt="Bizwit Research" />
+          ) : (
+            <img className='alllogo' src={logo} alt="Bizwit Research" />
+          )}
         </div>
+      
         <nav className="nav-links">
           <Link to="/capabilities">Capabilities</Link>
           <Link to="/bizchronicles">BizChronicles™</Link>
@@ -29,9 +39,12 @@ const Header = () => {
         </nav>
         <div className="header-actions">
           <Link to="/ReportStore" className="report-store-button">Report Store</Link>
-          <FaSearch className="search-icon" />
+          <div className='search-ico' onClick={() => setShowPopup(true)}>
+            <img className='search' src={sricon} alt="search-bar" />
+          </div>
         </div>
       </div>
+      {showPopup && <SearchPopup setShowPopup={setShowPopup} />}
     </header>
   );
 }

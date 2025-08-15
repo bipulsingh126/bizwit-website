@@ -2,15 +2,7 @@ import React from "react";
 import "./Footer.css";
 import {
   logo,
-  footer1,
-  footer2,
-  footer3,
-  footer4,
-  footer5,
-  footer6,
-  footer7,
-  footer8,
-  footer9,
+  footer
 } from "../assets/assets";
 
 const Footer = () => {
@@ -94,21 +86,21 @@ const Footer = () => {
 
               <div className="footer-links-column footer-acceptance-section">
                 <div className="iso-certified">
-                  <img src={footer1} alt="ISO Certified" />
-                  <img src={footer2} alt="ISO Certified" />
+                  <img src={footer[0].img} alt="ISO Certified" />
+                  <img src={footer[1].img} alt="ISO Certified" />
                 </div>
                 <div className="payment-acceptance-box">
                   <h3 className="footer-links-title">We accept</h3>
                   <div className="payment-methods">
-                    <img src={footer8} alt="Payment method" className="payment-method-icon" />
-                    <img src={footer2} alt="Payment method" className="payment-method-icon" />
-                    <img src={footer3} alt="Payment method" className="payment-method-icon" />
-                    <img src={footer4} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[7].img} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[8].img} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[2].img} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[3].img} alt="Payment method" className="payment-method-icon" />
                   </div>
                   <div className="payment-methods">
-                    <img src={footer5} alt="Payment method" className="payment-method-icon" />
-                    <img src={footer6} alt="Payment method" className="payment-method-icon" />
-                    <img src={footer7} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[4].img} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[5].img} alt="Payment method" className="payment-method-icon" />
+                    <img src={footer[6].img} alt="Payment method" className="payment-method-icon" />
                   </div>
                 </div>
               </div>

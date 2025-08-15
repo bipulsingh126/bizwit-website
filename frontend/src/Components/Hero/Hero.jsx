@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Hero.css';
-import { bg1, bg2, bg3, hero } from '../../assets/assets';
+import { bg1, bg2, bg,  hero } from '../../assets/assets';
 
-const bgImages = [ hero ,bg1, bg2, bg3 ];
+const bgImages = [ hero, bg1, bg2, bg ];
 
 const Hero = () => {
   const [bgIndex, setBgIndex] = useState(0);

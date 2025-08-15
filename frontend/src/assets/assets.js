@@ -32,7 +32,7 @@ import str4 from '../assets/str4.png';
 import str6 from '../assets/str6.png';
 import str7 from '../assets/str7.png';
 import testimonial from '../assets/testimonial.png';
-import tremd5 from '../assets/tremd5.png';
+import trend5 from '../assets/tremd5.png';
 import trend1 from '../assets/trend1.png';
 import trend2 from '../assets/trend2.png';
 import trend3 from '../assets/trend3.png';
@@ -62,7 +62,11 @@ import reportdetail4 from '../assets/reportdetail4.png';
 import reportdetail5 from '../assets/reportdetail5.png';
 import bg from '../assets/bg.png';
 import bgJpg from '../assets/bg.jpg';
-
+import logo1 from '../assets/LOGO1.png'
+import logo3 from '../assets/logo3.png'
+import hero from '../assets/bg.png'
+import graph from '../assets/bg1.png'
+import sricon from '../assets/sricon.png'
 export const clients = [
   client1,
   client2,
@@ -131,7 +135,7 @@ export {
   str6,
   str7,
   testimonial,
-  tremd5,
+  trend5,
   trend1,
   trend2,
   trend3,
@@ -152,4 +156,9 @@ export {
   reportDetail2,
   bg,
   bgJpg,
+  logo1,
+  logo3,
+  hero,
+  graph,
+  sricon
 };

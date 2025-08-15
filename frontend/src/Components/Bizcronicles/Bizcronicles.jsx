@@ -1,6 +1,6 @@
 import React from 'react';
 import './Bizcronicles.css';
-import { bicro1, bicro2 } from '../../assets/assets';
+import { Bicro1, Bicro2 } from '../../assets/assets';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 
 const Bizcronicles = () => {
@@ -16,7 +16,7 @@ const Bizcronicles = () => {
         <button className="carousel-arrow prev-arrow"><FaArrowLeft /></button>
         <div className="bizcronicles-carousel-inner">
           <div className="bizcronicles-carousel-item">
-            <img src={bicro2} alt="The Domino Effect" />
+            <img src={Bicro2} alt="The Domino Effect" />
             <div className="bizcronicles-carousel-item-content">
               <h3>The Domino Effect: How Tariffs Are Reshaping the Auto Landscape</h3>
               <div className="read-more-arrow">
@@ -25,7 +25,7 @@ const Bizcronicles = () => {
             </div>
           </div>
           <div className="bizcronicles-carousel-item">
-            <img src={bicro1} alt="Tariff Tremors" />
+            <img src={Bicro1} alt="Tariff Tremors" />
             <div className="bizcronicles-carousel-item-content">
               <h3>Tariff Tremors: How Trump’s New Trade Strategy is Squeezing the Global Auto Industry</h3>
               <div className="read-more-arrow">

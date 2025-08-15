@@ -5,7 +5,7 @@ import { HiOutlineUserGroup } from 'react-icons/hi';
 import { IoBarChartOutline } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
 import { HiQuestionMarkCircle } from 'react-icons/hi';
-import { card1,card2,card3, card4, graph, hero } from '../../assets/assets';
+import { card1,card2,card3, card4, hero, graph } from '../../assets/assets';
 
 // Placeholder data - in a real app, this would come from an API
 const cardData = {
