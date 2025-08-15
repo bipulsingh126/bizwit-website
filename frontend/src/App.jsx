@@ -7,6 +7,10 @@ import Copyright from "./Components/Copyright";
 import Header from "./Components/Header/Header";
 import ReportStore from "./Pages/ReportStore";
 import ReportDetails from "./Components/reportDetails/ReportDetails";
+import TableofContents from "./Components/reportDetails/TableofContents";
+import SegmentCompanies from "./Components/reportDetails/SegmentCompanies";
+
+
 
 
 
@@ -44,6 +48,8 @@ const App = () => {
         <Route path="/" element={<Home heroRef={heroRef} />} />
         <Route path="/ReportStore" element={<ReportStore />} />
         <Route path="/reportDetails" element={<ReportDetails />} />
+        <Route path="/TableofContents" element={<TableofContents />} />
+        <Route path="/SegmentCompanies" element={<SegmentCompanies />} />
       </Routes>
       <Footer />
       <Copyright />

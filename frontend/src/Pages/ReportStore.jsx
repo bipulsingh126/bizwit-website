@@ -383,7 +383,7 @@ const ReportStore = () => {
                 <div className="report-image">
                   <img src={report.image} alt="Report Cover" />
                 </div>
-                <div className="report-details">
+                <div className="report-card-details">
                   <h3 className="report-title" style={{ fontFamily: '"Work Sans", sans-serif', fontWeight: 600, fontSize: '16px', lineHeight: '100%', letterSpacing: '0', verticalAlign: 'middle' }}>{report.title}</h3>
                   <div className="report-meta">
                   <h5 className="content" style={{ fontFamily: '"Work Sans", sans-serif', fontWeight: 400, fontSize: '12px', lineHeight: '100%', letterSpacing: '0', verticalAlign: 'middle' }}>{report.content}</h5>

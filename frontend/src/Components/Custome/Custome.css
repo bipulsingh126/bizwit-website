@@ -1,0 +1,83 @@
+.custom-banner-container {
+    width: 1280px;
+    height: 100px;
+    margin: 40px auto; /* Centers the container horizontally */
+    background-size: cover;
+    background-position: center;
+    padding: 25px 40px;
+    border-radius: 10px; /* Updated from user request */
+    font-family: 'Poppins', sans-serif;
+    display: flex; /* Use flex to easily center content */
+    align-items: center; /* Vertically center content */
+    /* justify-content: flex-end; This is removed to allow margin-left to work */
+}
+
+
+.custom-banner-content {
+    display: flex;
+    /* justify-content: center; This is no longer needed */
+    gap: 40px; /* Adds space between the text and button */
+    align-items: center;
+    flex-wrap: wrap;
+    margin-left: 200px;
+}
+
+.custom-banner-text {
+    color: white;
+    font-family: 'Work Sans', sans-serif; /* Added Work Sans */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1; /* Equivalent to 100% */
+    letter-spacing: 0; /* Equivalent to 0% */
+    margin: 0;
+}
+
+.custom-banner-text strong {
+    font-weight: 700;
+}
+
+.custom-banner-button {
+    background-color: #FF4040;
+    color: white;
+    border: none;
+    width: 288px;
+    height: 40px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+    letter-spacing: 0.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+
+@media (max-width: 992px) {
+    .custom-banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .custom-banner-text {
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-banner-container {
+        padding: 20px;
+    }
+
+    .custom-banner-text {
+        font-size: 18px;
+    }
+
+    .custom-banner-button {
+        padding: 12px 24px;
+        font-size: 13px;
+    }
+}

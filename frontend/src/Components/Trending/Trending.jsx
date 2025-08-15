@@ -9,7 +9,7 @@ import trend3 from '../../assets/trend3.png';
 import trend4 from '../../assets/trend4.png';
 import tremd5 from '../../assets/tremd5.png';
 
-const Trending = () => {
+const Trending = ({ showTitle = true }) => {
     const settings = {
         dots: false,
         infinite: true,
@@ -80,7 +80,7 @@ const Trending = () => {
 
   return (
     <div className="trending-container">
-      <h2 className="trending-title">TRENDING REPORTS</h2>
+      {showTitle && <h2 className="trending-title">TRENDING REPORTS</h2>}
       <Slider {...settings}>
         {trendingReports.map((report, index) => (
           <div key={index} className="trending-card">
