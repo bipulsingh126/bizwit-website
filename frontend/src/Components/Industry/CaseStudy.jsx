@@ -30,7 +30,7 @@ const CaseStudy = () => {
     <div className="casestudy-container">
       <div className="casestudy-header">
         <span className="casestudy-tag">CASE STUDY</span>
-        <h2 className="casestudy-title">Empowering Businesses Worldwide with Research-Driven Insights.</h2>
+        <h2 className="casestudy-title">Empowering Businesses <span>Worldwide </span> with Research-Driven Insights.</h2>
       </div>
       <div className="casestudy-cards-container">
         <button className="casestudy-arrow left-arrow">&#8592;</button>

@@ -138,8 +138,82 @@
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+.casestudy-container1{
+  position: relative;
+  padding: 40px;
+  border-radius: 20px;
+  color: white;
+  font-family: sans-serif;
+  width: 1392px;
+  height: 666px;
+  opacity: 1;
+  top: 10px;
+  left: 70px; 
+}
+
+.casestudy-tag1 {
+  display: inline-flex; /* Use flexbox for better alignment */
+  align-items: center;
+  justify-content: center;
+  width: 164px;
+  height: 43px;
+  border-radius: 24px;
+  border: 2px solid #E5E5E5;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0;
+  color: #FF4040;
+  margin-left: 50px;
+}
 
 
+.casestudy-title1 {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  max-width: 500px;
+  color: #383838;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+
+.casestudy-title1 span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #83B5B4; /* Highlighting the word 'Worldwide' */
+}
+
+.casestudy-card1 {
+  background-color: #83B5B4;
+  border-radius: 20px;
+  width: 280px;
+  flex-shrink: 0;
+  overflow: hidden; /* Hide the overflow */
+  position: relative;
+  padding-top: 100px; /* Adjust as needed */
+}
+
+.casestudy-card-content .titlestudy {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #FFFFFF;
+  margin-top: 50px;
+}
 
 .biz-chronicle-img {
   position: absolute;
@@ -180,11 +254,49 @@
   padding: 8px;
   box-sizing: border-box;
 }
+.biz-chronicle-arrow1 {
+  position: absolute;
+  width: 26.4px;
+  height: 26.4px;
+  top: 380.35px;
+  left: 230.01px;
+  background-color: #64A3A2; /* Dark teal from image */
+  bottom: 30px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  padding: 8px;
+  box-sizing: border-box;
+}
+.biz-chronicle-arrow1:hover {
+  transform: rotate(-45deg);
+}
 
 .biz-chronicle-arrow:hover {
   transform: rotate(-45deg);
 }
 
+.casestudy-cards-container1 {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.casestudy-cards1 {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  flex-grow: 1;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+  width: 305px;
+  height: 445px;
+  opacity: 1;
+  border-radius: 30px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .biz-chronicle-container {

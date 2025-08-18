@@ -11,18 +11,43 @@
 }
 
 .casestudy-tag {
-  border: 1px solid white;
-  padding: 5px 15px;
-  border-radius: 20px;
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 176px;
+  height: 46px;
+  top: 25px;
+  left: 50px;
+  border-radius: 24px;
+  border: 2px solid white;
+  padding: 10px 20px;
+  opacity: 1;
+  box-sizing: border-box;
   margin-bottom: 15px;
   font-size: 14px;
 }
 
 .casestudy-title {
-  font-size: 28px;
-  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
   max-width: 500px;
+  color: #FFFFFF;
+  margin-top: 30px;
+  margin-left: 50px;
+}
+.casestudy-title span {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #83B5B4;
 }
 
 .casestudy-cards-container {
@@ -58,8 +83,8 @@
   top: -60px;
   left: 20%;
   transform: translateX(-50%);
-  width: 242px;
-  height: 242px;
+  width: 260px;
+  height: 260px;
   background-color: #88c0c5;
   border-radius: 50%;
   display: flex;

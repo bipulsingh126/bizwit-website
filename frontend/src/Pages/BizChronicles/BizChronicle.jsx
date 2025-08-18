@@ -1,5 +1,10 @@
 import React from 'react';
 import './BizChronicle.css';
+import Vector from '../../assets/Vector.png';
+import Vector2 from '../../assets/Vector-2.png';
+import Vector3 from '../../assets/Vector-3.png';
+import Vector4 from '../../assets/Vector-4.png';
+
 import { 
     arrow,
   bizchronicles, 
@@ -19,8 +24,28 @@ import {
   biz7,
   biz8,
   arrow1,
+  arrow2,
 } from '../../assets/assets';
-import CaseStudy from '../../Components/Industry/CaseStudy';
+
+const caseStudies = [
+  {
+    image: Vector,
+    title: 'Global Erythropoietin Drugs Market to Reach USD 7.7 Billion',
+  },
+  {
+    image: Vector2,
+    title: 'Global Ear Infection Treatment Market to Reach USD 8.29 Billion',
+  },
+  {
+    image: Vector3,
+    title: 'Global Albumin ELISA Test Market to Reach USD 61.62 Billion',
+  },
+  {
+    image: Vector4,
+    title: 'Global Cellular IoT Market to Reach USD 23.66 Billion',
+  },
+];
+
 
 const chroniclesData = [
   {
@@ -130,7 +155,29 @@ const BizChronicle = () => {
    </div>
 
    <div>
-    <CaseStudy/>
+   <div className="casestudy-container1">
+      <div className="casestudy-header">
+        <span className="casestudy-tag1">CASE STUDY</span>
+        <h2 className="casestudy-title1">Empowering Businesses <span>Worldwide</span>  with Research-Driven Insights.</h2>
+      </div>
+      <div className="casestudy-cards-container1">
+        <button className="casestudy-arrow left-arrow">&#8592;</button>
+        <div className="casestudy-cards1">
+          {caseStudies.map((study, index) => (
+            <div className="casestudy-card1" key={index}>
+              <div className="casestudy-card-image-wrapper">
+                  <img src={study.image} alt={study.title} className="casestudy-card-image" />
+              </div>
+              <div className="casestudy-card-content">
+                <p className='titlestudy'>{study.title}</p>
+                <img  className='biz-chronicle-arrow1' src={arrow2} alt="" />
+              </div>
+            </div>
+          ))}
+        </div>
+        <button className="casestudy-arrow right-arrow">&#8594;</button>
+      </div>
+    </div>
    </div>
    
    </>

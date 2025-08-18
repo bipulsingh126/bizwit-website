@@ -85,6 +85,7 @@ import biz6 from "../assets/biz6.png"
 import biz7 from "../assets/biz7.png"
 import biz8 from "../assets/biz8.png"
 import arrow1 from "../assets/arrow1.png"
+import arrow2 from '../assets/arrow2.png'
 export const clients = [
   client1,
   client2,
@@ -197,4 +198,5 @@ export {
   biz7,
   biz8,
   arrow1,
+  arrow2
 };
