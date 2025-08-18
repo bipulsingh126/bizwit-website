@@ -39,7 +39,7 @@ const Navbar = () => {
         </li>
       </ul>
       <div className="navbar-actions">
-        <button className="report-store-btn">Report Store</button>
+        <Link to="/ReportStore" className="report-store-btn">Report Store</Link>
         <div className="search-ico1" onClick={() => setShowPopup(true)}>
           <svg className="search1" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
         </div>

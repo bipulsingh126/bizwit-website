@@ -1,0 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@500&display=swap');
+
+.biz-chronicle-container {
+  font-family: 'Arial', sans-serif;
+  position: relative;
+  top: 150px;
+  left: 10px;
+  width: 100%; /* Adjusted for responsiveness */
+  margin-bottom: 200px;
+}
+
+.biz-chronicle-megatrends {
+  position: absolute;
+  width: 176px;
+  height: 43px;
+  top: -110px; /* Rounded from 1136.92px */
+  left: 80px;
+  border: 2px solid #E5E5E5;
+  border-radius: 24px;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  color: #FF4040;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.biz-chronicle-title {
+  text-align: start;
+  color: #0B7492; /* Dark blue from header */
+  margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: 70px;
+  margin-right: auto;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle; 
+}
+
+.biz-chronicle-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  grid-auto-rows: auto; /* Automatically adjust row size */
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.biz-chronicle-container2 {
+  position: relative;
+  width: 100%;
+  padding: 2rem 0;
+  margin-top: -100px; /* Adjust to pull it up */
+}
+
+.biz-chronicle-title2 {
+  text-align: start;
+  color: #0B7492;
+  margin-bottom: 4rem;
+  max-width: 900px;
+  margin-left: 70px;
+  margin-right: auto;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 100%;
+}
+
+.biz-chronicle-grid2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
+  gap: 2.5rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-items: center;
+}
+
+.biz-chronicle-card-item2 {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  width: 305px;
+  height: 242px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.biz-chronicle-img2 {
+  width: 291px;   /* Rounded from 291.04px */
+  height: 165px;  /* Rounded from 164.71px */
+  border-radius: 7px; /* Rounded from 6.98px */
+  object-fit: cover;
+  position: relative;
+  top: 7px;       /* Rounded from 6.98px */
+  left: 7px;      /* Rounded from 6.98px */
+}
+
+.biz-chronicle-card-title2 {
+  padding: 0 1rem;
+  margin-top: 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #333;
+}
+
+.biz-chronicle-arrow2 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 200px;
+  right: 260px;
+  cursor: pointer;
+}
+
+.biz-chronicle-card-item {
+  background-color: #EFF1F3; /* Light grey background from image */
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+  width: 305px;
+  height: 352px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.biz-chronicle-img {
+  position: absolute;
+  width: 269.8px;
+  height: 204.7px;
+  top: 17.6px;
+  left: 17.6px;
+  object-fit: cover;
+  border-radius: 11.73px;
+}
+
+.biz-chronicle-card-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #007a7a; /* Teal color from image */
+  margin: 15px;
+  flex-grow: 1;
+  margin-top: 230px; /* Pushes text below the absolutely positioned image */
+}
+
+.biz-chronicle-arrow {
+  position: absolute;
+  width: 26.4px;
+  height: 26.4px;
+  top: 307.35px;
+  left: 261.01px;
+  background-color: #0B7492; /* Dark teal from image */
+  bottom: 30px;
+  right: 30px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.biz-chronicle-arrow:hover {
+  transform: rotate(-45deg);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .biz-chronicle-container {
+    padding: 80px 1.5rem 3rem 1.5rem;
+  }
+
+  .biz-chronicle-title {
+    font-size: 1.8rem;
+  }
+
+  .biz-chronicle-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .biz-chronicle-card-item {
+    width: 100%; /* Take full width of grid column */
+  }
+}

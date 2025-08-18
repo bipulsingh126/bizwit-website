@@ -9,6 +9,8 @@ import ReportStore from "./Pages/ReportStore";
 import ReportDetails from "./Components/reportDetails/ReportDetails";
 import TableofContents from "./Components/reportDetails/TableofContents";
 import SegmentCompanies from "./Components/reportDetails/SegmentCompanies";
+import BizChronicle from "./Pages/BizChronicles/BizChronicle";
+
 
 
 
@@ -50,6 +52,7 @@ const App = () => {
         <Route path="/reportDetails" element={<ReportDetails />} />
         <Route path="/TableofContents" element={<TableofContents />} />
         <Route path="/SegmentCompanies" element={<SegmentCompanies />} />
+        <Route path="/bizchronicles" element={<BizChronicle/>} />
       </Routes>
       <Footer />
       <Copyright />
