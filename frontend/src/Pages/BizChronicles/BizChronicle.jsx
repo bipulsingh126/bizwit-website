@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './BizChronicle.css';
 import Vector from '../../assets/Vector.png';
 import Vector2 from '../../assets/Vector-2.png';
@@ -25,7 +25,10 @@ import {
   biz8,
   arrow1,
   arrow2,
+  scroll,
+  left,
 } from '../../assets/assets';
+import Newsletter from '../../Components/Newsletter/Newsletter';
 
 const caseStudies = [
   {
@@ -118,6 +121,18 @@ const chroniclesData2 = [
 ];
 
 const BizChronicle = () => {
+  const slider = useRef(null);
+
+  const slide = (direction) => {
+    const scrollAmount = 300; // Adjust scroll amount as needed
+    if (slider.current) {
+      if (direction === 'left') {
+        slider.current.scrollLeft -= scrollAmount;
+      } else {
+        slider.current.scrollLeft += scrollAmount;
+      }
+    }
+  };
   return (
    <>
    <div className='biz-chronicle-container'>
@@ -161,8 +176,8 @@ const BizChronicle = () => {
         <h2 className="casestudy-title1">Empowering Businesses <span>Worldwide</span>  with Research-Driven Insights.</h2>
       </div>
       <div className="casestudy-cards-container1">
-        <button className="casestudy-arrow left-arrow">&#8592;</button>
-        <div className="casestudy-cards1">
+       <img src={left}  className='left-arrow' alt="" onClick={() => slide('left')} />
+        <div className="casestudy-cards1" ref={slider}>
           {caseStudies.map((study, index) => (
             <div className="casestudy-card1" key={index}>
               <div className="casestudy-card-image-wrapper">
@@ -175,9 +190,12 @@ const BizChronicle = () => {
             </div>
           ))}
         </div>
-        <button className="casestudy-arrow right-arrow">&#8594;</button>
+       <img src={scroll} className='right-arrow' alt="" onClick={() => slide('right')} />
       </div>
     </div>
+   </div>
+   <div>
+    <Newsletter />
    </div>
    
    </>

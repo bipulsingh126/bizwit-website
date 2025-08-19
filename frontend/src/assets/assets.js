@@ -86,6 +86,8 @@ import biz7 from "../assets/biz7.png"
 import biz8 from "../assets/biz8.png"
 import arrow1 from "../assets/arrow1.png"
 import arrow2 from '../assets/arrow2.png'
+import scroll from '../assets/Scroller.png'
+import left from '../assets/left.png'
 export const clients = [
   client1,
   client2,
@@ -198,5 +200,7 @@ export {
   biz7,
   biz8,
   arrow1,
-  arrow2
+  arrow2,
+  scroll,
+  left
 };

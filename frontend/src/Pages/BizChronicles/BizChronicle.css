@@ -140,15 +140,16 @@
 }
 .casestudy-container1{
   position: relative;
-  padding: 40px;
+  padding: 50px;
   border-radius: 20px;
   color: white;
   font-family: sans-serif;
   width: 1392px;
   height: 666px;
   opacity: 1;
-  top: 10px;
-  left: 70px; 
+  top: -5px;
+  left: 90px; 
+  gap: 20px;
 }
 
 .casestudy-tag1 {
@@ -167,7 +168,7 @@
   line-height: 1;
   letter-spacing: 0;
   color: #FF4040;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 
@@ -181,7 +182,7 @@
   max-width: 500px;
   color: #383838;
   margin-top: 30px;
-  margin-left: 50px;
+  margin-left: 10px;
 }
 
 .casestudy-title1 span {
@@ -277,6 +278,24 @@
 
 .biz-chronicle-arrow:hover {
   transform: rotate(-45deg);
+}
+
+.left-arrow, .right-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+
+.left-arrow {
+    left: -50px;
+}
+
+.right-arrow {
+    right: 60px;
 }
 
 .casestudy-cards-container1 {
