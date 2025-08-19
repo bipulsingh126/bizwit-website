@@ -60,8 +60,8 @@ import reportpdf from "../assets/reportpdf.png";
 import reportdetail3 from "../assets/reportdetail3.png";
 import reportdetail4 from "../assets/reportdetail4.png";
 import reportdetail5 from "../assets/reportdetail5.png";
+import bgg from "../assets/bgg.jpg";
 import bg from "../assets/bg.png";
-import bgJpg from "../assets/bg.jpg";
 import logo1 from "../assets/LOGO1.png";
 import logo3 from "../assets/logo3.png";
 import hero from "../assets/bg.png";
@@ -88,6 +88,10 @@ import arrow1 from "../assets/arrow1.png"
 import arrow2 from '../assets/arrow2.png'
 import scroll from '../assets/Scroller.png'
 import left from '../assets/left.png'
+import contecticon1 from '../assets/contecticon1.png'
+import contecticon2 from '../assets/contecticon2.png'
+import contecticon3 from '../assets/contecticon3.png'
+import drop  from '../assets/drop.png'
 export const clients = [
   client1,
   client2,
@@ -176,7 +180,7 @@ export {
   reportDetail,
   reportDetail2,
   bg,
-  bgJpg,
+  bgg,
   logo1,
   logo3,
   hero,
@@ -202,5 +206,9 @@ export {
   arrow1,
   arrow2,
   scroll,
-  left
+  left,
+  contecticon1,
+  contecticon2,
+  contecticon3,
+  drop
 };

@@ -1,0 +1,74 @@
+.contect-container {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: sans-serif;
+  max-width: 1200px;
+  margin: 40px auto;
+}
+
+.contect-header {
+  margin-bottom: 60px;
+}
+
+.contect-title {
+  font-size: 36px;
+  font-weight: bold;
+  color: #0D7789; /* Teal color from image */
+  margin-bottom: 20px;
+}
+
+.contect-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.contect-info-container {
+  display: flex;
+  justify-content: center;
+  gap: 80px; /* Spacing between contact items */
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.contect-info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.contect-icon-wrapper {
+  background-color: #0D7789; /* Teal color */
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* Prevent the circle from shrinking */
+}
+
+.contect-icon {
+  width: 30px; 
+  height: 30px;
+}
+
+.contect-info-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.contect-icon-title {
+  font-size: 16px;
+  font-weight: bold;
+  color: #0D7789;
+  margin: 0 0 5px 0;
+}
+
+.contect-icon-subtitle {
+  font-size: 14px;
+  color: #555;
+  margin: 0;
+}

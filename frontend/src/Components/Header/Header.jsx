@@ -15,7 +15,7 @@ const Header = () => {
       <div className="top-bar">
         <div className="top-bar-links">
           <a href="/about">About Us</a>
-          <a href="/contact">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
           <a href="/empanel" className="empanel-button">Empanel With Us</a>
         </div>
       </div>
@@ -23,7 +23,7 @@ const Header = () => {
         <div className="logo">
           {location.pathname === '/ReportStore' ? (
             <img className='storelogo' src={logo3} alt="Bizwit Research" />
-          ) : location.pathname === '/reportDetails' || location.pathname === '/bizchronicles' ? (
+          ) : location.pathname === '/reportDetails' || location.pathname === '/bizchronicles' || location.pathname === '/contact' ? (
             <img className='detaillogo' src={logo1} alt="Bizwit Research" />
           ) : (
             <img className='alllogo' src={logo} alt="Bizwit Research" />

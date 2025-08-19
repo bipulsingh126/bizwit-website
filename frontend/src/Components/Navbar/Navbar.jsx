@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { logo } from "../../assets/assets";
+import { drop, logo } from "../../assets/assets";
 import SearchPopup from "../SearchPopup/SearchPopup";
 
 const Navbar = () => {
@@ -14,24 +14,24 @@ const Navbar = () => {
         </Link>
       </div>
       <ul className="navbar-links">
-        <li>
+        <li className="has-dropdown">
           <Link to="/capabilities" className="has-dropdown">
-            Capabilities
+            Capabilities <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
         </li>
-        <li>
+        <li className="has-dropdown">
           <Link to="/bizchronicles" className="has-dropdown">
-            BizChronicles™
+            BizChronicles™ <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
         </li>
-        <li>
+        <li className="has-dropdown">
           <Link to="/industries" className="has-dropdown">
-            Industries
+            Industries <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
         </li>
-        <li>
+        <li className="has-dropdown">
           <Link to="/consulting-services" className="has-dropdown">
-            Consulting Services
+            Consulting Services <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
         </li>
         <li>

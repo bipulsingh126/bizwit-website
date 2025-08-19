@@ -14,8 +14,6 @@
     transition: all 0.3s ease-in-out;
 }
 
-
-
 .navbar-logo img {
     height: 45px;
 }
@@ -40,17 +38,7 @@
     transition: color 0.3s ease;
 }
 
-.navbar-links a:hover {
-    color: #26C6DA;
-}
 
-.navbar-links a.has-dropdown::after {
-    content: '▼';
-    margin-left: 8px;
-    font-size: 0.8rem;
-    color: #26C6DA;
-    transition: color 0.3s ease;
-}
 
 .navbar-actions {
     display: flex;
@@ -67,6 +55,11 @@
     margin-right: 20px;
     font-size: 1rem;
     transition: all 0.3s ease;
+}
+.drop-icon {
+    width: 10px;
+    height: 5px;
+    margin-left: 5px;
 }
 
 .report-store-btn:hover {

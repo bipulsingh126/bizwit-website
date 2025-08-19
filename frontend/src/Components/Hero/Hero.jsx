@@ -27,11 +27,10 @@ const Hero = () => {
           <button className="hero-cta-button">
             Free Consultation
           </button>
-          <span className="arrow-icon">↗</span>
         </div>
       </div>
       <div className="hero-bottom-buttons">
-        {[3, 1, 2, 0].map((idx) => (
+        {[3, 0, 1, 2].map((idx) => (
           <button
             key={idx}
             className={`consultation-btn${bgIndex === idx ? ' active' : ''}`}

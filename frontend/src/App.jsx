@@ -10,6 +10,7 @@ import ReportDetails from "./Components/reportDetails/ReportDetails";
 import TableofContents from "./Components/reportDetails/TableofContents";
 import SegmentCompanies from "./Components/reportDetails/SegmentCompanies";
 import BizChronicle from "./Pages/BizChronicles/BizChronicle";
+import Contect from "./Pages/ContectUs/Contect";
 
 
 
@@ -53,6 +54,7 @@ const App = () => {
         <Route path="/TableofContents" element={<TableofContents />} />
         <Route path="/SegmentCompanies" element={<SegmentCompanies />} />
         <Route path="/bizchronicles" element={<BizChronicle/>} />
+        <Route path="/contact" element={<Contect/>}/>
       </Routes>
       <Footer />
       <Copyright />

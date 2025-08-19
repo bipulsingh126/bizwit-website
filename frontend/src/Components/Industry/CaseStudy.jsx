@@ -47,7 +47,6 @@ const CaseStudy = () => {
             </div>
           ))}
         </div>
-        <button className="casestudy-arrow right-arrow">&#8594;</button>
       </div>
     </div>
   );
