@@ -5,7 +5,7 @@ import { HiOutlineUserGroup } from 'react-icons/hi';
 import { IoBarChartOutline } from 'react-icons/io5';
 import { FaArrowRight } from 'react-icons/fa';
 import { HiQuestionMarkCircle } from 'react-icons/hi';
-import { card1,card2,card3, card4, hero, graph } from '../../assets/assets';
+import { card1,card2,card3, card4, hero, graph, cardicon2, cardicon1, cardicon, cardicon3 } from '../../assets/assets';
 
 // Placeholder data - in a real app, this would come from an API
 const cardData = {
@@ -40,20 +40,17 @@ const Bar = ({ height }) => (
 const Card = () => {
   return (
     <div className="card-container">
-      <div className="card-grid">
         {/* Assets Card */}
         <div className="card assets-card">
           <div className="assets-left-panel">
             <h3 className="assets-title">Assets</h3>
             <a href="#" className="learn-more">
-              Learn more <FaArrowRight className="learn-more-icon" />
+              Learn more  <img src={cardicon2} className='learn-more-icon' alt="" />
             </a>
           </div>
           <div className="assets-right-panel">
             <div className="assets-info-card">
-              <div className="assets-info-icon">
-                <LuLayers />
-              </div>
+             <img src={cardicon1} className='assets-info-icon' alt="" />
               <p className="assets-subtitle">Assets under management</p>
               <p className="assets-amount">{cardData.assets.aum}</p>
             </div>
@@ -65,9 +62,11 @@ const Card = () => {
 
         {/* Professionals Card */}
         <div className="card professionals-card">
-          <div className="professionals-icon">
-            <HiOutlineUserGroup />
-          </div>
+          <div className='professionals-left-panel'>
+            <div className='professionals-icon'>
+            <img src={cardicon} className='professionals-icon' alt="" />
+            </div>
+         
           <div className="professionals-content">
             <div>
               <h3 className="professionals-title">Professionals</h3>
@@ -78,6 +77,7 @@ const Card = () => {
               <img src={card2} alt="Professional 2" />
               <img src={card3} alt="Professional 3" />
             </div>
+          </div>
           </div>
         </div>
          
@@ -91,14 +91,12 @@ const Card = () => {
           />
           <div className="trust-info-overlay">
             <div className="trust-icon">
-              <IoBarChartOutline />
+              <img src={cardicon3} className='trust-icon' alt="" />
             </div>
-            <p className="trust-text">Earning client</p>
-            <p className="trust-text">trust since</p>
+            <p className="trust-text">Earning client trust since</p>
             <p className="trust-year">{cardData.trust.year}</p>
           </div>
         </div>
-      </div>
     </div>
   );
 };

@@ -5,12 +5,15 @@
     padding: 1rem 4rem;
     background-color: transparent;
     position: fixed;
-    width: 100%;
+    width: 1440px;
+    height: 157px;
     top: 0;
     left: 0;
     box-sizing: border-box;
     font-family: Arial, sans-serif;
     z-index: 1000;
+    transform: rotate(0deg);
+    opacity: 1;
     transition: all 0.3s ease-in-out;
 }
 
@@ -30,7 +33,7 @@
 }
 
 .navbar-links a {
-    color: #e4dddd;
+    color: #FFFFFF;
     text-decoration: none;
     font-size: 1rem;
     display: flex;

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './Hero.css';
-import { bg1, bg2, bg,  hero } from '../../assets/assets';
+import { bg1, bg2, bg3,  hero, herobutton } from '../../assets/assets';
 
-const bgImages = [ hero, bg1, bg2, bg ];
+const bgImages = [ hero, bg1, bg2, bg3 ];
 
 const Hero = () => {
   const [bgIndex, setBgIndex] = useState(0);
@@ -24,13 +24,11 @@ const Hero = () => {
           <span className="hero-subtitle">Consulting Partner</span>
         </h1>
         <div className="cta-container">
-          <button className="hero-cta-button">
-            Free Consultation
-          </button>
+         <img src={herobutton} className='hero-button' alt="" />
         </div>
       </div>
       <div className="hero-bottom-buttons">
-        {[3, 0, 1, 2].map((idx) => (
+        {[1, 0, 2,3].map((idx) => (
           <button
             key={idx}
             className={`consultation-btn${bgIndex === idx ? ' active' : ''}`}

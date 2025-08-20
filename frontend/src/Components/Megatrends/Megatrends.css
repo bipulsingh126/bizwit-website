@@ -70,13 +70,22 @@
 }
 
 .megatrend-card-footer button {
-  background-color: #d9534f;
+  background-color: #FF4040;
   color: white;
   border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 20px;
+  width: 199px;
+  height: 40px;
+  border-radius: 25px;
   cursor: pointer;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 13.13px;
+  line-height: 100%;
+  letter-spacing: 0;
 }
 
 .megatrend-card-footer .arrow-icon {

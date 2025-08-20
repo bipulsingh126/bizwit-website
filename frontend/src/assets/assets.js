@@ -65,7 +65,6 @@ import bg from "../assets/bg.png";
 import logo1 from "../assets/LOGO1.png";
 import logo3 from "../assets/logo3.png";
 import hero from "../assets/bg.png";
-import graph from "../assets/bg1.png";
 import sricon from "../assets/sricon.png";
 import bizchronicles from "../assets/BizChronicles.png";
 import bizchronicles1 from "../assets/BizChronicles1.png";
@@ -92,6 +91,14 @@ import contecticon1 from '../assets/contecticon1.png'
 import contecticon2 from '../assets/contecticon2.png'
 import contecticon3 from '../assets/contecticon3.png'
 import drop  from '../assets/drop.png'
+import herobutton from  '../assets/herobutton.png'
+import headerbg from '../assets/headerbg.png'
+import graph from '../assets/graph.png'
+import cardicon from '../assets/cardicon.png'
+import cardicon1 from '../assets/cardicon1.png'
+import cardicon2 from '../assets/cardicon2.png'
+import cardicon3 from '../assets/cardicon3.png'
+
 export const clients = [
   client1,
   client2,
@@ -152,6 +159,7 @@ export {
   card4,
   connect,
   mega1,
+  headerbg,
   mega2,
   mega3,
   str1,
@@ -168,6 +176,11 @@ export {
   vector,
   vector2,
   vector3,
+  herobutton,
+  cardicon,
+  cardicon2,
+  cardicon1,
+  cardicon3,
   vector4,
   bg1,
   bg2,
