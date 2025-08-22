@@ -1,7 +1,7 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    width: 1540px;
+    width: 1400px;
     height: 157px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
@@ -44,7 +44,7 @@
 .top-bar a {
     color: white;
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: -80px;
    
 }
 
@@ -134,7 +134,7 @@
 }
 
 .logo {
-    margin-left: 80px;
+    margin-left: 30px;
     margin-bottom: -40px;
 }
 
@@ -164,7 +164,7 @@
     display: flex;
     gap: 25px;
     list-style: none;
-    margin-right: 250px;
+    margin-right: 280px;
     padding: 0;
 }
 
@@ -179,7 +179,7 @@
     height: 41px;
     position: absolute;
     top: 80px;
-    left: 1200px;
+    left: 1120px;
     transform: rotate(0deg);
     opacity: 1;
     border-radius: 20px;
@@ -220,8 +220,8 @@
     width: 150px;
     height: 41px;
     position: absolute;
-    top: 80px;
-    left: 1020px;
+    top: 75px;
+    left: 940px;
     transform: rotate(0deg);
     opacity: 1;
     border-radius: 52px;
@@ -251,7 +251,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 100px;
+    margin-right: 50px;
 }
 
 .search {

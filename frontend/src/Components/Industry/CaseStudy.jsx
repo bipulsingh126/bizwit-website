@@ -4,6 +4,7 @@ import Vector from '../../assets/Vector.png';
 import Vector2 from '../../assets/Vector-2.png';
 import Vector3 from '../../assets/Vector-3.png';
 import Vector4 from '../../assets/Vector-4.png';
+import { casebutton } from '../../assets/assets';
 
 // Sample data for the cards
 const caseStudies = [
@@ -42,7 +43,7 @@ const CaseStudy = () => {
               </div>
               <div className="casestudy-card-content">
                 <p>{study.title}</p>
-                <button className="casestudy-card-arrow">&#8594;</button>
+                <button className="casestudy-card-arrow"><img className='cardbutton' src={casebutton} alt="" /></button>
               </div>
             </div>
           ))}

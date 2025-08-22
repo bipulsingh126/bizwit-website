@@ -20,7 +20,7 @@
 .connect-form-section {
   flex: 1;
   padding: 50px;
-  background-color: #FFF9E8;
+  background-color: #FFF1CE;
 }
 
 .schedule-consultant-tag {
@@ -246,7 +246,7 @@
   max-width: 1204px;
   margin: 40px auto 0;
   padding: 30px 40px;
-  background-color: #fdfaf5;
+  background-color: #FFF9EB;
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
 }

@@ -19,21 +19,24 @@
 }
 
 .our-client-logos {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 120px;
-  margin-top: 60px;
-  align-items: center;
-  justify-items: center;
   width: 100%;
-  max-width: 1200px;
-  animation: slide-left-infinite 8s linear infinite;
+  overflow: hidden;
+  margin-top: 60px;
+}
+
+.logos-track {
+  display: flex;
+  gap: 120px;
+  align-items: center;
+  width: max-content;
+  animation: slide-left-infinite 20s linear infinite;
 }
 
 .our-client-logo {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .our-client-logo img {
@@ -44,9 +47,9 @@
 
 @keyframes slide-left-infinite {
   0% {
-    transform: translateX(100%);
-  } 
+    transform: translateX(0);
+  }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-50%);
   }
 }

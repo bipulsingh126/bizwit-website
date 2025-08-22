@@ -1,54 +1,33 @@
-import React from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
+import React, { useRef } from 'react';
 import './Trending.css';
 import trend1 from '../../assets/trend1.png';
 import trend2 from '../../assets/trend2.png';
 import trend3 from '../../assets/trend3.png';
 import trend4 from '../../assets/trend4.png';
 import tremd5 from '../../assets/tremd5.png';
+import leftArrow from '../../assets/left.png';
+import rightArrow from '../../assets/Scroller.png';
 
 const Trending = ({ showTitle = true }) => {
-    const settings = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        responsive: [
-          {
-            breakpoint: 1200,
-            settings: {
-              slidesToShow: 4,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 992,
-            settings: {
-              slidesToShow: 3,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 768,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1,
-            }
-          },
-          {
-            breakpoint: 576,
-            settings: {
-              slidesToShow: 1,
-              slidesToScroll: 1,
-            }
-          }
-        ]
-      };
+  const scrollContainerRef = useRef(null);
+
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: -270, // Card width + gap
+        behavior: 'smooth'
+      });
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollBy({
+        left: 270, // Card width + gap
+        behavior: 'smooth'
+      });
+    }
+  };
 
   const trendingReports = [
     { 
@@ -81,17 +60,29 @@ const Trending = ({ showTitle = true }) => {
   return (
     <div className="trending-container">
       {showTitle && <h2 className="trending-title">TRENDING REPORTS</h2>}
-      <Slider {...settings}>
-        {trendingReports.map((report, index) => (
-          <div key={index} className="trending-card">
-            <img src={report.img} alt={report.title} />
-            <div className="year-badge">{report.year}</div>
-            <div className="card-content">
-              <p>{report.title}</p>
+      <div className="trending-scroll-wrapper">
+        <button className="scroll-btn scroll-left" onClick={scrollLeft}>
+          <img src={leftArrow} alt="Scroll Left" />
+        </button>
+        
+        <div className="trending-cards-container" ref={scrollContainerRef}>
+          {trendingReports.map((report, index) => (
+            <div key={index} className='trending-card-wrapper'>
+              <div className="trending-card">
+                <img src={report.img} alt={report.title} />
+                <div className="year-badge">{report.year}</div>
+                <div className="card-content">
+                  <p>{report.title}</p>
+                </div>
+              </div>
             </div>
-          </div>
-        ))}
-      </Slider>
+          ))}
+        </div>
+        
+        <button className="scroll-btn scroll-right" onClick={scrollRight}>
+          <img src={rightArrow} alt="Scroll Right" />
+        </button>
+      </div>
     </div>
   );
 };

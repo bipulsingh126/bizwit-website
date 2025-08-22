@@ -1,161 +1,177 @@
-body {
-    background-color: #f8f9fa;
+/* Bizcronicles Section */
+.bizcronicl-container {
+  background-color: white;
+  padding: 60px 20px;
+  width: 1420px; /* As requested */
+  height: auto; /* Changed to auto for content flexibility */
+  box-sizing: border-box;
+  margin: 0 auto; /* Centering the container */
+  position: relative; /* Needed for absolute positioning of children if any */
 }
 
-.bizcronicles-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px 20px;
-    text-align: center;
-    background-color: #f8f9fa;
+.bizcronicl-heading {
+  text-align: center;
+  max-width: 1200px;
+  margin-bottom: -140px;
+  margin-left: 50px;
 }
 
-.bizcronicles-header {
-    margin-bottom: 20px;
+/* Badge style for the heading */
+.heading {
+  display: inline-block;
+  padding: 15px 20px;
+  color: #FF4040;
+  border: 2px solid #E5E5E5;
+  border-radius: 54px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  /* Typography from user request */
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0;
+  text-align: center;
+  vertical-align: middle;
 }
 
-.bizcronicles-badge {
-    display: inline-block;
-    padding: 10px 20px;
-    border: 1px solid #E0E0E0;
-    border-radius: 30px;
-    color: #FF4136;
-    font-weight: bold;
-    font-size: 14px;
-    background-color: #FFFFFF;
-    margin-bottom: 20px;
+
+.subtitle {
+  width: 862px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 100%;
+  text-align: center;
+  vertical-align: middle;
+  color: #383838;
+  margin: 0 auto;
 }
 
-.bizcronicles-description {
-    color: #666;
-    font-size: 16px;
-    max-width: 600px;
-    margin-bottom: 40px;
+/* Card Container */
+.bizcronicl-cardtrangle {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  width: 630px;
+  height: 400px;
+  position: relative;
+  top: 48px;
+  left: 20px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 20px;
 }
 
-.bizcronicles-carousel {
-    position: relative;
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+/* Individual Card */
+.bizcronicl-card1 {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: left;
 }
 
-.bizcronicles-carousel-inner {
-    display: flex;
-    gap: 30px;
-    overflow: hidden;
-    width: 100%;
-    justify-content: center;
+.bizcronicl-card1:hover {
+  transform: translateY(-5px);
 }
 
-.bizcronicles-carousel-item {
-    background-color: #FFFBEB;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-    display: flex;
-    width: 550px;
-    height: 350px;
-    overflow: hidden;
-    position: relative;
-}
-
-.bizcronicles-carousel-item img {
+.bizcronicl-img {
   width: 100%;
-  height: 100%;
-
-    
-}
-    
-
-
-.bizcronicles-carousel-item-content {
-    padding: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    text-align: left;
-    position: relative;
-    width: 55%;
+  height: 250px;
+  object-fit: cover;
 }
 
-.bizcronicles-carousel-item-content::before {
-    content: '';
-    position: absolute;
-    left: -50px; /* Adjust this value to control the shape */
-    top: 0;
-    width: 100px; /* Adjust this value to control the shape */
-    height: 100%;
-    background-color: #FFFBEB;
-    transform: skewX(-15deg);
-    z-index: 1;
+.bizcronicl-trangle {
+  width: 477px;
+  height: 175px;
+  position: relative;
+  top: 20px;
+  left: 20px;
+  transform: rotate(0deg);
+  opacity: 1;
+  background-color: #f0f0f0;
 }
 
-.bizcronicles-carousel-item-content h3,
-.bizcronicles-carousel-item-content h4 {
-    font-size: 18px;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-    line-height: 1.4;
-    position: relative;
-    z-index: 2;
+.bizcronicl-title {
+  padding: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+  line-height: 1.5;
+  min-height: 100px;
 }
 
+/* Navigation Arrows */
 .carousel-arrow {
-    background-color: #fff;
-    border: 1px solid #e0e0e0;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    transition: background-color 0.3s, color 0.3s;
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .carousel-arrow:hover {
-    background-color: #0B7492;
-    color: #fff;
+    background-color: #333;
+    color: white;
 }
 
 .prev-arrow {
-    left: -60px; /* Adjusted for better spacing */
+  left: 40px;
 }
 
 .next-arrow {
-    right: -60px; /* Adjusted for better spacing */
+  right: 40px;
 }
 
-.read-more-arrow {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 25px;
-    right: 25px;
-    z-index: 2;
-    color: #0B7492;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .bizcronicl-cardtrangle {
+        grid-template-columns: 1fr;
+    }
 }
 
-.bizcronicles-carousel-item:hover .read-more-arrow {
-    transform: scale(1.1);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+.bizcronicl-cardcontainer{
+  width: 1420px;
+  height: 503px;
+  position: relative;
+  top: 167px;
+  left: -60px;
+  transform: rotate(0deg);
+  opacity: 1;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+} 
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 0.9rem;
+    padding: 12px 25px;
+  }
+
+  .carousel-arrow {
+      top: 65%;
+      width: 40px;
+      height: 40px;
+  }
+
+  .prev-arrow {
+    left: 15px;
+  }
+
+  .next-arrow {
+    right: 15px;
+  }
 }
-
-

@@ -9,11 +9,18 @@ const OurClient = () => {
         <span className="our-client-tag">OUR CLIENTS</span>
       </div>
       <div className="our-client-logos">
-        {clients.map((client, index) => (
-          <div className="our-client-logo" key={index}>
-            <img src={client} alt={`client-logo-${index}`} />
-          </div>
-        ))}
+        <div className="logos-track">
+          {clients.map((client, index) => (
+            <div className="our-client-logo" key={index}>
+              <img src={client} alt={`client-logo-${index}`} />
+            </div>
+          ))}
+          {clients.map((client, index) => (
+            <div className="our-client-logo" key={`duplicate-${index}`}>
+              <img src={client} alt={`client-logo-duplicate-${index}`} />
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

@@ -1,112 +1,160 @@
 .trending-container {
-    width: 90%;
-    margin: 0 auto;
-    padding: 50px 0;
-    
-  }
-  
-  .trending-title {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: bold;
-    color: #FF4040;
-    border: 1px solid #E5E5E5;
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 30px;
-    position: relative;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .trending-card {
-    position: relative;
-    width: 250px;
-    height: 250px;
-    border-radius: 24.51px;
-    overflow: hidden;
-    
-    /* margin is now handled by slick-slide padding */
-    border: 0.82px solid #727272;
-    transition: border-color 0.3s ease-in-out;
-  }
+  width: 100%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
 
-  .trending-card:hover {
-    border-color: #0B7492; /* Teal color from image */
-  }
+.trending-title {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin-bottom: 20px;
+  color: #ff4040;
+  border: 1px solid #e5e5e5;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 30px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
-  /* Add padding to the slick-slider items to create a gap */
-  .trending-container .slick-slide {
-    padding: 0 5px;
-  } 
-  
-  .trending-card img {
-    width: 100%;
-    display: block;
-  }
-  
-  .year-badge {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    padding: 5px 10px;
-    border-radius: 15px;
-    font-size: 12px;
-  }
-  
-  .card-content {
-    position: absolute;
-    width: 240px;
-    height: 100px;
-    top: 158.42px;
-    left: 1.9px;
-    background: rgba(239, 241, 243, 0.8);
-    backdrop-filter: blur(5px);
-    color: #0B7492;
-    padding: 15px;
-    box-sizing: border-box;
-    border-top-left-radius: 10.62px;
-    border-top-right-radius: 10.62px;
-    border-bottom-right-radius: 21.24px;
-    border-bottom-left-radius: 21.24px;
-  }
-  
-  .card-content p {
-    margin: 0;
-    font-family: 'Work Sans', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 100%;
-    letter-spacing: 0;
-    vertical-align: middle;
-  }
-  
-  .slick-prev:before,
-  .slick-next:before {
-    color: black;
-  }
-  
-  .slick-prev {
-    left: -25px;
-  }
-  
-  .slick-next {
-    right: -25px;
-  }
+.trending-card-wrapper {
+  width: 255px;
+  height: 255px;
+  opacity: 1;
+  transform: rotate(0deg);
+  border-radius: 24.51px;
+  border: 0.82px solid #727272;
+}
+
+.trending-card {
+  position: relative;
+  width: 241.83px;
+  height: 241.83px;
+  opacity: 1;
+  transform: rotate(0deg);
+  top: 4.08px;
+  left: 4.08px;
+  border-radius: 22.06px;
+  overflow: hidden;
+  gap: 20px;
+  margin-right: 9px; /* margin is now handled by slick-slide padding */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.trending-card:hover {
+  border-color: #0b7492; /* Teal color from image */
+}
+
+/* Scroll wrapper and navigation */
+.trending-scroll-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  gap: 20px;
+}
+
+.trending-cards-container {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  flex: 1;
+  padding: 10px 0;
+}
+
+.trending-cards-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.scroll-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  min-width: 50px;
+  height: 50px;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(1.1);
+}
+
+.scroll-btn img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+
+.trending-card img {
+  width: 100%;
+  display: block;
+}
+
+.year-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 12px;
+}
+
+.card-content {
+  position: absolute;
+  width: 240px;
+  height: 100px;
+  top: 158.42px;
+  left: 1.9px;
+  background: rgba(239, 241, 243, 0.8);
+  backdrop-filter: blur(5px);
+  color: #0b7492;
+  padding: 15px;
+  box-sizing: border-box;
+  border-top-left-radius: 10.62px;
+  border-top-right-radius: 10.62px;
+  border-bottom-right-radius: 21.24px;
+  border-bottom-left-radius: 21.24px;
+}
+
+.card-content p {
+  margin: 0;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+}
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
-  .trending-card {
+  .trending-card-wrapper {
     width: 220px;
     height: 220px;
+    flex-shrink: 0;
   }
   .card-content {
-    width: 210px;
-    height: 90px;
-    top: 138.42px;
+    width: calc(100% - 30px);
+    height: 85px;
+    top: 125px;
+    left: 15px;
   }
   .card-content p {
     font-size: 14px;
@@ -114,14 +162,16 @@
 }
 
 @media (max-width: 992px) {
-  .trending-card {
+  .trending-card-wrapper {
     width: 200px;
     height: 200px;
+    flex-shrink: 0;
   }
   .card-content {
-    width: 190px;
-    height: 80px;
-    top: 128.42px;
+    width: calc(100% - 30px);
+    height: 75px;
+    top: 110px;
+    left: 15px;
   }
   .card-content p {
     font-size: 13px;
@@ -132,15 +182,16 @@
 }
 
 @media (max-width: 768px) {
-  .trending-card {
+  .trending-card-wrapper {
     width: 220px;
     height: 220px;
-    margin: 0 auto;
+    flex-shrink: 0;
   }
   .card-content {
-    width: 210px;
-    height: 90px;
-    top: 138.42px;
+    width: calc(100% - 30px);
+    height: 85px;
+    top: 125px;
+    left: 15px;
   }
   .card-content p {
     font-size: 14px;
@@ -148,11 +199,13 @@
   .trending-title {
     font-size: 20px;
   }
-  .slick-prev {
-    left: -15px;
+  .scroll-btn {
+    min-width: 40px;
+    height: 40px;
   }
-  .slick-next {
-    right: -15px;
+  .scroll-btn img {
+    width: 25px;
+    height: 25px;
   }
 }
 
@@ -160,16 +213,25 @@
   .trending-container {
     padding: 30px 0;
   }
-  .trending-container .slick-slide {
-    padding: 0 15px;
+  .trending-scroll-wrapper {
+    gap: 10px;
+  }
+  .trending-cards-container {
+    gap: 15px;
+  }
+  .trending-card-wrapper {
+    width: 280px;
+    height: auto;
+    flex-shrink: 0;
+    padding: 0;
+    border: none;
   }
   .trending-card {
-    width: 100%;
     height: auto;
-    max-width: 300px;
-    margin: 0 auto;
+    border: 0.82px solid #727272;
   }
   .trending-card img {
+    width: 100%;
     height: 250px;
     object-fit: cover;
   }
@@ -190,8 +252,12 @@
     font-size: 18px;
     padding: 8px 16px;
   }
-  .slick-prev,
-  .slick-next {
-    display: none !important;
+  .scroll-btn {
+    min-width: 35px;
+    height: 35px;
+  }
+  .scroll-btn img {
+    width: 20px;
+    height: 20px;
   }
 }

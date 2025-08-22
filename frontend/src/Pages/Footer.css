@@ -1,13 +1,13 @@
 .footer {
     background-color: #ffffff;
     font-family: 'Inter', sans-serif;
-    width: 1480px;
-    height: 350px;
-    margin: 40px auto; /* Centers the footer and adds vertical spacing */
+    width: 100%;
+    max-width: 1400px;
+    min-height: 350px;
+    margin: 40px auto;
     padding: 40px;
     box-sizing: border-box;
-    overflow: hidden; 
-    /* Prevents scrollbar from appearing */
+    overflow: hidden;
 }
 
 .footer-container {
@@ -16,6 +16,7 @@
     padding: 0 40px;
     display: flex;
     flex-direction: column;
+    box-sizing: border-box;
 }
 
 .footer-top {
@@ -27,7 +28,7 @@
 }
 
 .footer-logo-section {
-    flex: 0.8; /* Make logo section smaller */
+    flex: 0.8;
     min-width: 250px;
     margin-bottom: 20px;
     margin-right: 70px;

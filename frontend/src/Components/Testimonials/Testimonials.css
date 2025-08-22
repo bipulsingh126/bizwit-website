@@ -131,7 +131,7 @@
 }
 
 .quote-card {
-  background-color: #FFF8E8;
+  background-color: #FFF9EB;
   border-radius: 10px;
   padding: 40px;
   position: relative;
@@ -139,21 +139,17 @@
 }
 
 .quote-mark {
-  color: #0077B6;
   position: absolute;
-  top: 5px;
+  top: 20px;
   left: 30px;
-  font-family: 'Work Sans', sans-serif;
-  font-weight: 400;
-  font-size: 150px;
-  line-height: 100%;
-  letter-spacing: 0%;
+  width: 60px;
+  height: 60px;
+  opacity: 1;
   vertical-align: bottom;
-
 }
 
 .quote-text {
-  color: #333;
+  color: #383838;
   margin-bottom: 30px;
   padding-top: 60px;
   font-family: 'Inter', sans-serif;
@@ -211,7 +207,6 @@
   height: 40px;
   opacity: 1;
   border-radius: 50%;
-  border: 1px solid #ddd;
   background-color: white;
   display: flex;
   align-items: center;
@@ -224,6 +219,13 @@
 .next-btn {
   color: #0077B6;
   border-color: #0077B6;
+}
+
+.test {
+  width: 40px;
+  height: 40px;
+  opacity: 1;
+  transform: rotate(0deg);
 }
 
 /* Responsive Styles */

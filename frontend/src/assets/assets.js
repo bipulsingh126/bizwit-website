@@ -98,7 +98,11 @@ import cardicon from '../assets/cardicon.png'
 import cardicon1 from '../assets/cardicon1.png'
 import cardicon2 from '../assets/cardicon2.png'
 import cardicon3 from '../assets/cardicon3.png'
-
+import megaarrow from '../assets/Megaarrows.png'
+import casebutton from '../assets/casebutton.png'
+import testi from '../assets/testi.png'
+import testi1 from '../assets/testi1.png'
+import testi2 from '../assets/testi2.png'
 export const clients = [
   client1,
   client2,
@@ -109,6 +113,8 @@ export const clients = [
   client7,
   client8,
   client9,
+  client5,
+
 ];
 
 export const footer = [
@@ -157,10 +163,14 @@ export {
   card2,
   card3,
   card4,
+  testi,
   connect,
+  testi1,
+  testi2,
   mega1,
   headerbg,
   mega2,
+  megaarrow,
   mega3,
   str1,
   str2,
@@ -177,6 +187,7 @@ export {
   vector2,
   vector3,
   herobutton,
+  casebutton,
   cardicon,
   cardicon2,
   cardicon1,

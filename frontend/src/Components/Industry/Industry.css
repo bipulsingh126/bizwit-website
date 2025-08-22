@@ -3,6 +3,7 @@
     margin: 0 auto;
     padding: 50px 0;
     text-align: center;
+    margin-bottom: 40px;
   }
   
   .industry-title {
@@ -26,9 +27,10 @@
     flex-direction: column;
     align-items: center;
     gap: 0;
-    max-width: 1200px;
+    max-width: 1261px;
+    width: 100%;
     margin: 0 auto;
-    padding: 20px 0;
+    position: relative;
   }
   .industry-row {
     display: flex;
@@ -93,6 +95,10 @@
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
+  .industry-grid {
+    max-width: 1000px;
+    padding: 15px;
+  }
   .industry-card {
     width: 180px;
     height: 180px;
@@ -103,9 +109,18 @@
   .industry-row:nth-child(2) {
     margin-bottom: -18px;
   }
+  .industry-name {
+    font-size: 13px;
+    padding: 5px 16px;
+    bottom: 35px;
+  }
 }
 
 @media (max-width: 992px) {
+  .industry-grid {
+    max-width: 800px;
+    padding: 10px;
+  }
   .industry-card {
     width: 150px;
     height: 150px;
@@ -126,21 +141,27 @@
 }
 
 @media (max-width: 768px) {
+  .industry-container {
+    padding: 30px 10px;
+  }
+  .industry-grid {
+    max-width: 600px;
+    padding: 5px;
+  }
   .industry-row {
     flex-wrap: wrap;
     margin-left: 0 !important;
     margin-bottom: 20px !important;
+    justify-content: center;
   }
   .industry-row:last-child {
     margin-bottom: 0 !important;
   }
-
   .industry-card {
     width: 120px;
     height: 120px;
     margin: 10px;
   }
-
   .industry-row:nth-child(1),
   .industry-row:nth-child(2),
   .industry-row:nth-child(3) {
@@ -153,9 +174,20 @@
     padding: 4px 12px;
     bottom: 25px;
   }
+  .industry-title {
+    font-size: 20px;
+    padding: 8px 16px;
+  }
 }
 
 @media (max-width: 480px) {
+  .industry-container {
+    padding: 20px 5px;
+  }
+  .industry-grid {
+    max-width: 400px;
+    padding: 0;
+  }
   .industry-title {
     font-size: 18px;
     padding: 8px 16px;
