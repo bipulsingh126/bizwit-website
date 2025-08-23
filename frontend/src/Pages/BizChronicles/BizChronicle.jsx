@@ -140,6 +140,7 @@ const BizChronicle = () => {
       Here are some chronicles of businesses that dared to ask the right questions — and found powerful answers.
      </h1>
      <div className='biz-chronicle-grid'>
+     <img src={left}  className='left-arrow1' alt="" onClick={() => slide('left')} />
         {chroniclesData.map((item, index) => {
           return (
             <div className='biz-chronicle-card-item' key={index}>
@@ -150,6 +151,7 @@ const BizChronicle = () => {
           )
         })}
      </div>
+     <img src={scroll} className='right-arrow1' alt="" onClick={() => slide('right')} />
    </div>
    <div className='biz-chronicle-container'>
     <p className='biz-chronicle-megatrends'>MEGATRENDS</p>
@@ -157,6 +159,7 @@ const BizChronicle = () => {
       Here are some chronicles of businesses that dared to ask the right questions — and found powerful answers.
      </h1>
      <div className='biz-chronicle-grid2'>
+     <img src={left}  className='left-arrow1' alt="" onClick={() => slide('left')} />
         {chroniclesData2.map((item, index) => {
           return (
             <div className='biz-chronicle-card-item2' key={index}>
@@ -167,7 +170,9 @@ const BizChronicle = () => {
           )
         })}
      </div>
+     <img src={scroll} className='right-arrow1' alt="" onClick={() => slide('right')} />
    </div>
+   
 
    <div>
    <div className="casestudy-container1">

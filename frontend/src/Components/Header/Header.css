@@ -1,15 +1,16 @@
 .header-container {
     display: flex;
     flex-direction: column;
-    width: 1400px;
+    width: 100%;
+    max-width: 1400px;
     height: 157px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
     position: fixed;
     top: 0;
-    left:1px;
+    left: 50%;
+    transform: translateX(-50%);
     z-index: 1000;
     background-color: white;
-    transform: rotate(0deg);
     opacity: 1;
 }
 
@@ -25,20 +26,20 @@
 .top-bar-links {
     display: flex;
     align-items: center;
-    width: 1640px;
+    justify-content: flex-end;
+    width: 100%;
     height: 48px;
     background-image: url('../../assets/headerbg.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    transform: rotate(0deg);
     opacity: 1;
     padding: 8px 50px;
     border-bottom-left-radius: 30px;
     box-sizing: border-box;
     position: relative;
     z-index: 1;
-    margin-right: 40px;
+    gap: 20px;
 }
 
 .top-bar a {
@@ -242,6 +243,8 @@
     justify-content: center;
     cursor: pointer;
     transition: color 0.3s ease;
+    padding: 10px 15px;
+    white-space: nowrap;
 }
 .search-ico {
     cursor: pointer;
@@ -251,7 +254,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 50px;
+    margin-right: -5px;
 }
 
 .search {
@@ -263,8 +266,13 @@
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .header-container {
+        height: 140px;
+    }
+    
     .top-bar-links {
         padding: 8px 30px;
+        gap: 15px;
     }
     
     .main-header {
@@ -275,12 +283,21 @@
         gap: 20px;
     }
     
-    .nav-links a {
-        font-size: 14px;
+    .nav-link, .nav-link1 {
+        font-size: 16px;
+    }
+    
+    .report-store-button {
+        font-size: 16px;
+        padding: 8px 16px;
     }
 }
 
 @media (max-width: 768px) {
+    .header-container {
+        height: 120px;
+    }
+    
     .top-bar {
         height: 35px;
     }
@@ -288,23 +305,23 @@
     .top-bar-links {
         padding: 6px 20px;
         border-bottom-left-radius: 20px;
+        gap: 10px;
     }
     
-    .top-bar a {
+    .top-bar-link, .top-bar-link1, .top-bar-link2 {
         font-size: 12px;
-        margin-left: 15px;
-    }
-    
-    .empanel-button {
-        padding: 4px 8px;
-        font-size: 11px;
+        padding: 6px 10px;
     }
     
     .main-header {
         padding: 8px 20px;
     }
     
-    .logo img {
+    .logo {
+        margin-left: 10px;
+    }
+    
+    .logo img, .logo .alllogo, .logo .detaillogo {
         height: 35px;
     }
     
@@ -312,25 +329,31 @@
         display: none;
     }
     
-    .mobile-menu-toggle {
-        display: flex;
-    }
-    
     .header-actions {
         gap: 15px;
     }
     
     .report-store-button {
-        padding: 6px 12px;
-        font-size: 12px;
+        padding: 8px 12px;
+        font-size: 14px;
     }
     
-    .search-icon {
-        font-size: 16px;
+    .search-ico {
+        margin-right: 20px;
+        padding: 6px;
+    }
+    
+    .search {
+        width: 14px;
+        height: 14px;
     }
 }
 
 @media (max-width: 480px) {
+    .header-container {
+        height: 100px;
+    }
+    
     .top-bar {
         height: 30px;
     }
@@ -338,23 +361,28 @@
     .top-bar-links {
         padding: 4px 15px;
         border-bottom-left-radius: 15px;
+        gap: 8px;
     }
     
-    .top-bar a {
-        font-size: 11px;
-        margin-left: 10px;
-    }
-    
-    .empanel-button {
-        padding: 3px 6px;
+    .top-bar-link, .top-bar-link1 {
         font-size: 10px;
+        padding: 4px 6px;
+    }
+    
+    .top-bar-link2 {
+        font-size: 10px;
+        padding: 4px 8px;
     }
     
     .main-header {
         padding: 6px 15px;
     }
     
-    .logo img {
+    .logo {
+        margin-left: 5px;
+    }
+    
+    .logo img, .logo .alllogo, .logo .detaillogo {
         height: 30px;
     }
     
@@ -363,18 +391,56 @@
     }
     
     .report-store-button {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+    
+    .search-ico {
+        margin-right: 10px;
+        padding: 5px;
+    }
+    
+    .search {
+        width: 12px;
+        height: 12px;
+    }
+}
+
+@media (max-width: 360px) {
+    .header-container {
+        height: 90px;
+    }
+    
+    .top-bar-links {
+        padding: 3px 10px;
+        gap: 5px;
+    }
+    
+    .top-bar-link, .top-bar-link1 {
+        font-size: 9px;
+        padding: 3px 5px;
+    }
+    
+    .top-bar-link2 {
+        font-size: 9px;
+        padding: 3px 6px;
+    }
+    
+    .main-header {
         padding: 5px 10px;
+    }
+    
+    .logo img, .logo .alllogo, .logo .detaillogo {
+        height: 25px;
+    }
+    
+    .report-store-button {
+        padding: 5px 8px;
         font-size: 11px;
     }
     
-    .search-icon {
-        font-size: 14px;
+    .search-ico {
+        margin-right: 5px;
+        padding: 4px;
     }
-    
-    .mobile-nav-links {
-        padding: 15px;
-        gap: 10px;
-    }
-    
- 
 }

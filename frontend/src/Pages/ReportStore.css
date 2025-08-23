@@ -2,7 +2,7 @@
   background-color: #f8f9fa;
   min-height: 100vh;
   padding: 20px 0;
-  margin-top: 105px; /* Account for fixed header height */
+  margin-top: 140px; /* Account for fixed header height */
 }
 
 .report-store-container {
@@ -54,9 +54,6 @@
 }
 
 /* Category Group Styles */
-.category-group {
-  margin-bottom: 8px;
-}
 
 .category-header,
 .region-header {
@@ -71,8 +68,6 @@
   transition: all 0.3s ease;
   font-family: 'Work Sans', sans-serif;
   opacity: 1;
-  gap: 4px;
-  box-sizing: border-box;
 }
 
 .category-header:hover,
@@ -444,7 +439,7 @@
 .btn-secondary {
   width: 165px;
   height: 32px;
-  background: #007bff;
+  background: #104D72;
   color: white;
   border-radius: 20px;
   padding: 0;

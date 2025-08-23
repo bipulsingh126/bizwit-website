@@ -441,8 +441,8 @@ const ReportStore = () => {
                     <span className="discount-percentage">20%</span>
                   </div>
                   <div className="action-buttons">
-                    <button className="btn-primary">BUY NOW</button>
-                    <button className="btn-secondary">REQUEST SAMPLE</button>
+                    <button className="btn-primary">DOWNLOAD SAMPLE</button>
+                    <button className="btn-secondary">BUY NOW</button>
                   </div>
                 </div>
               </Link>

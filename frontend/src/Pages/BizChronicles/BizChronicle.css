@@ -3,7 +3,7 @@
 .biz-chronicle-container {
   font-family: 'Arial', sans-serif;
   position: relative;
-  top: 150px;
+  top: 180px;
   left: 10px;
   width: 100%; /* Adjusted for responsiveness */
   margin-bottom: 200px;
@@ -47,10 +47,11 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
   grid-auto-rows: auto; /* Automatically adjust row size */
-  gap: 2.5rem;
-  max-width: 1400px;
+  gap: 20px;
+  max-width: 1280px;
   margin: 0 auto;
   justify-items: center;
+  margin-left: 25px;
 }
 
 .biz-chronicle-container2 {
@@ -76,10 +77,11 @@
 .biz-chronicle-grid2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
-  gap: 2.5rem;
-  max-width: 1400px;
+  gap: 10px;
+  max-width: 1280px;
   margin: 0 auto;
   justify-items: center;
+  margin-left: 25px;
 }
 
 .biz-chronicle-card-item2 {
@@ -148,7 +150,7 @@
   height: 666px;
   opacity: 1;
   top: -5px;
-  left: 90px; 
+  left: 30px; 
   gap: 20px;
 }
 
@@ -213,7 +215,7 @@
   letter-spacing: 0;
   vertical-align: middle;
   color: #FFFFFF;
-  margin-top: 50px;
+  margin-top: -10px;
 }
 
 .biz-chronicle-img {
@@ -296,6 +298,23 @@
 
 .right-arrow {
     right: 60px;
+}
+
+.left-arrow1, .right-arrow1 {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+.left-arrow1 {
+  left: -15px;
+}
+
+.right-arrow1 {
+  right: 5px;
 }
 
 .casestudy-cards-container1 {
