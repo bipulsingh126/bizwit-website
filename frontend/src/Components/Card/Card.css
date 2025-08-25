@@ -1,85 +1,74 @@
 .card-container {
-  padding: 45px 1px ;
-  width: 1092px;
-  height: 180px;
-  position: relative;
-  top: -60px;
-  left: 174px;
-  transform: rotate(0deg);
-  opacity: 1;
   display: flex;
-  gap: 30px;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 2rem 1rem;
   max-width: 1200px;
- margin-left: 50px;
- top: 10px;
- position: relative;
+  margin: 0 auto;
 }
 
 .card {
   background-color: #ffffff;
   border-radius: 16px;
-  padding: 1rem;
-  box-shadow: 0 4px_6px -1px rgba(0, 0, 0, 0.1), 0 2px_4px -2px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
+  min-width: 280px;
+  max-width: 100%;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 12px -1px rgba(0, 0, 0, 0.15), 0 4px 8px -2px rgba(0, 0, 0, 0.1);
 }
 
 
 /* Assets Card */
 .assets-card {
   background-color: #EFF1F3;
-  flex-direction: row;
-  gap: 30px;
+  flex-direction: column;
+  gap: 1.5rem;
   align-items: stretch;
-  width: 460px;
-  height: 180px;
-  transform: rotate(0deg);
-  opacity: 1; 
-  position: relative;
 }
 
 .assets-left-panel {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1rem 0;
+  gap: 1rem;
 }
 
 .assets-title {
   font-size: 1.5rem;
   font-weight: 600;
   color: #0d5a67;
+  margin: 0;
 }
 
 .learn-more {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.5rem;
   color: #0d5a67;
   text-decoration: none;
   font-family: Inter, sans-serif;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 100%;
-  letter-spacing: 0;
-  vertical-align: middle;
+  font-size: 0.875rem;
+  line-height: 1;
+  transition: gap 0.2s ease;
+}
+
+.learn-more:hover {
+  gap: 0.75rem;
 }
 
 .learn-more-icon {
-  width: 17px;
-  height: 17px;
-  position: absolute;
-  top: 134px;
-  left: 90px;
-  transform: rotate(0deg);
-  opacity: 1;
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.2s ease;
 }
 
 .learn-more:hover .learn-more-icon {
@@ -89,7 +78,7 @@
 .assets-right-panel {
   display: flex;
   gap: 1rem;
-  flex-grow: 1;
+  flex-wrap: wrap;
 }
 
 .assets-info-card {
@@ -100,110 +89,85 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
-  flex-grow: 1;
+  flex: 1;
+  min-width: 150px;
   position: relative;
 }
 
 .assets-info-icon {
-  width: 33px;
-  height: 32px;
-  position: absolute;
-  top: 3px;
-  left: 10px;
-  transform: rotate(0deg);
-  opacity: 1;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.75rem;
 }
 
 .assets-subtitle {
   font-family: Inter, sans-serif;
   font-weight: 400;
-  font-size: 13px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-  vertical-align: middle;
+  font-size: 0.8125rem;
+  line-height: 1;
   color: #0B7492;
-  margin-top: 45px;
-  margin-right: 3px;
+  margin: 0 0 0.5rem 0;
 }
 
 .assets-amount {
   font-family: Inter, sans-serif;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-  vertical-align: middle;
+  font-size: 1.25rem;
+  line-height: 1;
   color: #0d5a67;
-  margin-top: 15px;
-
+  margin: 0;
 }
 
 .assets-chart {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: 1;
+  min-width: 120px;
 }
 
 .assets-chart img {
   border-radius: 12px;
-  max-width: 150px;
+  max-width: 100%;
+  height: auto;
   object-fit: cover;
 }
 
 /* Professionals Card */
 .professionals-card {
-  align-items: flex-start;
   background-color: #EFF1F3;
   padding: 1.5rem;
-  width: 276px;
-  height: 180px;
-  transform: rotate(0deg);
-  opacity: 1;
   border-radius: 20px;
 }
 
 .professionals-left-panel {
-  width: 246px;
-  height: 150px;
-  position: relative;
-  top: 3px;
-  left: -5px;
-  transform: rotate(0deg);
-  opacity: 1;
-  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
   background-color: #FFFFFF;
-  gap: 10px;
+  border-radius: 10px;
+  padding: 1rem;
+  position: relative;
 }
 
 .professionals-icon {
-  width: 32px;
-  height: 32px;
-  position: absolute;
-  top: 5px;
-  left: 5px;
-  transform: rotate(0deg);
-  opacity: 1;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 0.5rem;
 }
 
 .professionals-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  width: 100%;
-  position: relative;
-  top: 70px;
-  left: 10px;
+  gap: 1rem;
 }
 
 .professionals-title {
   font-family: Inter, sans-serif;
   font-weight: 400;
-  font-size: 16px;
-  line-height: 100%;
-  letter-spacing: 0;
-  vertical-align: middle;
+  font-size: 1rem;
+  line-height: 1;
   color: #0B7492;
   margin: 0;
 }
@@ -211,29 +175,23 @@
 .professionals-count {
   font-family: Inter, sans-serif;
   font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-  vertical-align: middle;
+  font-size: 1.25rem;
+  line-height: 1;
   color: #0d5a67;
-  margin: 0.25rem 0 0;
-  margin-top: 20px;
-  margin-right: 20px;
+  margin: 0.25rem 0 0 0;
 }
 
 .professionals-avatars {
   display: flex;
-  margin-right: 20px;
 }
 
 .professionals-avatars img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   border-radius: 50%;
-  border: 3px solid #ffffff;
-  margin-left: -15px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px #0000001a;
+  margin-left: -.9rem; /* Updated margin-left */
 }
 
 .professionals-avatars img:first-child {
@@ -246,12 +204,8 @@
   overflow: hidden;
   padding: 0;
   color: white;
-  width: 310px;
-  height: 180px;
-  left: 30px;
-  transform: rotate(0deg);
-  opacity: 1;
   border-radius: 20px;
+  min-height: 200px;
 }
 
 .trust-bg-image {
@@ -266,100 +220,181 @@
 }
 
 .trust-info-overlay {
-  position: relative; /* Changed to relative */
-  width: 135px;
-  height: 150px;
-  top: 15px;
-  left: 15px;
-  transform: rotate(0deg);
-  opacity: 1;
-  border-radius: 10px;
-  background: #e8eff1;
-  backdrop-filter: blur(30px);
-  z-index: 1;
-  padding: 1rem;
-}
-
-.trust-text {
-  position: absolute; /* Changed to absolute */
-  top: 80px; /* Position from the top */
-  left: 10px; /* Position from the left */
-  color: #0d5a67;
-  font-family: Inter, sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 14px;
-  line-height: 100%;
-  letter-spacing: 0;
-  vertical-align: middle;
-}
-
-.trust-year {
   position: relative;
-  top: 90px;
-  left: -30px;
-  width: 100%;
-  color: #0d5a67;
-  font-family: Inter, sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 100%;
-  letter-spacing: 0;
-  text-align: center;
-  vertical-align: middle;
+  background: rgba(232, 239, 241, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  padding: 1.5rem;
+  margin: 1rem;
+  border-radius: 10px;
+  max-width: 200px;
 }
 
 .trust-icon {
-  font-size: 2.5rem;
+  width: 1.75rem;
+  height: 2rem;
   margin-bottom: 1rem;
+}
+
+.trust-text {
   color: #0d5a67;
-  position: relative;
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.2;
+  margin: 0 0 0.5rem 0;
 }
 
-img.trust-icon {
-  width: 29.54px;
-  height: 32px;
-  position: absolute;
-  top: -5px;
-  left: -5px;
-  transform: rotate(0deg);
-  opacity: 1;
+.trust-year {
+  color: #0d5a67;
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1;
+  margin: 0;
 }
 
-/* Responsive */
-@media (max-width: 992px) {
+/* Responsive Design */
+@media (min-width: 768px) {
+  .card-container {
+    flex-wrap: nowrap;
+    gap: 2rem;
+  }
+  
   .assets-card {
-    flex-direction: column;
+    flex-direction: row;
+    flex: 2;
+  }
+  
+  .assets-left-panel {
+    flex: 1;
+    min-width: 120px;
+  }
+  
+  .assets-right-panel {
+    flex: 2;
+    flex-wrap: nowrap;
+  }
+  
+  .professionals-card {
+    flex: 1;
+  }
+  
+  .trust-card {
+    flex: 1;
+  }
+  
+  .trust-info-overlay {
+    max-width: 150px;
   }
 }
 
-@media (max-width: 768px) {
-  .card-grid {
-    grid-template-columns: 1fr;
+@media (min-width: 1024px) {
+  .card-container {
+    padding: 3rem 2rem;
   }
+  
+  .assets-card {
+    gap: 2rem;
+  }
+  
+  .assets-info-card {
+    min-width: 180px;
+  }
+  
+  .trust-info-overlay {
+    max-width: 180px;
+    margin: 1.5rem;
+  }
+}
 
+@media (max-width: 767px) {
+  .card-container {
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  .card {
+    padding: 1.25rem;
+  }
+  
   .assets-right-panel {
     flex-direction: column;
   }
-
-  .assets-chart img {
-    max-width: 100%;
+  
+  .assets-info-card {
+    min-width: auto;
   }
-
+  
+  .professionals-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .professionals-avatars {
+    margin-top: 0.5rem;
+  }
+  
   .trust-info-overlay {
-    position: relative;
-    top: auto;
-    left: auto;
-    transform: none;
-    width: 100%;
     max-width: 100%;
-    border-radius: 0;
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 2rem;
+    margin: 0.75rem;
     text-align: center;
   }
-
+  
   .trust-card {
-    height: 400px;
+    min-height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 1rem;
+    min-width: auto;
+  }
+  
+  .assets-title {
+    font-size: 1.25rem;
+  }
+  
+  .assets-amount,
+  .professionals-count,
+  .trust-year {
+    font-size: 1.125rem;
+  }
+  
+  .trust-info-overlay {
+    padding: 1rem;
+    margin: 0.5rem;
+  }
+  
+  .professionals-avatars img {
+    width: 2rem;
+    height: 2rem;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .card {
+    border-radius: 18px;
+  }
+  
+  .assets-info-card,
+  .professionals-left-panel,
+  .trust-info-overlay {
+    border-radius: 14px;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .learn-more-icon {
+    transition: none;
+  }
+  
+  .learn-more:hover .learn-more-icon {
+    transform: none;
   }
 }

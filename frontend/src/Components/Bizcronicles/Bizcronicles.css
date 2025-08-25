@@ -1,177 +1,178 @@
-/* Bizcronicles Section */
-.bizcronicl-container {
-  background-color: white;
-  padding: 60px 20px;
-  width: 1420px; /* As requested */
-  height: auto; /* Changed to auto for content flexibility */
-  box-sizing: border-box;
-  margin: 0 auto; /* Centering the container */
-  position: relative; /* Needed for absolute positioning of children if any */
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600&display=swap');
+
+.bizcronicles-container {
+  padding: 40px 0;
+  font-family: sans-serif;
+  width: 1420px;
+  height: 670px;
 }
 
-.bizcronicl-heading {
+.bizcronicles-header {
   text-align: center;
-  max-width: 1200px;
-  margin-bottom: -140px;
-  margin-left: 50px;
+  margin-bottom: 30px;
 }
 
-/* Badge style for the heading */
-.heading {
-  display: inline-block;
+.bizcronicles-title-btn {
+  background-color: white;
+  border: 2px solid #dee2e6;
+  border-radius: 54px;
   padding: 15px 20px;
   color: #FF4040;
-  border: 2px solid #E5E5E5;
-  border-radius: 54px;
-  margin-bottom: 20px;
-  text-transform: uppercase;
-  /* Typography from user request */
+  cursor: pointer;
+  margin-bottom: 15px;
+  width: 200px;
+  height: 56px;
+  opacity: 1;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 560px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 22px;
-  line-height: 100%;
+  line-height: 1;
   letter-spacing: 0;
-  text-align: center;
-  vertical-align: middle;
 }
 
-
-.subtitle {
-  width: 862px;
+.bizcronicles-subtitle {
+  color: #383838;
+  max-width: 600px;
+  margin: 0 auto;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 100%;
-  text-align: center;
-  vertical-align: middle;
-  color: #383838;
-  margin: 0 auto;
+  line-height: 1;
+  letter-spacing: 0;
 }
 
-/* Card Container */
-.bizcronicl-cardtrangle {
+.bizcronicles-slider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 1420px;
+  height: 503px;
+  border-radius: 30px;
+  background: #6B6B6B1A;
+}
+
+.slider-track {
   display: flex;
   gap: 20px;
-  justify-content: center;
-  width: 630px;
-  height: 400px;
-  position: relative;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  position: absolute;
   top: 48px;
-  left: 20px;
-  transform: rotate(0deg);
+  left: 50px;
   opacity: 1;
-  border-radius: 20px;
 }
 
-/* Individual Card */
-.bizcronicl-card1 {
-  background: white;
-  border-radius: 15px;
-  overflow: hidden;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-  text-align: left;
+.slider-track::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
 }
-
-.bizcronicl-card1:hover {
-  transform: translateY(-5px);
-}
-
-.bizcronicl-img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-}
-
-.bizcronicl-trangle {
+.Rectangle {
   width: 477px;
   height: 175px;
+  opacity: 1;
+  background: #FFFFFF;
+}
+.biz-card {
+  background-color: #FFF9EB;
+  border-radius: 20px;
+  display: flex;
+  width: 630px;
+  height: 400px;
+  flex-shrink: 0;
+  scroll-snap-align: start;
+  overflow: hidden;
   position: relative;
+}
+
+.biz-card-image {
+  width: 274px;
+  height: 360px;
+  position: absolute;
   top: 20px;
   left: 20px;
-  transform: rotate(0deg);
-  opacity: 1;
-  background-color: #f0f0f0;
+  border-radius: 15px;
+  overflow: hidden;
 }
 
-.bizcronicl-title {
-  padding: 25px;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #333;
-  line-height: 1.5;
-  min-height: 100px;
+.biz-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
 }
 
-/* Navigation Arrows */
-.carousel-arrow {
+.biz-card-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   position: absolute;
-  top: 60%;
-  transform: translateY(-50%);
-  background-color: white;
-  border: 1px solid #ddd;
+  width: 308px;
+  height: 92px;
+  top: 160px;
+  left: 308px;
+  opacity: 1;
+}
+
+
+.biz-card-title {
+  color: #343a40;
+  margin: 0;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.biz-card-arrow {
+  background: none;
+  border: none;
+  color: #0B7492;
+  cursor: pointer;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  top: 180px;
+  left: 260px;
+  opacity: 1;
+  background-color: #E5E7EB;
   border-radius: 50%;
-  width: 50px;
-  height: 50px;
+}
+
+.biz-card-arrow svg {
+  width: 18.12px;
+  height: 20.42px;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  transform: rotate(-45deg);
+}
+
+.slider-arrow {
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  z-index: 10;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-.carousel-arrow:hover {
-    background-color: #333;
-    color: white;
+  position: absolute;
+  z-index: 1;
 }
 
 .prev-arrow {
-  left: 40px;
+  left: 20px;
 }
 
 .next-arrow {
-  right: 40px;
-}
-
-/* Responsive Design */
-@media (max-width: 1024px) {
-    .bizcronicl-cardtrangle {
-        grid-template-columns: 1fr;
-    }
-}
-
-.bizcronicl-cardcontainer{
-  width: 1420px;
-  height: 503px;
-  position: relative;
-  top: 167px;
-  left: -60px;
-  transform: rotate(0deg);
-  opacity: 1;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-} 
-
-@media (max-width: 768px) {
-  .heading {
-    font-size: 0.9rem;
-    padding: 12px 25px;
-  }
-
-  .carousel-arrow {
-      top: 65%;
-      width: 40px;
-      height: 40px;
-  }
-
-  .prev-arrow {
-    left: 15px;
-  }
-
-  .next-arrow {
-    right: 15px;
-  }
+  right: 20px;
 }
