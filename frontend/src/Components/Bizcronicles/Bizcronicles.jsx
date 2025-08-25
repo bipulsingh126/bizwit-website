@@ -25,25 +25,29 @@ const Bizcronicles = () => {
     },
   ];
 
+  const getCardWidth = () => {
+    const screenWidth = window.innerWidth;
+    if (screenWidth <= 480) {
+      return 270; // mobile: 260px card + 10px gap
+    } else if (screenWidth <= 768) {
+      return 362; // tablet: 350px card + 12px gap
+    } else if (screenWidth <= 1200) {
+      return 515; // medium: 500px card + 15px gap
+    }
+    return 625; // desktop: 600px card + 25px gap
+  };
+
   const scrollNext = () => {
-    console.log('Next button clicked');
     if (sliderRef.current) {
-      console.log('Slider ref found, scrolling...');
-      const cardWidth = 620; // card width + gap
+      const cardWidth = getCardWidth();
       sliderRef.current.scrollLeft += cardWidth;
-    } else {
-      console.log('Slider ref not found');
     }
   };
 
   const scrollPrev = () => {
-    console.log('Previous button clicked');
     if (sliderRef.current) {
-      console.log('Slider ref found, scrolling...');
-      const cardWidth = 620; // card width + gap
+      const cardWidth = getCardWidth();
       sliderRef.current.scrollLeft -= cardWidth;
-    } else {
-      console.log('Slider ref not found');
     }
   };
 
