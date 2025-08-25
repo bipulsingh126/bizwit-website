@@ -75,14 +75,6 @@ import bizchronicles5 from "../assets/BizChronicles5.png";
 import bizchronicles6 from "../assets/BizChronicles6.png";
 import bizchronicles7 from "../assets/BizChronicles7.png";
 import arrow from "../assets/Arrows.png"
-import biz1 from "../assets/Biz1.png"
-import biz2 from "../assets/Biz2.png"
-import biz3 from "../assets/biz3.png"
-import biz4 from "../assets/biz4.png"
-import biz5 from "../assets/biz5.png"
-import biz6 from "../assets/biz6.png"
-import biz7 from "../assets/biz7.png"
-import biz8 from "../assets/biz8.png"
 import arrow1 from "../assets/arrow1.png"
 import arrow2 from '../assets/arrow2.png'
 import scroll from '../assets/Scroller.png'
@@ -219,14 +211,6 @@ export {
   bizchronicles6,
   bizchronicles7,
   arrow,
-  biz1,
-  biz2,
-  biz3,
-  biz4,
-  biz5,
-  biz6,
-  biz7,
-  biz8,
   arrow1,
   arrow2,
   scroll,

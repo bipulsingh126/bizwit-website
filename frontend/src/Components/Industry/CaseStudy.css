@@ -4,7 +4,7 @@
   border-radius: 20px;
   color: white;
   font-family: sans-serif;
-  width: 1320px;
+  width: 1330px;
   height: 719px;
   opacity: 1;
   transform: rotate(0deg);
@@ -182,3 +182,20 @@
 .casestudy-arrow:hover{
   transition: calc(-45deg);
 }
+.left-arrow2, .right-arrow2 {
+  position: absolute;
+  top: 480px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+}
+
+.left-arrow2 {
+  left: 1px;
+}
+.right-arrow2 {
+  right: 2px;
+}
+

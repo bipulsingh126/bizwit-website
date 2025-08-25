@@ -3,8 +3,10 @@
 .bizcronicles-container {
   padding: 40px 0;
   font-family: sans-serif;
-  width: 1420px;
+  width: 100%;
+  max-width: 1420px;
   height: 670px;
+  margin: 0 auto;
 }
 
 .bizcronicles-header {
@@ -27,7 +29,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 560px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-size: 22px;
@@ -51,10 +54,12 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 1420px;
+  width: 100%;
+  max-width: 1420px;
   height: 503px;
   border-radius: 30px;
   background: #6B6B6B1A;
+  margin: 0 auto;
 }
 
 .slider-track {
@@ -65,29 +70,43 @@
   scrollbar-width: none; /* Firefox */
   position: absolute;
   top: 48px;
-  left: 50px;
+  left: 70px;
+  right: 70px;
   opacity: 1;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+  height: 400px;
 }
 
 .slider-track::-webkit-scrollbar {
   display: none; /* Safari and Chrome */
 }
 .Rectangle {
-  width: 477px;
+  width: 520px;
   height: 175px;
   opacity: 1;
   background: #FFFFFF;
+  border-radius: 0px 0px 50px 0px; /* adjust corners */
+  clip-path: polygon(0 0, 100% 0, 70% 75%, 0% 100%); /* slant bottom edge */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* optional shadow */
 }
 .biz-card {
   background-color: #FFF9EB;
   border-radius: 20px;
   display: flex;
-  width: 630px;
+  width: 600px;
   height: 400px;
   flex-shrink: 0;
   scroll-snap-align: start;
   overflow: hidden;
   position: relative;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.biz-card:hover {
+  background-color: #0B7492;
+  color: white;
 }
 
 .biz-card-image {
@@ -131,6 +150,11 @@
   letter-spacing: 0;
 }
 
+.biz-card:hover .biz-card-title {
+  color: white;
+}
+
+
 .biz-card-arrow {
   background: none;
   border: none;
@@ -140,7 +164,7 @@
   width: 40px;
   height: 40px;
   top: 180px;
-  left: 260px;
+  left: 230px;
   opacity: 1;
   background-color: #E5E7EB;
   border-radius: 50%;
@@ -160,6 +184,7 @@
   border: 1px solid #dee2e6;
   border-radius: 50%;
   width: 40px;
+  color: #0B7492;
   height: 40px;
   display: flex;
   align-items: center;
@@ -167,6 +192,10 @@
   cursor: pointer;
   position: absolute;
   z-index: 1;
+}
+.slider-arrow:hover {
+  background-color: #0B7492;
+  color: white;
 }
 
 .prev-arrow {

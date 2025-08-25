@@ -15,14 +15,6 @@ import {
   bizchronicles5, 
   bizchronicles6, 
   bizchronicles7 ,
-  biz1,
-  biz2,
-  biz3,
-  biz4,
-  biz5,
-  biz6,
-  biz7,
-  biz8,
   arrow1,
   arrow2,
   scroll,
@@ -85,40 +77,7 @@ const chroniclesData = [
   },
 ];
 
-const chroniclesData2 = [
-  {
-    img: biz1,
-    title: 'Top Agriculture Industry Trends to Watch in 202',
-  },
-  {
-    img: biz2,
-    title: 'Chemical Industry Trends to Watch in 2025',
-  },
-  {
-    img: biz3,
-    title: 'Top Healthcare Industry Trends in 2025'
-  },
-  {
-    img: biz4,
-    title: 'Top Automotive Industry Trends in 2025',
-  },
-  {
-    img: biz5,
-    title: 'Cybersecurity Trends to Watch in 2025',
-  },
-  {
-    img: biz6,
-    title: 'The Evolution of Retail: What’s Next in 2025 and Beyond?',
-  },
-  {
-    img: biz7,
-    title: 'Top AI Trends to Watch in 2025',
-  },
-  {
-    img: biz8,
-    title: 'Tourism Industry Trends to Watch in 2025',
-  },
-];
+
 
 const BizChronicle = () => {
   const slider = useRef(null);
@@ -160,7 +119,7 @@ const BizChronicle = () => {
      </h1>
      <div className='biz-chronicle-grid2'>
      <img src={left}  className='left-arrow1' alt="" onClick={() => slide('left')} />
-        {chroniclesData2.map((item, index) => {
+        {chroniclesData.map((item, index) => {
           return (
             <div className='biz-chronicle-card-item2' key={index}>
               <img src={item.img} alt=""  className='biz-chronicle-img2' />
@@ -172,8 +131,6 @@ const BizChronicle = () => {
      </div>
      <img src={scroll} className='right-arrow1' alt="" onClick={() => slide('right')} />
    </div>
-   
-
    <div>
    <div className="casestudy-container1">
       <div className="casestudy-header">

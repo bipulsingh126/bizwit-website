@@ -4,7 +4,7 @@ import Vector from '../../assets/Vector.png';
 import Vector2 from '../../assets/Vector-2.png';
 import Vector3 from '../../assets/Vector-3.png';
 import Vector4 from '../../assets/Vector-4.png';
-import { casebutton } from '../../assets/assets';
+import { casebutton, left, scroll } from '../../assets/assets';
 
 // Sample data for the cards
 const caseStudies = [
@@ -34,7 +34,7 @@ const CaseStudy = () => {
         <h2 className="casestudy-title">Empowering Businesses <span>Worldwide </span> with Research-Driven Insights.</h2>
       </div>
       <div className="casestudy-cards-container">
-        <button className="casestudy-arrow left-arrow">&#8592;</button>
+         <img src={left}  className='left-arrow2' alt="" onClick={() => slide('left')} />
         <div className="casestudy-cards">
           {caseStudies.map((study, index) => (
             <div className="casestudy-card" key={index}>
@@ -48,6 +48,7 @@ const CaseStudy = () => {
             </div>
           ))}
         </div>
+         <img src={scroll} className='right-arrow2' alt="" onClick={() => slide('right')} />
       </div>
     </div>
   );
