@@ -7,8 +7,13 @@ import SearchPopup from "../SearchPopup/SearchPopup";
 
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const navigate = useNavigate();
   const location = useLocation();
+  
+  const toggleMobileMenu = () => {
+    setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
 
   return (
     <header className="header-container">
@@ -38,23 +43,30 @@ const Header = () => {
           )}
         </div>
 
-        <nav className="nav-links">
-          <Link className="nav-link" to="/capabilities">
+        {/* Mobile Menu Button */}
+        <button className="mobile-menu-btn-header" onClick={toggleMobileMenu}>
+          <span className={`hamburger-line-header ${isMobileMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line-header ${isMobileMenuOpen ? 'open' : ''}`}></span>
+          <span className={`hamburger-line-header ${isMobileMenuOpen ? 'open' : ''}`}></span>
+        </button>
+        
+        <nav className={`nav-links ${isMobileMenuOpen ? 'mobile-open' : ''}`}>
+          <Link className="nav-link" to="/capabilities" onClick={() => setIsMobileMenuOpen(false)}>
             Capabilities <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
-          <Link className="nav-link" to="/bizchronicles">
+          <Link className="nav-link" to="/bizchronicles" onClick={() => setIsMobileMenuOpen(false)}>
             BizChronicles™
             <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
-          <Link className="nav-link" to="/industries">
+          <Link className="nav-link" to="/industries" onClick={() => setIsMobileMenuOpen(false)}>
             Industries
             <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
-          <Link className="nav-link" to="/consulting-services">
+          <Link className="nav-link" to="/consulting-services" onClick={() => setIsMobileMenuOpen(false)}>
             Consulting Services
             <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
-          <Link className="nav-link1" to="/bizwit-insights">
+          <Link className="nav-link1" to="/bizwit-insights" onClick={() => setIsMobileMenuOpen(false)}>
             Bizwit Insights
           </Link>
         </nav>

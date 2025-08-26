@@ -41,3 +41,96 @@ button {
   border: none;
   cursor: pointer;
 }
+
+/* Responsive Images and Media */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive Typography */
+@media (max-width: 1024px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 13px;
+  }
+}
+
+/* Touch-friendly interactive elements */
+@media (pointer: coarse) {
+  button,
+  input[type="button"],
+  input[type="submit"],
+  input[type="reset"],
+  a {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Improve readability on smaller screens */
+@media (max-width: 768px) {
+  body {
+    line-height: 1.5;
+  }
+  
+  p, li, span {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Focus indicators for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus,
+a:focus {
+  outline: 2px solid #26C6DA;
+  outline-offset: 2px;
+}
+
+/* Prevent horizontal scroll */
+body,
+html {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Container class for consistent max-width */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 10px;
+  }
+}
