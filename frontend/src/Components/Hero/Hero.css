@@ -5,6 +5,7 @@
   position: relative;
   width: 100%;
   max-width: 1340px;
+  height: 700px; /* legacy value retained */
   height: clamp(350px, 60vw, 650px);
   border-radius: clamp(15px, 3vw, 40px);
   margin: clamp(10px, 3vw, 40px) auto;
@@ -18,7 +19,6 @@
   overflow: hidden;
   box-sizing: border-box;
   margin-top: -3px;
-  height: 700px;
 }
 
 /* Hero Overlay */
@@ -49,10 +49,13 @@
   position: relative;
   z-index: 10;
   max-width: 800px;
+  /* legacy spacing retained but will be overridden by the responsive margin below */
   margin-left: 4rem;
   margin-bottom: 6rem;
   margin: 6rem;
   font-size: 2px;
+  /* responsive margin */
+  margin: clamp(1.5rem, 6vw, 6rem);
 }
 
 /* Hero Subtitle */
