@@ -303,13 +303,36 @@
 
 /* Responsive Design */
 @media (max-width: 1200px) {
-    /* Switch to hamburger earlier to avoid overlap on zoomed layouts */
+    /* Keep desktop nav visible; allow wrapping to avoid overlap */
+    .header-container { height: 140px; }
+
+    .top-bar-links {
+        padding: 8px 30px;
+        gap: 15px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .main-header { padding: 10px 30px; }
+
+    .nav-links { gap: 16px; flex-wrap: wrap; row-gap: 8px; }
+    .nav-link, .nav-link1 { font-size: 16px; }
+
+    .report-store-button {
+        font-size: 16px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .header-container { height: 140px; }
+
+    /* At tablet and below, switch to hamburger and overlay menu */
     .mobile-menu-btn-header { display: flex; }
 
-    /* Overlay menu styling for tablet widths */
     .nav-links {
         position: fixed;
-        top: 130px; /* below the header */
+        top: 120px;
         left: 50%;
         transform: translateX(-50%);
         width: 95%;
@@ -326,29 +349,8 @@
         display: none;
         border: 1px solid rgba(255, 255, 255, 0.2);
     }
+
     .nav-links.mobile-open { display: flex; }
-
-    .header-container { height: 140px; }
-
-    .top-bar-links {
-        padding: 8px 30px;
-        gap: 15px;
-        background-size: cover;
-        background-position: center center;
-    }
-
-    .main-header { padding: 10px 30px; }
-
-    .nav-link, .nav-link1 { font-size: 16px; }
-
-    .report-store-button {
-        font-size: 16px;
-        padding: 8px 16px;
-    }
-}
-
-@media (max-width: 1024px) {
-    .header-container { height: 140px; }
 }
 
 @media (max-width: 768px) {
