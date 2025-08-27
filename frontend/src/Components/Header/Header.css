@@ -172,12 +172,17 @@
     top: -25px;
 }
 
-.nav-links {
+ .nav-links {
     display: flex;
     gap: 20px;
     list-style: none;
-    margin-right: 200px;
     padding: 0;
+    margin: 0;
+    flex: 1 1 auto;
+    justify-content: center;
+    min-width: 0;
+    align-items: center;
+    white-space: nowrap;
 }
 
 .header-actions {
@@ -222,20 +227,10 @@
     align-items: center;
     cursor: pointer;
     transition: color 0.3s ease;
-    margin-left: 30px;
+    margin: 0; /* spacing handled by gap on container */
 }
 
 .nav-link1{
-    width: 150px;
-    height: 41px;
-    position: absolute;
-    top: 75px;
-    left: 910px;
-    transform: rotate(0deg);
-    opacity: 1;
-    border-radius: 52px;
-    padding: 10px;
-    gap: 5px;
     font-family: 'Work Sans', sans-serif;
     font-weight: 500;
     font-style: normal;
@@ -307,34 +302,53 @@
 }
 
 /* Responsive Design */
-@media (max-width: 1024px) {
-    .header-container {
-        height: 140px;
+@media (max-width: 1200px) {
+    /* Switch to hamburger earlier to avoid overlap on zoomed layouts */
+    .mobile-menu-btn-header { display: flex; }
+
+    /* Overlay menu styling for tablet widths */
+    .nav-links {
+        position: fixed;
+        top: 130px; /* below the header */
+        left: 50%;
+        transform: translateX(-50%);
+        width: 95%;
+        max-width: 600px;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(10px);
+        border-radius: 15px;
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        padding: 1.25rem;
+        margin: 0;
+        z-index: 1000;
+        flex-direction: column;
+        gap: 0.75rem;
+        display: none;
+        border: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
+    .nav-links.mobile-open { display: flex; }
+
+    .header-container { height: 140px; }
+
     .top-bar-links {
         padding: 8px 30px;
         gap: 15px;
         background-size: cover;
         background-position: center center;
     }
-    
-    .main-header {
-        padding: 10px 30px;
-    }
-    
-    .nav-links {
-        gap: 20px;
-    }
-    
-    .nav-link, .nav-link1 {
-        font-size: 16px;
-    }
-    
+
+    .main-header { padding: 10px 30px; }
+
+    .nav-link, .nav-link1 { font-size: 16px; }
+
     .report-store-button {
         font-size: 16px;
         padding: 8px 16px;
     }
+}
+
+@media (max-width: 1024px) {
+    .header-container { height: 140px; }
 }
 
 @media (max-width: 768px) {
@@ -379,10 +393,7 @@
         height: 32px;
     }
     
-    .mobile-menu-btn-header {
-        display: flex;
-    }
-    
+    /* Mobile menu behavior is already enabled at 1200px; keep same overlay layout */
     .nav-links {
         position: fixed;
         top: 120px;
