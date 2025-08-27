@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   max-width: 1340px;
-  height: clamp(350px, 50vw, 650px);
+  height: clamp(350px, 60vw, 650px);
   border-radius: clamp(15px, 3vw, 40px);
   margin: clamp(10px, 3vw, 40px) auto;
   background-size: cover;
@@ -17,6 +17,8 @@
   align-items: flex-start;
   overflow: hidden;
   box-sizing: border-box;
+  margin-top: -3px;
+  height: 700px;
 }
 
 /* Hero Overlay */
@@ -131,7 +133,7 @@
   left: 50%;
   transform: translateX(-50%);
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 1rem;
   width: 80%;
   max-width: 900px;
@@ -144,27 +146,38 @@
   height: 61px;
   border: none;
   border-radius: 15px;
+  font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  font-size: 0.9rem;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(9.9px);
+  color: #383838;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
+  padding: 18px 25px;
+  opacity: 1;
 }
 
 .consultation-btn.active {
   background: rgba(255, 255, 255, 0.9);
-  color: #333;
+  color: #383838;
   box-shadow: none;
 }
 
 .consultation-btn:not(.active) {
   background: rgba(255, 255, 255, 0.15);
-  color: white;
+  color: #383838;
+}
+
+.consultation-btn:hover {
+  background-color: #F8F8F8;
+  color: #333;
 }
 
 
@@ -328,57 +341,57 @@
 @media (max-width: 360px) {
   .hero-container {
     width: 98%;
-    height: 300px;
+    height: 280px;
     margin: 10px auto;
     border-radius: 15px;
   }
   
   .hero-content {
-    margin: 2rem 1rem;
+    margin: 1.5rem 0.8rem;
   }
   
   .hero-title {
-    font-size: 22px;
-    max-width: 240px;
+    font-size: 20px;
+    max-width: 220px;
     line-height: 125%;
   }
   
   .hero-underline {
-    width: 55px;
+    width: 50px;
     height: 2px;
   }
   
   .hero-button {
-    width: 140px;
-    height: 28px;
-    margin-top: 15px;
+    width: 130px;
+    height: 26px;
+    margin-top: 12px;
   }
   
   .hero-bottom-buttons {
-    bottom: 0.8rem;
-    width: 96%;
-    gap: 0.3rem;
+    bottom: 0.5rem;
+    width: 98%;
+    gap: 0.2rem;
     flex-wrap: wrap;
     justify-content: center;
   }
   
   .consultation-btn {
-    width: 150px;
-    height: 36px;
-    font-size: 0.7rem;
+    width: 140px;
+    height: 32px;
+    font-size: 0.65rem;
     border-radius: 8px;
-    padding: 4px 10px;
-    margin-bottom: 0.2rem;
+    padding: 3px 8px;
+    margin-bottom: 0.1rem;
   }
   
   .hero-cta-button {
-    font-size: 0.8rem;
-    padding: 6px 14px;
+    font-size: 0.75rem;
+    padding: 5px 12px;
   }
 
   .arrow-icon {
-    width: 24px;
-    height: 24px;
-    font-size: 1rem;
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
   }
 }

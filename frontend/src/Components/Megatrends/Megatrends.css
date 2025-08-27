@@ -1,6 +1,10 @@
 .megatrends-container {
   padding: 4rem 2rem;
   background-color: #fff;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 .megatrends-header {
@@ -93,14 +97,39 @@
   height: 40px;
   opacity: 1;
   position: relative;
-  top: 8px;
+  top: 5px;
   left: -100px;
-  transform: rotate(0deg);
-  transition: transform 0.3s ease-in-out;
+  background: #E5E7EB;
+  border-radius: 20px;
 }
 
-.megaicon:hover {
-  transform: rotate(-45deg);
+
+
+.usehover {
+  position: relative;
+  overflow: hidden;
+  transition: color 1s ease;
+}
+
+.usehover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, #CF2828, transparent);
+  transition: left 1s ease;
+  z-index: 0;
+}
+
+.usehover:hover::before {
+  left: 100%;
+}
+
+.usehover:hover {
+  color: white;
+  background-color: #CF2828;
 }
 
 
@@ -197,20 +226,71 @@
     padding: 1.5rem 0.75rem;
   }
   
+  .megatrends-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.8rem;
+  }
+  
+  .megatrends-header p {
+    font-size: 0.85rem;
+  }
+  
   .megatrend-card-content {
     padding: 1rem;
   }
   
   .megatrend-card-content h3 {
     font-size: 1.125rem;
+    line-height: 1.3;
   }
   
   .megatrend-card-content p {
     font-size: 0.8rem;
+    line-height: 1.4;
   }
   
   .megatrend-card-footer button {
-    font-size: 0.875rem;
-    padding: 0.625rem 1.25rem;
+    font-size: 0.75rem;
+    padding: 0.5rem 1rem;
+    width: 160px;
+    height: 36px;
+  }
+  
+  .megaicon {
+    width: 32px;
+    height: 32px;
+    left: -80px;
+  }
+}
+
+@media (max-width: 360px) {
+  .megatrends-container {
+    padding: 1rem 0.5rem;
+  }
+  
+  .megatrends-badge {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
+  }
+  
+  .megatrend-card-content h3 {
+    font-size: 1rem;
+  }
+  
+  .megatrend-card-content p {
+    font-size: 0.75rem;
+  }
+  
+  .megatrend-card-footer button {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.8rem;
+    width: 140px;
+    height: 32px;
+  }
+  
+  .megaicon {
+    width: 28px;
+    height: 28px;
+    left: -60px;
   }
 }

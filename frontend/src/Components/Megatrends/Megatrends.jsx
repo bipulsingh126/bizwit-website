@@ -3,7 +3,7 @@ import "./Megatrends.css";
 import mega1 from "../../assets/mega1.png";
 import mega2 from "../../assets/mega2.png";
 import mega3 from "../../assets/mega3.png";
-import { megaarrow } from "../../assets/assets";
+import { megaarrow, } from "../../assets/assets";
 
 const Megatrends = () => {
   return (
@@ -18,6 +18,7 @@ const Megatrends = () => {
       <div className="megatrends-grid">
         <div className="megatrend-card">
           <img
+          className="megaimage"
             src={mega1}
             alt="AI, Automation & the New Human-Machine Economy"
           />
@@ -32,13 +33,13 @@ const Megatrends = () => {
               retail to finance and healthcare.
             </p>
             <div className="megatrend-card-footer">
-              <button>DOWNLOAD WHITE PAPER</button>
+              <button className="usehover">DOWNLOAD WHITE PAPER</button>
               <img src={megaarrow} className="megaicon" alt="" />
             </div>
           </div>
         </div>
         <div className="megatrend-card">
-          <img src={mega2} alt="Climate Capitalism" />
+          <img className="megaimage" src={mega2} alt="Climate Capitalism" />
           <div className="megatrend-card-content">
             <h3>
               Climate Capitalism: The Green Transition and the Race for
@@ -50,13 +51,13 @@ const Megatrends = () => {
               risks and regulatory shifts.
             </p>
             <div className="megatrend-card-footer">
-              <button>DOWNLOAD WHITE PAPER</button>
+              <button className="usehover">DOWNLOAD WHITE PAPER</button>
               <img src={megaarrow} className="megaicon" alt="" />
             </div>
           </div>
         </div>
         <div className="megatrend-card">
-          <img src={mega3} alt="Geo-Economic Fragmentation" />
+          <img className="megaimage" src={mega3} alt="Geo-Economic Fragmentation" />
           <div className="megatrend-card-content">
             <h3>
               Geo-Economic Fragmentation: The End of Globalization as We Know It
@@ -68,7 +69,7 @@ const Megatrends = () => {
               alliances.
             </p>
             <div className="megatrend-card-footer">
-              <button>DOWNLOAD WHITE PAPER</button>
+              <button className="usehover">DOWNLOAD WHITE PAPER</button>
               <img className=" megaicon" src={megaarrow} alt="" />
             </div>
           </div>

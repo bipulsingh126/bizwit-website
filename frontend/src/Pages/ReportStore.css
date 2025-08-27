@@ -210,10 +210,6 @@
   box-sizing: border-box;
 }
 
-.search-input:focus {
-  border-color: #0B7492;
-  box-shadow: 0 0 0 3px rgba(11, 116, 146, 0.1);
-}
 
 .search-btn {
   position: absolute;
