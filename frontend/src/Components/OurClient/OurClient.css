@@ -14,8 +14,15 @@
   border: 1px solid #ccc;
   padding: 10px 20px;
   border-radius: 30px;
-  color: #e57373;
-  font-weight: 500;
+  color: #FF4040;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21.97px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
 }
 
 .our-client-logos {

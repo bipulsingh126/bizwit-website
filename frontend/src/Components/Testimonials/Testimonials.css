@@ -20,7 +20,7 @@
   color: #FF4D4F;
   justify-content: center;
   align-items: center;
-  border: 1px solid #FF4D4F;
+  border: 1px solid #E5E5E5;
   width: 161px;
   height: 26px;
   opacity: 1;
@@ -82,15 +82,22 @@
   color: white;
   border: none;
   padding: 10px 20px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-style: normal;
   font-size: 14px;
-  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
   cursor: pointer;
   margin-bottom: 30px;
   margin-top: 20px;
-  width: 197px;
+  width: 200px;
   height: 39px;
-  border-radius: 25px;
+  top: 324.12px;
+  transform: rotate(0deg);
   opacity: 1;
+  border-radius: 25px;
 }
 
 .rating-container {
@@ -116,7 +123,7 @@
   display: flex;
   align-items: center;
   gap: 20px; /* Adjust gap as needed */
-  margin-top: 50px;
+  margin-top: 120px;
 }
 
 .rating-image {
@@ -132,7 +139,12 @@
 
 .quote-card {
   background-color: #FFF9EB;
-  border-radius: 10px;
+  width: 639px;
+  height: 417px;
+  left: -60px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 20px;
   padding: 40px;
   position: relative;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
@@ -154,6 +166,7 @@
   padding-top: 60px;
   font-family: 'Inter', sans-serif;
   font-weight: 400;
+  font-style: normal;
   font-size: 18px;
   line-height: 100%;
   letter-spacing: 0%;
@@ -164,7 +177,7 @@
   display: flex;
   align-items: center;
   gap: 15px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 
 }
 
@@ -172,7 +185,7 @@
   width: 60px;
   height: 60px;
   opacity: 1;
-
+  margin-top: 100px;
   border-radius: 50%;
   background-color: #ccc;
   background-image: url('../../assets/Testimonials.png');
@@ -186,7 +199,9 @@
   font-weight: 600;
   color: #333;
 }
-
+.author-info{
+  margin-top: 100px;
+}
 .author-info p {
   margin: 0;
   font-size: 14px;
@@ -197,7 +212,7 @@
   display: flex;
   gap: 10px;
   position: absolute;
-  bottom: 20px;
+  bottom: 70px;
   right: 20px;
  
 }

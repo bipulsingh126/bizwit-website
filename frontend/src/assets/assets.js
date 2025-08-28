@@ -1,4 +1,4 @@
-import logo from "../assets/BIZWITLOGO.png";
+import logo from "../assets/White Logo.svg";
 import Bicro1 from "../assets/Bicro1.png";
 import Bicro2 from "../assets/Bicro2.png";
 import R from "../assets/R.png";
