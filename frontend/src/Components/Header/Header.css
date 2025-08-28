@@ -40,11 +40,10 @@
     content: "";
     position: absolute;
     bottom: -10px;
-    left: 80%%;
+    left: 80%;
     transform: translateX(-50%);
     width: 200px;
     height: 50px;
-    background-color: #0a4a6e;
      background-color: #144B6E;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;

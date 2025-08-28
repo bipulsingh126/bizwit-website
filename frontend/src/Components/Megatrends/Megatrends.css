@@ -51,6 +51,15 @@
   object-fit: cover;
 }
 
+.megaimage {
+  width: 710px;
+  height: 470px;
+  left: 28px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 10px;
+}
+
 .megatrend-card-content {
   padding: 2rem;
   width: 50%;

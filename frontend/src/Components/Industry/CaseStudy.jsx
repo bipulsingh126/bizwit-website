@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import './CaseStudy.css';
 import Vector from '../../assets/Vector.png';
 import Vector2 from '../../assets/Vector-2.png';
@@ -27,6 +27,22 @@ const caseStudies = [
 ];
 
 const CaseStudy = () => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const cardsRef = useRef(null);
+
+  const slide = (direction) => {
+    const cardWidth = 320; // Approximate card width + gap
+    const maxIndex = caseStudies.length - 1;
+    
+    if (direction === 'left' && currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      cardsRef.current.scrollLeft -= cardWidth;
+    } else if (direction === 'right' && currentIndex < maxIndex) {
+      setCurrentIndex(currentIndex + 1);
+      cardsRef.current.scrollLeft += cardWidth;
+    }
+  };
+
   return (
     <div className="casestudy-container">
       <div className="casestudy-header">
@@ -35,7 +51,7 @@ const CaseStudy = () => {
       </div>
       <div className="casestudy-cards-container">
          <img src={left}  className='left-arrow2' alt="" onClick={() => slide('left')} />
-        <div className="casestudy-cards">
+        <div className="casestudy-cards" ref={cardsRef}>
           {caseStudies.map((study, index) => (
             <div className="casestudy-card" key={index}>
               <div className="casestudy-card-image-wrapper">

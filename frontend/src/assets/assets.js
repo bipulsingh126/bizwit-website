@@ -42,7 +42,7 @@ import vector2 from "../assets/vector-2.png";
 import vector3 from "../assets/vector-3.png";
 import vector4 from "../assets/vector-4.png";
 import footer1 from "../assets/footer1.png";
-import footer2 from "../assets/footer2.png";
+import footer2 from "../assets/footer2.jpg";
 import footer3 from "../assets/footer3.png";
 import footer4 from "../assets/footer4.png";
 import footer5 from "../assets/footer5.png";
