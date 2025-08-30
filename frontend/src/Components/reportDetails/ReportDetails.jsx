@@ -199,7 +199,6 @@ const ReportDetails = () => {
               <TableofContents />
             </div>
           )}
-
           {activeTab === "segments" && (
             <div className="report-details-bottom-down-content">
               <SegmentCompanies />
@@ -207,12 +206,12 @@ const ReportDetails = () => {
           )}
         </div>
       </div>
-      {(activeTab === "contents" || activeTab === "segments") && (
+      {(activeTab === "contents" || activeTab === "segments" || activeTab === "description") && (
         <div className="report-details-bottom-down-down">
           <Custome />
         </div>
       )}
-      {(activeTab === "contents" || activeTab === "segments") && (
+      {(activeTab === "contents" || activeTab === "segments" || activeTab === "description") && (
         <div className="report-details-bottom-down-down">
           <p className="related-reports-title">RELATED REPORTS</p>
         </div>

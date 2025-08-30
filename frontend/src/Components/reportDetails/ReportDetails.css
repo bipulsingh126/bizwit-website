@@ -35,10 +35,13 @@
 
 .report-details-left-img {
   width: 109px;
-  height: 190px;
+  height: 174px;
   opacity: 1;
+  border-radius: 8px;
+  border: 1px solid #ddd;
   margin-bottom: 40px;
   transition: transform 0.3s ease;
+  transform: rotate(0deg);
 }
 
 .report-details-left-img:hover {
@@ -52,18 +55,22 @@
 }
 
 .report-details-right-title {
-  width: 1141px;
+  width: 1280px;
+  height: 174px;
   position: relative;
   opacity: 1;
-  left: -200px;
+  margin-left: -200px;
   font-family: 'Work Sans', sans-serif;
   font-weight: 600;
+  font-style: normal;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
   vertical-align: middle;
   color: #0B7492;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  margin-right: 0;
   text-align: left;
 }
 
@@ -76,9 +83,11 @@
   text-align: center;
   vertical-align: middle;
   color: #666;
-  margin: 0;
+  margin-top: -90px;
+  margin-bottom: 0;
+  margin-right: 0;
   position: relative;
-  left: -200px;
+  margin-left: -200px;
   padding: 8px 15px;
   border-radius: 20px;
   display: inline-block;
@@ -95,7 +104,7 @@
   cursor: pointer;
   transition: all 0.3s ease;
   border: 2px solid;
-  margin-right: 15px;
+ margin-left: -180px;
   margin-bottom: 10px;
 }
 
@@ -105,6 +114,7 @@
   position: relative;
   top: 15px;
   left: -200px;
+  margin-right: 20px;
   opacity: 1;
   border-radius: 20px;
   background: #A6E715;
@@ -125,8 +135,8 @@
     width: 230px;
     height: 38px;
     position: relative;
-    top: -30px;
-    left: 50px;
+    top: -35px;
+    margin-left: 70px;
     opacity: 1;
     border-radius: 20px;
     background: #104D72;
@@ -147,9 +157,7 @@
   grid-column: 1 / -1;
   position: relative;
   top: -80px;
-  background: #f8f9fa;
   left: -30px;
-  border-radius: 15px;
   padding: 25px;
   display: flex;
   align-items: center;
@@ -165,7 +173,7 @@
 
 .report-details-right-bottom-content {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   gap: 10px;
   align-items: center;
   margin-left: 50px;
@@ -195,11 +203,8 @@
   letter-spacing: 0%;
   text-align: center;
   vertical-align: middle;
-  color: #0B7492;
-  background: white;
+  color: #0B7492; 
   padding: 4px 12px;
-  border-radius: 15px;
-  border: 1px solid #e9ecef;
 }
 
 /* Vertical Lines for Metadata Separation */
@@ -215,8 +220,8 @@
   width: 90%;
   max-width: 1280px;
   position: relative;
-  top: -200px;
-  left: 50%;
+  top: -300px;
+  left: 45%;
   transform: translateX(-50%);
   opacity: 1;
   border-radius: 20px;
@@ -247,7 +252,7 @@
   height: 43px;
   position: relative;
   top: 25px;
-  left: 40px;
+  left: 10px;
   gap: -20px;
   transform: rotate(0deg);
   opacity: 1;
@@ -436,7 +441,7 @@
   opacity: 1;
   position: relative;
   top: 40px;
-  left: -20px;
+  left: 140px;
   transform: rotate(0deg);
 }
 
@@ -649,8 +654,8 @@
   
   .report-details-bottom-down-down,
   .features-container {
-    top: -50px;
-    margin-bottom: -50px;
+    top: -300px;
+    margin-bottom: 0;
     padding: 30px 15px;
   }
 }
