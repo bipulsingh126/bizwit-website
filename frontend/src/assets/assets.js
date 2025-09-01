@@ -95,6 +95,7 @@ import casebutton from '../assets/casebutton.png'
 import testi from '../assets/testi.png'
 import testi1 from '../assets/testi1.png'
 import testi2 from '../assets/testi2.png'
+import Footerlogo  from '../assets/Footerlogo.png'
 export const clients = [
   client1,
   client2,
@@ -161,6 +162,7 @@ export {
   testi2,
   mega1,
   headerbg,
+  Footerlogo,
   mega2,
   megaarrow,
   mega3,

@@ -1,8 +1,8 @@
 import React from "react";
 import "./Footer.css";
 import {
-  logo,
-  footer
+  footer,
+  Footerlogo
 } from "../assets/assets";
 
 const Footer = () => {
@@ -11,7 +11,7 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-top">
           <div className="footer-logo-section">
-            <img src={logo} alt="Bizwit Research" className="footer-logo" />
+            <img src={Footerlogo} alt="Bizwit Research" className="footer-logo1" />
             <p className="footer-tagline">
               Accelerate growth with research that transforms challenges into
               opportunities.

@@ -4,7 +4,7 @@
     width: 100%;
     max-width: 1400px;
     min-height: 350px;
-    margin: 40px auto;
+    margin: 1px auto 1px; /* top | right-left | bottom */
     padding: 40px;
     box-sizing: border-box;
     overflow: hidden;
@@ -32,12 +32,24 @@
     min-width: 250px;
     margin-bottom: 20px;
     margin-right: 70px;
+    position: relative; /* Anchor for absolutely positioned logo */
 }
 
 .footer-logo {
     width: 163px;
     height: 43px;
     margin-bottom: 15px;
+}
+
+/* Explicit styling for the new footer logo variant */
+.footer-logo1 {
+    width: 163px;
+    height: 43.0040779114px; /* as specified */
+    position: absolute;
+    top: -40px;
+    left: 30px;
+    transform: rotate(0deg);
+    opacity: 1;
 }
 
 .footer-tagline {
@@ -48,6 +60,7 @@
     color: #0B7492;
     max-width: 300px;
     margin-bottom: 15px;
+    margin-top: 30px;
 }
 
 .contact-info {
