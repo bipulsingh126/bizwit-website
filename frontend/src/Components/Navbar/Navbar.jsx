@@ -48,7 +48,7 @@ const Navbar = () => {
             Consulting Services <img className="drop-icon" src={drop} alt="Dropdown" />
           </Link>
         </li>
-        <li>
+        <li className="has-dropdown1">
           <Link to="/bizwit-insights" onClick={() => setIsMobileMenuOpen(false)}>Bizwit Insights</Link>
         </li>
       </ul>
