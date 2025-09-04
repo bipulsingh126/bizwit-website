@@ -31,6 +31,11 @@
   transform: rotate(0deg);
   border-radius: 24.51px;
   border: 0.82px solid #727272;
+  transition: all 0.3s ease;
+}
+
+.trending-card-wrapper:hover {
+  box-shadow: 0 0 0 3px #0B7492;
 }
 
 .trending-card {
@@ -147,8 +152,8 @@ border-radius: 50%;
 /* Responsive Styles */
 @media (max-width: 1200px) {
   .trending-card-wrapper {
-    width: 220px;
-    height: 220px;
+
+    height: 250px;
     flex-shrink: 0;
   }
   .card-content {
@@ -164,8 +169,7 @@ border-radius: 50%;
 
 @media (max-width: 992px) {
   .trending-card-wrapper {
-    width: 200px;
-    height: 200px;
+    height: 250px;
     flex-shrink: 0;
   }
   .card-content {
@@ -184,8 +188,8 @@ border-radius: 50%;
 
 @media (max-width: 768px) {
   .trending-card-wrapper {
-    width: 220px;
-    height: 220px;
+  
+    height: 250px;
     flex-shrink: 0;
   }
   .card-content {
