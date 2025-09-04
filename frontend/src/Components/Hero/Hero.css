@@ -84,8 +84,152 @@
 .cta-container {
   display: flex;
   align-items: center;
-  
   gap: 0.2rem;
+}
+
+.hero-button-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.hero-button-group:hover .hero-custom-button::before {
+  left: 0;
+}
+
+.hero-button-group:hover .hero-custom-button1::before {
+  left: 0;
+}
+
+.hero-button-group:hover {
+  transform: translateY(-2px);
+}
+
+.hero-button-group:hover .button-arrow {
+  transform: rotate(-45deg) translateX(3px);
+}
+
+.hero-custom-button {
+  width: 198px;
+  height: 44px;
+  background: linear-gradient(135deg, #A6E715 0%, #8BC34A 100%);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 32px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(166, 231, 21, 0.3);
+  top: 20px;
+  left: 10px;
+  transform: rotate(0deg);
+  opacity: 1;
+}
+
+.hero-custom-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #7FB110;
+  transition: left 0.4s ease;
+  z-index: 1;
+  border-radius: 32px;
+}
+
+.hero-custom-button:hover::before {
+  left: 0;
+}
+
+.hero-custom-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(127, 177, 16, 0.4);
+}
+
+.button-text,
+.button-arrow {
+  position: relative;
+  z-index: 2;
+  transition: all 0.3s ease;
+  margin: 0;
+}
+
+.hero-custom-button1 {
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  width: 44px;
+  height: 44px;
+  transform: rotate(0deg);
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background: #A6E715 ;
+  border: none;
+  border-radius: 50px;
+  margin-top: 40px;
+  margin-left: 5px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.hero-custom-button1::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: #A6E715;
+  transition: left 0.4s ease;
+  z-index: 2;
+  border-radius: 50px;
+}
+
+.hero-custom-button1:hover::before {
+  left: 0;
+}
+
+.hero-custom-button1:hover {
+  transform: translateY(-2px);
+}
+
+.hero-custom-button1:hover .button-arrow {
+  transform: rotate(-45deg) translateX(3px);
+}
+.button-arrow {
+  width: 19.93353809574167px;
+  height: 22.456702801705053px;
+  top: 1px;
+  left: -2px;
+  transform: rotate(-45deg);
+  opacity: 1;
+  color: #FFFFFF;
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: transform 0.3s ease;
+  z-index: 2;
+}
+
+.hero-custom-button:hover .button-arrow {
+  transform: translateX(3px);
 }
 
 .hero-cta-button {
@@ -220,6 +364,12 @@
     margin-top: 25px;
   }
   
+  .hero-custom-button {
+    width: 220px;
+    height: 40px;
+    font-size: 15px;
+  }
+  
   .hero-bottom-buttons {
     bottom: 1.8rem;
     width: 85%;
@@ -262,6 +412,12 @@
     width: 200px;
     height: 36px;
     margin-top: 22px;
+  }
+  
+  .hero-custom-button {
+    width: 200px;
+    height: 36px;
+    font-size: 14px;
   }
   
   .hero-bottom-buttons {
@@ -309,6 +465,12 @@
     width: 170px;
     height: 32px;
     margin-top: 18px;
+  }
+  
+  .hero-custom-button {
+    width: 170px;
+    height: 32px;
+    font-size: 13px;
   }
   
   .hero-bottom-buttons {
@@ -368,6 +530,12 @@
     width: 130px;
     height: 26px;
     margin-top: 12px;
+  }
+  
+  .hero-custom-button {
+    width: 130px;
+    height: 26px;
+    font-size: 12px;
   }
   
   .hero-bottom-buttons {

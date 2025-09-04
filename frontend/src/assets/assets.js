@@ -96,6 +96,7 @@ import testi from '../assets/testi.png'
 import testi1 from '../assets/testi1.png'
 import testi2 from '../assets/testi2.png'
 import Footerlogo  from '../assets/Footerlogo.png'
+import mobilelogo from '../assets/mobilelogo.png'
 export const clients = [
   client1,
   client2,
@@ -160,6 +161,7 @@ export {
   connect,
   testi1,
   testi2,
+  mobilelogo,
   mega1,
   headerbg,
   Footerlogo,

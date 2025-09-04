@@ -24,7 +24,14 @@ const Hero = () => {
           <span className="hero-subtitle">Consulting Partner</span>
         </h1>
         <div className="cta-container">
-         <img src={herobutton} className='hero-button' alt="" />
+          <div className="hero-button-group">
+            <button className="hero-custom-button">
+              <span className="button-text">Free Consultation</span>
+            </button>
+            <button className='hero-custom-button1'>
+              <span className="button-arrow">→</span>
+            </button>
+          </div>
         </div>
       </div>
       <div className="hero-bottom-buttons">

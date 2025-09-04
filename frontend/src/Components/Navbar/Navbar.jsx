@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { drop, logo } from "../../assets/assets";
+import { drop, logo, mobilelogo } from "../../assets/assets";
 import SearchPopup from "../SearchPopup/SearchPopup";
 
 const Navbar = () => {
@@ -16,7 +16,8 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-logo">
         <Link to="/">
-          <img src={logo} alt="Bizwit Research Logo" />
+          <img src={logo} alt="Bizwit Research Logo" className="desktop-logo" />
+          <img src={mobilelogo} alt="Bizwit Research Logo" className="mobile-logo" />
         </Link>
       </div>
       
