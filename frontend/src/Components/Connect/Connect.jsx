@@ -60,7 +60,7 @@ const Connect = () => {
           <p className="monthly-quote">"Your monthly dose of actionable research, industry insights, and smart consulting advice — only from Bizwit."</p>
         </div>
         <div className="bottom-right">
-          <div className="subscription-form">
+          <div className="subscription-form"> 
             <input type="email" placeholder="Type here..." />
             <button>SUBSCRIBE</button>
           </div>

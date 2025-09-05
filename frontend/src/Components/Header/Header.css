@@ -3,8 +3,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 1400px;
-    height: 157px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 125px;
     position: fixed;
     top: 0;
     left: 50%;
@@ -12,6 +11,11 @@
     z-index: 1000;
     background-color: white;
     opacity: 1;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-container.header-hidden {
+    transform: translateX(-50%) translateY(-100%);
 }
 
 .top-bar {
@@ -135,7 +139,8 @@
     align-items: center;
     padding: 10px 50px;
     background-color: white;
-    margin-top: 30px;
+    margin-top: 10px;
+    margin-bottom: -20px;
 }
 
 .logo {
@@ -297,7 +302,11 @@
 /* Responsive Design */
 @media (max-width: 1200px) {
     /* Keep desktop nav visible; allow wrapping to avoid overlap */
-    .header-container { height: 140px; }
+    .header-container { height: 120px; }
+
+    .header-container.header-hidden {
+        transform: translateX(-50%) translateY(-100%);
+    }
 
     .top-bar-links {
         padding: 8px 30px;
@@ -318,7 +327,11 @@
 }
 
 @media (max-width: 1024px) {
-    .header-container { height: 140px; }
+    .header-container { height: 120px; }
+
+    .header-container.header-hidden {
+        transform: translateX(-50%) translateY(-100%);
+    }
 
     /* At tablet and below, switch to hamburger and overlay menu */
     .mobile-menu-btn-header { display: flex; }
@@ -341,6 +354,11 @@
         gap: 0.75rem;
         display: none;
         border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: top 0.3s ease-in-out;
+    }
+
+    .header-container.header-hidden .nav-links {
+        top: 20px;
     }
 
     .nav-links.mobile-open { display: flex; }
@@ -351,6 +369,10 @@
         height: 120px;
         width: 100%;
         max-width: 100%;
+    }
+
+    .header-container.header-hidden {
+        transform: translateX(-50%) translateY(-100%);
     }
     
     .top-bar {
@@ -408,6 +430,11 @@
         gap: 1rem;
         display: none;
         border: 1px solid rgba(255, 255, 255, 0.2);
+        transition: top 0.3s ease-in-out;
+    }
+
+    .header-container.header-hidden .nav-links {
+        top: 20px;
     }
     
     .nav-links.mobile-open {
@@ -463,6 +490,10 @@
 @media (max-width: 480px) {
     .header-container {
         height: 100px;
+    }
+
+    .header-container.header-hidden {
+        transform: translateX(-50%) translateY(-100%);
     }
     
     .top-bar {
@@ -523,6 +554,10 @@
 @media (max-width: 360px) {
     .header-container {
         height: 90px;
+    }
+
+    .header-container.header-hidden {
+        transform: translateX(-50%) translateY(-100%);
     }
     
     .top-bar-links {

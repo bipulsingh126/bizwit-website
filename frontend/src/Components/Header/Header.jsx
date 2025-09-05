@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Header.css";
 import logo from "../../assets/BIZWITLOGO.png";
 import { Link, useNavigate, useLocation } from "react-router-dom";
@@ -8,6 +8,8 @@ import SearchPopup from "../SearchPopup/SearchPopup";
 const Header = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const navigate = useNavigate();
   const location = useLocation();
   
@@ -15,8 +17,45 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      
+      // Show header if:
+      // 1. At the top of the page (within 10px)
+      // 2. Scrolling up
+      // 3. Mobile menu is open
+      if (currentScrollY < 10) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY < lastScrollY || isMobileMenuOpen) {
+        // Scrolling up or mobile menu is open
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY && currentScrollY > 100) {
+        // Scrolling down and past 100px
+        setIsHeaderVisible(false);
+      }
+      
+      setLastScrollY(currentScrollY);
+    };
+
+    // Add scroll event listener
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    
+    // Cleanup
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, [lastScrollY, isMobileMenuOpen]);
+
+  // Ensure header is visible when mobile menu is open
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      setIsHeaderVisible(true);
+    }
+  }, [isMobileMenuOpen]);
+
   return (
-    <header className="header-container">
+    <header className={`header-container ${!isHeaderVisible ? 'header-hidden' : ''}`}>
       <div className="top-bar">
         <div className="top-bar-links">
           <Link className="top-bar-link" to="/about">

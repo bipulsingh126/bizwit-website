@@ -1,19 +1,20 @@
 import React from "react";
 import './Contect.css';
 import { contecticon1, contecticon2, contecticon3 } from "../../assets/assets";
+import Connect from "../../Components/Connect/Connect";
 
 const Contect = () => {
   return (
     <>
       <div className="contect-container">
-        <div className="contect-header">
-          <p className="contect-title">Let’s Connect</p>
+          <div className="contect-title-container">
+          <p className="contect-title">Let’s <span className="contect-span">Connect</span></p>
+          </div>
           <p className="contect-subtitle">
             We look forward to understanding your strategic vision and unlocking
             new insights together. We look forward to understanding your
             strategic vision and unlocking new insights together.{" "}
           </p>
-        </div>
         <div className="contect-info-container">
           <div className="contect-info-item">
             <div className="contect-icon-wrapper">
@@ -43,6 +44,12 @@ const Contect = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="contect-connect-container">
+        <Connect/>
+      </div>
+      <div>
+        
       </div>
     </>
   );
