@@ -97,6 +97,7 @@ import testi1 from '../assets/testi1.png'
 import testi2 from '../assets/testi2.png'
 import Footerlogo  from '../assets/Footerlogo.png'
 import mobilelogo from '../assets/mobilelogo.png'
+import contectpic from '../assets/contectpic.png'
 export const clients = [
   client1,
   client2,
@@ -153,6 +154,7 @@ export {
   Star8,
   Star9,
   Testimonials,
+  contectpic,
   card1,
   card2,
   card3,

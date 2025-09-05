@@ -1,21 +1,23 @@
 /* Page-wide background for Contact page */
 body {
-  background-color: #fdfaf5;
+  
   margin: 0;
   padding: 0;
 }
-
+.connect-wrapper1 {
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  margin-top: -650px;
+}
 .contect-container {
   text-align: center;
   padding: 50px 20px;
   font-family: sans-serif;
   max-width: 1200px;
   margin: 40px auto;
-  position: relative;
   min-height: 150vh;
-  background-color: #fdfaf5;
+  background-color: #fff;
 }
-
 .contect-header {
   position: relative;
   margin-bottom: 60px;
@@ -84,6 +86,7 @@ body {
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 30px;
+  
 }
 
 .contect-info-container {
@@ -135,6 +138,17 @@ body {
   margin: 0 0 5px 0;
   width: 250px;
 }
+.connect-container1 {
+  display: flex;
+  width: 1204px;
+  height: 820px;
+  margin: 50px auto;
+  background-color: #FFF9E8;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
 
 .contect-icon-subtitle {
   font-size: 14px;
@@ -152,20 +166,383 @@ body {
   color: #B4E717;
 }
 
-.contect-connect-container{
-  margin-top: -620px;
-  margin-left: 30px;
+.connect-form-section {
+  flex: 1;
+  padding: 50px;
+  background-color: #FFF1CE;
+}
+.schedule-consultant-tag {
+  display: inline-flex; /* Use flex to center content */
+  align-items: center;
+  justify-content: center;
+  width: 309px;
+  height: 56px;
+  border: 2px solid #E5E5E5;
+  color: #FF4040;
+  padding: 15px 20px;
+  border-radius: 54px;
+  font-size: 17px;
+  font-weight: 400;
+margin-bottom: 20px;
+  text-transform: uppercase;
+  box-sizing: border-box; /* Include padding in dimensions */
+  gap: 10px;
+}
+.connect-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #383838;
+  margin-bottom: 15px;
+}
+.connect-description {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0;
+  vertical-align: middle;
+  color: #555;
+  margin-bottom: 30px;
+}
+.contact-form .form-group,
+.contact-form .form-row {
+  margin-bottom: 20px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0;
+  color: #333;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form input[type="tel"],
+.contact-form textarea,
+.contact-form select {
   width: 100%;
-  max-width: 1280px;
+  height: 50px;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+}
+
+.form-group-half {
+  flex: 1;
+}
+
+.phone-input {
+  display: flex;
+}
+
+.phone-input select {
+  width: 120px;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.phone-input input[type="tel"] {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-group-checkbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  width: 156px;
+  height: 39px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+.form-group-checkbox input[type="checkbox"] {
+  width: auto;
   height: auto;
-  min-height: 753px;
+  margin: 0;
+}
+
+.form-group-checkbox label {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+}
+
+.form-group-checkbox input {
+  width: auto;
+}
+
+.schedule-consultation-btn {
+  width: 232px;
+  height: 39px;
+  background-color: #FF4040;
+  color: white;
+  border: none;
+  padding: 0;
+  border-radius: 27px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.schedule-consultation-btn:hover {
+  background-color: #d85a3e;
+}
+
+.connect-image-section {
+  flex: 1;
   position: relative;
-  transform: rotate(0deg);
-  opacity: 1;
-  background-color: #fdfaf5;
-  z-index: 1;
+}
+
+.connect-image-section img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 100% 0; /* Align image to the right */
+}
+
+.contact-info-bubble {
+  position: absolute;
+  bottom: 30px;
+  right: -0.40px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px 25px 15px 50px;
+  border-radius: 80px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  width: 523px;
+  height: 80px;
+  box-sizing: border-box; /* Ensure padding is included in height */
+}
+
+.contact-info-bubble .phone-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-color: #2A9D8F;
+  border-radius: 50%;
+  /* Simple phone icon using CSS */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>');
+  background-size: 18px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.contact-info-bubble p {
+  margin: 0;
+  color: #333;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+}
+
+.contact-info-bubble a {
+  color: #E76F51;
+  text-decoration: none;
+  font-weight: 600;
 }
 /* Hide the connect-bottom section in the Contact page */
 .contect-connect-container .connect-bottom {
   display: none;
+}
+.contect-pic-container{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 847px;
+  height: 530px;
+  position: relative;
+  left: 200px;
+  top: -100px;
+  transform: translateX(-50%);
+  margin: 100px auto 100px auto;
+  margin-bottom: -20px;
+  gap: 15px;
+  opacity: 1;
+  border-radius: 30px;
+}
+
+.contect-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+
+
+/* Contact section title and subtitle styles */
+.contect-connect-title {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #FF4040;
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  width: 148px;
+  height: 36px;
+  position: relative;
+  top: 30px;
+  left: 30px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 24px;
+  border: 2px solid #E5E5E5;
+  padding: 10px 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.contect-connect-container1{
+  width: 412px;
+  height: 530px;
+  position: absolute;
+  left: 868px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border-radius: 30px;
+  background: #FFF9EB;
+
+}
+
+.contect-connect-subtitle {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 30px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  color: #0B7492;
+  margin-top: 50px;
+  width: 330px;
+  height: 120px;
+  position: relative;
+  top: 20px;
+  left: 10px;
+  transform: rotate(0deg);
+  opacity: 1;
+  max-width: 400px;
+}
+
+.contect-connect-button {
+  width: 198px;
+  height: 44px;
+  background-color: #FF4040;
+  color: white;
+  border: none;
+  border-radius: 32px;
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 240px;
+  position: relative;
+ margin-left: 150px;
+  overflow: hidden;
+}
+
+.contect-connect-button:hover {
+  transform: translateY(-2px);
+  background-color: #0D7789;
+}
+
+.contect-connect-button-text {
+  margin: 0;
+}
+
+.contect-connect-button-arrow {
+  width: 44px;
+  height: 44px;
+  top: 440px;
+  left: 340px;
+  transform: rotate(-45deg);
+  opacity: 1;
+  background-color: #FF4040;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+  position: absolute;
+}
+
+.contect-connect-button-arrow-icon {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .contect-pic-container {
+    position: relative;
+    width: 100%;
+    left: 0;
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+  }
+  
+  .contect-pic-container > * {
+    height: 200px;
+  }
 }

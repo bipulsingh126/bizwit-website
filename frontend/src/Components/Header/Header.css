@@ -144,7 +144,7 @@
 }
 
 .logo {
-    margin-left: 30px;
+    margin-left: -10px;
     margin-bottom: -40px;
 }
 
@@ -224,8 +224,15 @@
     display: flex;
     align-items: center;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     margin: 0; /* spacing handled by gap on container */
+    padding: 10px 15px;
+    border-radius: 24px;
+    margin-right: -30px;
+}
+
+.nav-link:hover {
+    background: #6B6B6B33;
 }
 
 .nav-link1{
@@ -243,9 +250,15 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
     padding: 10px 15px;
     white-space: nowrap;
+    border-radius: 24px;
+}
+
+.nav-link1:hover {
+    background: #F1407E;
+    color: #FFFFFF;
 }
 .search-ico {
     cursor: pointer;
@@ -262,6 +275,18 @@
     width: 16.56px;
     height: 16.56px;
 }
+
+.drop-icon {
+    width: 10px;
+    height: 5px;
+    margin-left: 5px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    /* CSS filter to change PNG color to #104D72 */
+    filter: brightness(0) saturate(100%) invert(29%) sepia(99%) saturate(1000%) hue-rotate(196deg) brightness(95%) contrast(95%);
+}
+
 
 /* Mobile Menu Button */
 .mobile-menu-btn-header {

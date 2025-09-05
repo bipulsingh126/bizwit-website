@@ -1,17 +1,19 @@
-/* Connect Component Styles */
+/* Connect Component Styles - Mobile First */
 .connect-wrapper {
-  padding: 50px;
+  padding: clamp(20px, 4vw, 50px);
   background-color: #fdfaf5;
   font-family: Arial, sans-serif;
 }
 
 .connect-container {
   display: flex;
-  width: 1204px;
-  height: 820px;
-  margin: 50px auto;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1204px;
+  min-height: auto;
+  margin: clamp(20px, 4vw, 50px) auto;
   background-color: #FFF9E8;
-  border-radius: 20px;
+  border-radius: clamp(10px, 2vw, 20px);
   overflow: hidden;
   font-family: 'Inter', sans-serif;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -19,12 +21,13 @@
 
 .connect-form-section {
   flex: 1;
-  padding: 50px;
+  padding: clamp(20px, 4vw, 50px);
   background-color: #FFF1CE;
+  order: 2;
 }
 
 .schedule-consultant-tag {
-  display: inline-flex; /* Use flex to center content */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 309px;
@@ -37,44 +40,44 @@
   font-weight: 400;
   margin-bottom: 20px;
   text-transform: uppercase;
-  box-sizing: border-box; /* Include padding in dimensions */
+  box-sizing: border-box;
   gap: 10px;
 }
 
 .connect-title {
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  font-size: 40px;
-  line-height: 100%;
+  font-size: clamp(28px, 6vw, 40px);
+  line-height: 110%;
   letter-spacing: 0;
   color: #383838;
-  margin-bottom: 15px;
+  margin-bottom: clamp(12px, 3vw, 15px);
 }
 
 .connect-description {
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 20px;
-  line-height: 100%;
+  font-size: clamp(16px, 4vw, 20px);
+  line-height: 120%;
   letter-spacing: 0;
   vertical-align: middle;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: clamp(20px, 5vw, 30px);
 }
 
 .contact-form .form-group,
 .contact-form .form-row {
-  margin-bottom: 20px;
+  margin-bottom: clamp(15px, 4vw, 20px);
 }
 
 .contact-form label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: clamp(6px, 2vw, 8px);
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 100%;
+  font-size: clamp(16px, 3.5vw, 18px);
+  line-height: 110%;
   letter-spacing: 0;
   color: #333;
 }
@@ -85,23 +88,25 @@
 .contact-form textarea,
 .contact-form select {
   width: 100%;
-  height: 50px;
-  padding: 12px;
+  height: clamp(44px, 8vw, 50px);
+  padding: clamp(10px, 2.5vw, 12px);
   border: 1px solid #ddd;
-  border-radius: 8px;
+  border-radius: clamp(6px, 1.5vw, 8px);
   background-color: #fff;
-  font-size: 14px;
+  font-size: clamp(13px, 3vw, 14px);
   box-sizing: border-box;
 }
 
 .contact-form textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: clamp(80px, 15vw, 100px);
+  height: auto;
 }
 
 .form-row {
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: clamp(15px, 4vw, 20px);
 }
 
 .form-group-half {
@@ -110,30 +115,34 @@
 
 .phone-input {
   display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .phone-input select {
-  width: 120px;
-  border-right: none;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: clamp(6px, 1.5vw, 8px);
 }
 
 .phone-input input[type="tel"] {
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: clamp(6px, 1.5vw, 8px);
 }
 
 .form-group-checkbox {
   display: flex;
   align-items: center;
-  gap: 10px;
-  margin-bottom: 20px;
-  width: 156px;
-  height: 39px;
-  padding: 0 10px;
+  gap: clamp(8px, 2vw, 10px);
+  margin-bottom: clamp(15px, 4vw, 20px);
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  min-height: clamp(35px, 7vw, 39px);
+  padding: clamp(8px, 2vw, 10px);
   border: 1px solid #ddd;
-  border-radius: 2px;
+  border-radius: 4px;
   box-sizing: border-box;
 }
 
@@ -155,14 +164,15 @@
 }
 
 .schedule-consultation-btn {
-  width: 232px;
-  height: 39px;
+  width: 100%;
+  max-width: 280px;
+  height: clamp(44px, 8vw, 50px);
   background-color: #FF4040;
   color: white;
   border: none;
-  padding: 0;
-  border-radius: 27px;
-  font-size: 14px;
+  padding: clamp(10px, 2.5vw, 12px) clamp(15px, 4vw, 20px);
+  border-radius: clamp(20px, 5vw, 27px);
+  font-size: clamp(12px, 3vw, 14px);
   font-weight: 600;
   cursor: pointer;
   text-transform: uppercase;
@@ -170,6 +180,7 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  margin-top: clamp(10px, 3vw, 15px);
 }
 
 .schedule-consultation-btn:hover {
@@ -179,6 +190,8 @@
 .connect-image-section {
   flex: 1;
   position: relative;
+  order: 1;
+  min-height: clamp(250px, 40vw, 400px);
 }
 
 .connect-image-section img {
@@ -190,32 +203,32 @@
 
 .contact-info-bubble {
   position: absolute;
-  bottom: 30px;
-  right: -0.40px;
-  background-color: rgba(255, 255, 255, 0.9);
-  padding: 15px 25px 15px 50px;
-  border-radius: 80px;
+  bottom: clamp(15px, 3vw, 30px);
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: clamp(12px, 3vw, 15px) clamp(15px, 4vw, 25px) clamp(12px, 3vw, 15px) clamp(40px, 8vw, 50px);
+  border-radius: clamp(40px, 8vw, 80px);
   display: flex;
   align-items: center;
-  gap: 15px;
+  gap: clamp(10px, 3vw, 15px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  width: 523px;
-  height: 80px;
-  box-sizing: border-box; /* Ensure padding is included in height */
+  width: clamp(280px, 80%, 523px);
+  min-height: clamp(60px, 12vw, 80px);
+  box-sizing: border-box;
 }
 
 .contact-info-bubble .phone-icon {
   position: absolute;
-  left: 10px;
+  left: clamp(8px, 2vw, 10px);
   top: 50%;
   transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
+  width: clamp(24px, 5vw, 30px);
+  height: clamp(24px, 5vw, 30px);
   background-color: #2A9D8F;
   border-radius: 50%;
-  /* Simple phone icon using CSS */
   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>');
-  background-size: 18px;
+  background-size: clamp(14px, 3vw, 18px);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -226,10 +239,11 @@
   font-family: 'Work Sans', sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 18px;
-  line-height: 100%;
+  font-size: clamp(14px, 3.5vw, 18px);
+  line-height: 120%;
   letter-spacing: 0%;
   vertical-align: middle;
+  text-align: center;
 }
 
 .contact-info-bubble a {
@@ -241,28 +255,31 @@
 /* Bottom Subscription Section */
 .connect-bottom {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   max-width: 1204px;
-  margin: 40px auto 0;
-  padding: 30px 40px;
+  margin: clamp(20px, 5vw, 40px) auto 0;
+  padding: clamp(20px, 5vw, 30px) clamp(20px, 5vw, 40px);
   background-color: #FFF9EB;
-  border-radius: 8px;
+  border-radius: clamp(6px, 1.5vw, 8px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  gap: clamp(20px, 5vw, 30px);
+  text-align: center;
 }
 
 .bottom-left {
   flex: 1;
-  max-width: 50%;
-  margin-right: 30px;
+  width: 100%;
+  margin-right: 0;
 }
 
 .monthly-quote {
   font-family: 'Inter', sans-serif;
   font-weight: 600;
   font-style: normal;
-  font-size: 18px;
-  line-height: 100%;
+  font-size: clamp(16px, 3.5vw, 18px);
+  line-height: 120%;
   letter-spacing: 0;
   color: #007a7a;
   margin: 0;
@@ -272,35 +289,36 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-  max-width: 50%;
-
+  align-items: center;
+  gap: clamp(12px, 3vw, 15px);
+  width: 100%;
 }
 
 .subscription-form {
   display: flex;
-  width: 470px;
-  background-color: #f5f5f5;
-  border-radius: 20px;
+  flex-direction: column;
+  width: 100%;
+  max-width: 470px;
+  background-color: transparent;
+  border-radius: clamp(15px, 4vw, 20px);
   overflow: hidden;
-  height: 46px;
+  gap: clamp(10px, 2.5vw, 12px);
+  height: auto;
 }
 
 .subscription-form input[type="email"] {
   flex-grow: 1;
-  padding: 10px 15px;
+  padding: clamp(10px, 2.5vw, 12px) clamp(12px, 3vw, 15px);
   border: 1px solid #e0e0e0;
-  border-right: none;
   background-color: #f5f5f5;
-  font-size: 14px;
+  font-size: clamp(13px, 3vw, 14px);
   outline: none;
-  border-top-left-radius: 4px;
-  border-bottom-left-radius: 4px;
-  height: 100%;
+  border-radius: clamp(6px, 1.5vw, 8px);
+  height: clamp(44px, 8vw, 46px);
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
   color: #666;
+  text-align: center;
 }
 
 .subscription-form input[type="email"]::placeholder {
@@ -311,16 +329,16 @@
 .subscription-form button {
   background-color: #FF4040;
   color: white;
-  padding: 0 20px;
+  padding: clamp(10px, 2.5vw, 12px) clamp(15px, 4vw, 20px);
   border: none;
   cursor: pointer;
   font-weight: 600;
-  font-size: 14px;
+  font-size: clamp(12px, 3vw, 14px);
   text-transform: uppercase;
-  height: 100%;
+  height: clamp(44px, 8vw, 46px);
   font-family: 'Work Sans', sans-serif;
   letter-spacing: 0.5px;
-  border-radius: 0;
+  border-radius: clamp(6px, 1.5vw, 8px);
 }
 
 .subscription-form button:hover {
@@ -330,25 +348,29 @@
 .privacy-policy {
   display: flex;
   align-items: center;
-  font-size: 12px;
+  justify-content: center;
+  font-size: clamp(11px, 2.5vw, 12px);
   color: #666;
-  gap: 8px;
-  padding-left: 5px;
+  gap: clamp(6px, 1.5vw, 8px);
+  padding: 0;
   font-family: 'Work Sans', sans-serif;
-  margin-top: 5px;
+  margin-top: clamp(4px, 1vw, 5px);
+  text-align: center;
+  flex-wrap: wrap;
 }
 
 .privacy-policy input[type="checkbox"] {
   appearance: none;
   -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
+  width: clamp(12px, 3vw, 14px);
+  height: clamp(12px, 3vw, 14px);
   border: 1px solid #ccc;
   border-radius: 2px;
   outline: none;
   cursor: pointer;
   position: relative;
   background-color: white;
+  flex-shrink: 0;
 }
 
 .privacy-policy input[type="checkbox"]:checked {
@@ -370,148 +392,134 @@
   cursor: pointer;
   font-family: 'Work Sans', sans-serif;
   font-weight: 500;
-  font-size: 12px;
-  line-height: 100%;
+  font-size: clamp(11px, 2.5vw, 12px);
+  line-height: 120%;
   color: #0B7492;
   margin-bottom: 0;
+  text-align: center;
 }
 
 .privacy-policy input {
   margin: 0;
 }
 
-/* Responsive Styles */
-@media (max-width: 1250px) {
-  .connect-container, .connect-bottom {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 1024px) {
-  .connect-container,
-  .connect-bottom {
-    flex-direction: column;
-    height: auto; /* Adjust height for stacked layout */
-    width: 90%;
-  }
-
-  .connect-image-section {
-    min-height: 400px;
-    order: -1; /* Move image to the top */
-  }
-
-  .connect-form-section {
-      padding: 40px;
-  }
-
-  .connect-bottom {
-    gap: 30px;
-    text-align: center;
-  }
-
-  .bottom-left,
-  .bottom-right {
-    max-width: 100%;
-    align-items: center;
-  }
-
-  .bottom-right {
-    width: 100%;
-  }
-
-  .contact-info-bubble {
-    right: 50%;
-    transform: translateX(50%);
-    width: 80%;
-    text-align: center;
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-  .connect-wrapper {
-    padding: 20px 10px;
-  }
-
-  .connect-container, .connect-bottom {
-    width: 100%;
-    margin: 0;
-    border-radius: 0;
-  }
-
-  .connect-form-section {
-    padding: 30px 20px;
-  }
-
-  .connect-title {
-      font-size: 32px;
-  }
-
-  .connect-description {
-      font-size: 16px;
-  }
-
+/* Responsive Breakpoints */
+/* Small tablets and large phones (768px and up) */
+@media (min-width: 768px) {
   .form-row {
-    flex-direction: column;
-    gap: 20px;
+    flex-direction: row;
+    gap: clamp(15px, 3vw, 20px);
+  }
+
+  .phone-input {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .phone-input select {
+    width: 120px;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .phone-input input[type="tel"] {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
   }
 
   .subscription-form {
-      width: 100%;
+    flex-direction: row;
+    background-color: #f5f5f5;
+    gap: 0;
+    height: clamp(44px, 8vw, 46px);
+  }
+
+  .subscription-form input[type="email"] {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    text-align: left;
+  }
+
+  .subscription-form button {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+
+/* Large tablets and desktops (1024px and up) */
+@media (min-width: 1024px) {
+  .connect-container {
+    flex-direction: row;
+    height: auto;
+    min-height: 820px;
+  }
+
+  .connect-form-section {
+    order: 1;
+  }
+
+  .connect-image-section {
+    order: 2;
+    min-height: 820px;
+  }
+
+  .connect-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    gap: clamp(20px, 3vw, 30px);
+  }
+
+  .bottom-left {
+    max-width: 50%;
+    margin-right: clamp(20px, 3vw, 30px);
+  }
+
+  .bottom-right {
+    align-items: flex-start;
+    max-width: 50%;
   }
 
   .contact-info-bubble {
-    width: 90%;
-    padding: 15px;
-    font-size: 14px;
+    right: clamp(15px, 2vw, 30px);
+    left: auto;
+    transform: none;
+    width: clamp(400px, 45%, 523px);
   }
 }
 
+/* Extra small devices (phones, 480px and down) */
 @media (max-width: 480px) {
-    .schedule-consultant-tag {
-        width: 100%;
-        font-size: 14px;
-        height: auto;
-        padding: 12px 15px;
-    }
+  .connect-wrapper {
+    padding: 15px 5px;
+  }
 
-    .connect-title {
-        font-size: 28px;
-    }
+  .connect-container {
+    margin: 15px auto;
+    border-radius: 10px;
+  }
 
-    .schedule-consultation-btn {
-        font-size: 12px;
-    }
+  .contact-info-bubble {
+    flex-direction: column;
+    gap: 8px;
+    padding: 10px;
+    text-align: center;
+    width: 90%;
+  }
 
-    .subscription-form {
-        flex-direction: column;
-        background-color: transparent;
-        gap: 10px;
-        height: auto;
-    }
+  .contact-info-bubble .phone-icon {
+    position: static;
+    transform: none;
+    margin-bottom: 5px;
+  }
 
-    .subscription-form input[type="email"] {
-        border-radius: 4px;
-        border: 1px solid #e0e0e0;
-        text-align: center;
-        height: 46px;
-    }
-
-    .subscription-form button {
-        border-radius: 4px;
-        height: 46px;
-    }
-
-    .contact-info-bubble {
-        flex-direction: column;
-        gap: 10px;
-        padding: 10px;
-    }
-
-    .contact-info-bubble .phone-icon {
-        position: static;
-        transform: none;
-    }
+  .contact-info-bubble p {
+    font-size: 12px;
+    line-height: 130%;
+  }
 }
+
+
