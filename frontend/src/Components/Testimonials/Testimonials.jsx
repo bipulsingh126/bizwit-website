@@ -1,9 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./Testimonials.css";
 import testimonial_img from "../../assets/testimonial.png";
 import { testi, testi1, testi2 } from "../../assets/assets";
 
 const Testimonials = () => {
+  const navigate = useNavigate();
+
+  const handleReadAllClick = () => {
+    navigate('/testall');
+  };
+
   return (
     <div className="testimonials-container">
       <div className="testimonials-header">
@@ -22,7 +29,7 @@ const Testimonials = () => {
             questions — and found powerful answers.
           </p>
           <div className="button-rating-wrapper">
-            <button className="read-all-btn">Read All Testimonials</button>
+            <button onClick={handleReadAllClick} className="read-all-btn">Read All Testimonials</button>
             <div className="rating-container">
               <img
                 src={testimonial_img}

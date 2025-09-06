@@ -75,7 +75,9 @@ const Header = () => {
             <img className="storelogo" src={logo3} alt="Bizwit Research" />
           ) : location.pathname === "/reportDetails" ||
             location.pathname === "/bizchronicles" ||
-            location.pathname === "/contact" ? (
+            location.pathname === "/contact" ||
+            location.pathname=== '/testall'
+ ?  (
             <img className="detaillogo" src={logo1} alt="Bizwit Research" />
           ) : (
             <img className="alllogo" src={logo} alt="Bizwit Research" />
