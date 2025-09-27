@@ -294,9 +294,7 @@ const ReportStore = () => {
                     onClick={() => toggleCategory(category.name)}
                   >
                     <span className="category-name">{category.name}</span>
-                    <span className={`arrow ${expandedCategories[category.name] ? 'expanded' : ''}`}>
-                      ▼
-                    </span>
+                    
                   </div>
                   <div className={`subcategory-list ${expandedCategories[category.name] ? 'expanded' : ''}`}>
                     {category.subcategories.map((sub, subIndex) => (
@@ -320,7 +318,7 @@ const ReportStore = () => {
                   <div key={regionName} className="region-container">
                     <div className="region-header" onClick={() => toggleRegion(regionName)}>
                       <span className="region-name">{regionName}</span>
-                      <span className={`arrow ${expandedRegions[regionName] ? 'expanded' : ''}`}>▼</span>
+                      
                     </div>
                     <div className={`region-list ${expandedRegions[regionName] ? 'expanded' : ''}`}>
                       {regionData[regionName].map((country, index) => (

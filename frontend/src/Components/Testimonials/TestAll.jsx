@@ -1,5 +1,6 @@
 import "./TestAll.css";
-import { testi } from "../../assets/assets";
+import { testi, testimonial } from "../../assets/assets";
+import OurClient from "../OurClient/OurClient";
 
 const TestAll = () => {
   const testimonials = [
@@ -68,6 +69,22 @@ const TestAll = () => {
           <div className="arrow arrow-left"></div>
           <div className="arrow arrow-right"></div>
         </div>
+      </div>
+      <div className=" testimonial-container">
+         <div className="br2-left"></div> 
+        <div className=" testimonial">
+          <div className=" star-test">
+             <img className=" star-test1" src={ testimonial} alt="" />
+          </div>
+            <div className=" star-test2">
+            <p className="tile1">4.9</p>
+            <p className="tile2">Trust Pilot</p>
+            </div>
+        </div>
+           <div className="br2-right"></div>  
+      </div>
+      <div className=" our-client">
+        <OurClient/>
       </div>
     </div>
   );

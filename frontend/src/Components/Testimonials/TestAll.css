@@ -4,6 +4,7 @@
   padding: 130px 20px 40px 20px;
   font-family: 'Work Sans', sans-serif;
   min-height: 100vh;
+  margin-bottom: 30px;
 }
 
 /* Header Section */
@@ -70,7 +71,7 @@
   transform: rotate(0deg);
   opacity: 1;
   position: relative;
-  margin-bottom: 100px;
+  
 }
 
 
@@ -260,11 +261,13 @@
 .arrow-left::before {
   margin-left: -1px;
   -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .arrow-right::before {
   margin-right: 1px;
   -webkit-transform: rotate(-225deg);
+  transform: rotate(-225deg);
 }
 
 .arrow:hover {
@@ -275,6 +278,111 @@
 
 .arrow:hover::before {
   border-color: white;
+}
+.testimonial-container {
+  width: 1080px;
+  height: 80px;
+  left: 90px;
+  transform: rotate(0deg);
+  opacity: 1;
+  position: relative;
+  display: flex;
+  align-items: center;
+ margin-left: -30px;
+ margin-top: 30px;
+
+}
+
+.testimonial {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border-radius: 40px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  width: 236px;
+  height: 80px;
+  left:4px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border: 2px solid #E5E5E5;
+  position: relative;
+  margin-left: -20px;
+  margin-top: 80px;
+}
+
+.star-test {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star-test img {
+  width: 60.99983215332031px;
+  height: 60.99983215332031px;
+  top: 0px;
+  margin-left: 8px;
+  transform: rotate(0deg);
+  opacity: 1;
+  position: relative;
+  background: #D9D9D9;
+  border-radius: 50%;
+}
+
+.tile1 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: #FF4040;
+  margin: 0;
+  gap: 5px;
+}
+
+.tile2 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #FF4040;
+  margin: 0;
+}
+
+.star-test p:not(.tile1) {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-size: 12px;
+  color: #FF4040;
+  margin: 0;
+}
+
+.br2-left {
+  width: 523px;
+  height: 0px;
+  top: 41px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border: 2px solid #E5E5E5;
+  position: relative;
+  margin-left: -20px;
+}
+
+.br2-right {
+  width: 523px;
+  height: 0px;
+  top: 41px;
+  transform: rotate(0deg);
+  opacity: 1;
+  border: 2px solid #E5E5E5;
+  position: relative;
+}
+
+/* Hide OUR CLIENTS tag specifically on TestAll page */
+.test-page-container .our-client-tag {
+  display: none;
 }
 
 /* Responsive Design */
