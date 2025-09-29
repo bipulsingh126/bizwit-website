@@ -162,7 +162,7 @@ const Navbar = () => {
                   <div className="capabilities-column">
                     <h3 className="column-title1" id="full-time-equivalent">Full Time Equivalent (FTE)</h3>
                     <div className="fte-content">
-                      <Link to="/content-lead-generation" 
+                      <Link to="/contentled" 
                             className="fte-highlight" 
                             aria-label="Content Lead Demand Generation services"
                             onClick={() => { setShowCapabilitiesDropdown(false); setIsMobileMenuOpen(false); }}>

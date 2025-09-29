@@ -98,6 +98,9 @@ import testi2 from '../assets/testi2.png'
 import Footerlogo  from '../assets/Footerlogo.png'
 import mobilelogo from '../assets/mobilelogo.png'
 import contectpic from '../assets/contectpic.png'
+import contentled from '../assets/contentled.png'
+import lead from '../assets/lead.png'
+import billon from '../assets/billon.png'
 export const clients = [
   client1,
   client2,
@@ -149,6 +152,7 @@ export {
   R,
   Rectangle,
   Star10,
+  lead,
   Star3,
   Star5,
   Star8,
@@ -169,6 +173,8 @@ export {
   Footerlogo,
   mega2,
   megaarrow,
+  contentled,
+  billon,
   mega3,
   str1,
   str2,

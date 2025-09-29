@@ -143,7 +143,8 @@ const Header = () => {
             ) : location.pathname === "/reportDetails" ||
               location.pathname === "/bizchronicles" ||
               location.pathname === "/contact" ||
-              location.pathname=== '/testall'
+              location.pathname=== '/testall' ||
+              location.pathname==='/ContentLed'
    ?  (
               <img className="detaillogo" src={logo1} alt="Bizwit Research" />
             ) : (
@@ -227,7 +228,7 @@ const Header = () => {
                   <div className="capabilities-column">
                     <h3 className="column-title1" id="full-time-equivalent">Full Time Equivalent (FTE)</h3>
                     <div className="fte-content">
-                      <Link to="/content-lead-generation" 
+                      <Link to="/contentled" 
                             className="fte-highlight" 
                             aria-label="Content Lead Demand Generation services"
                             onClick={() => { setShowCapabilitiesDropdown(false); setIsMobileMenuOpen(false); }}>

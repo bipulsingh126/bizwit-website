@@ -12,6 +12,7 @@ import SegmentCompanies from "./Components/reportDetails/SegmentCompanies";
 import BizChronicle from "./Pages/BizChronicles/BizChronicle";
 import Contect from "./Pages/ContectUs/Contect";
 import TestAll from "./Components/Testimonials/TestAll";
+import ContentLed from "./Components/Content-Led/ContentLed";
 
 
 
@@ -57,6 +58,7 @@ const App = () => {
         <Route path="/bizchronicles" element={<BizChronicle/>} />
         <Route path="/contact" element={<Contect/>}/>
         <Route path="/testall" element={<TestAll/>} />
+        <Route path="/contentled" element={<ContentLed/>} />
       </Routes>
       <Footer />
       <Copyright />
