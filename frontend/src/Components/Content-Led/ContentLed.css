@@ -341,7 +341,7 @@
   margin-top: 10px;
   font-size: 24px;
   font-weight: 700;
-  color: #333;
+  color: #0B7492;
   font-family: 'Work Sans', sans-serif;
 }
 
@@ -372,48 +372,168 @@
   letter-spacing: 0%;
   vertical-align: middle;
 }
-
-/* Responsive */
-@media (max-width: 992px) {
-  .content-led .cl-content {
-    max-width: 70%;
-    padding: 20px 40px;
-  }
-  .content-led .cl-title {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 768px) {
-  .content-led .cl-container {
-    height: auto;
-    min-height: 450px;
-  }
-  .content-led .cl-content {
-    max-width: 100%;
-    padding: 40px;
-    text-align: center;
-  }
-  .content-led .cl-overlay {
-    background: rgba(0, 0, 0, 0.6);
-  }
-  .content-led .cl-actions {
-    justify-content: center;
-  }
-}
-
-.underline {
-  position: absolute;
-  width: 420px;
-  height: 0px;
-  top: 300px;
-  left: 430px;
+.cl-container4 {
+  position: relative;
+  width: 1263.1419677734375px;
+  height: 542.699951171875px;
+  top: 60px;
+  left: 88px;
   opacity: 1;
-  transform: rotate(90deg);
-  border: 3px solid #A6E715;
-  border-width: 3px;
+  transform: rotate(0deg);
+  margin: 50px 0px auto;
+  margin-bottom: 100px;
+}
+.cl-media10 {
+  position: absolute;
+  width: 220px;
+  height: 43px;
+  left: 450px;
+  top: -60px;
+  opacity: 1;
+  transform: rotate(0deg);
+  border-radius: 24px;
+  border-width: 2px;
+  padding: 10px 20.5px;
+  gap: 10px;
+  border: 2px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cl-title10 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 100%;
+  width: 179px;
+  height: 23px;
+  opacity: 1;
+  transform: rotate(0deg);
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FF4040;
+}
+
+/* What We Offer Section */
+.what-we-offer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 50px; /* Increased gap to ensure cards don't overlap */
+  margin-top: 80px;
+margin-right: 110px;
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+}
+
+.offer-card {
+  position: relative;
+  background: #4694A3;
+   transform: rotate(-170deg);
+  border-radius: 25px;
+  padding: 30px;
+  width: 350px;
+  height: 400px; /* Changed to auto for flexible content */
+  min-height: 300px; /* Set a min-height */
+  box-shadow: 0 4px 15px rgba(78, 59, 59, 0.05);
+  z-index: 2;
+  display: flex;
+  flex-direction: column; 
+  z-index: -1;
+  margin-top: 60px;
+}
+
+.offer-card::after {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: -0px;
+  width: 350px;
+  height: 400px;
+  background: #FFFFFF; /* Teal background color */
+  border-radius: 25px;
+  z-index: -1;
+  transform: rotate(-10deg);
+}
+
+/* Adjust the second card's background to be lighter */
+.offer-card:nth-child(1)::before {
+  background: #4fa3b8; /* Lighter teal */
+  opacity: 0.4;
+}
+
+/* Adjust the third card's background to be even lighter */
+.offer-card:nth-child(3)::before {
+  background: #7fbfcfa8; /* Even lighter teal */
+  opacity: 0.3;
+}
+
+.offer-card h3 {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  color: #0B7492; /* Teal color for title */
+  margin-bottom: 20px;
+  rotate: -190deg;
+  margin-top: 280px;
+}
+
+.offer-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  rotate: -190deg;
+  margin-top: -250px;
+}
+
+.offer-card li {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  color: #383838;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  padding-left: 20px;
+  position: relative;
+}
+
+.offer-card li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #0B7492; /* Teal bullet point */
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+/* Responsive adjustments for the cards */
+@media (max-width: 1200px) {
+  .what-we-offer-cards {
+    gap: 60px;
+  }
 }
 
 
 
+/* responsive degine  */
+@media (max-width: 768px) {
+  .what-we-offer-cards {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px; /* Keep a larger gap for stacked cards */
+  }
+  
+  .offer-card {
+    width: 90%;
+    max-width: 400px;
+  }
+  
+}
 
+  

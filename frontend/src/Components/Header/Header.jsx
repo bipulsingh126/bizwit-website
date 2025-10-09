@@ -144,7 +144,7 @@ const Header = () => {
               location.pathname === "/bizchronicles" ||
               location.pathname === "/contact" ||
               location.pathname=== '/testall' ||
-              location.pathname==='/ContentLed'
+              location.pathname==='/ContentLed' 
    ?  (
               <img className="detaillogo" src={logo1} alt="Bizwit Research" />
             ) : (

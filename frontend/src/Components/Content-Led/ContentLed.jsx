@@ -98,6 +98,45 @@ Content-led demand generation focuses on attracting, nurturing, and converting p
       </div>
     </div>
     </RootTag>
+    <div div className="cl-container4">
+      <div className="cl-media10">
+        <p className=" cl-title10"> WHAT WE OFFER?</p>
+      </div>
+      <div className="what-we-offer-cards">
+        <div className="offer-card">
+          <h3>Asset Creation & Optimization</h3>
+          <ul>
+            <li>Whitepapers, eBooks, Blog series, infographics</li>
+            <li>SEO-optimized + gated content</li>
+          </ul>
+        </div>
+        <div className="offer-card">
+          <h3>Content Strategy & Planning</h3>
+          <ul>
+            <li>Persona mapping</li>
+            <li>Journey funnel alignment</li>
+            <li>Editorial Calendar</li>
+          </ul>
+        </div>
+        <div className="offer-card">
+          <h3>Distribution & Lead Capture</h3>
+          <ul>
+            <li>Email + LinkedIn campaigns</li>
+            <li>Media partnerships</li>
+            <li>Performance monitoring</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+            {/* OUR 6-STEP DEMAND GEN ENGINE */}
+    <div className="demand-gen-engine" >
+            <div className="gen-title">
+              <p className="gen-title1">OUR 6-STEP DEMAND GEN ENGINE</p>
+            </div>
+            <div>
+              
+            </div>
+    </div>
     </div>
   );
 };
