@@ -107,7 +107,7 @@ import demandgen3 from '../assets/DEMANDGENENGINE3.png'
 import demandgen4 from '../assets/DEMANDGENENGINE4.png'
 import demandgen5 from '../assets/DEMANDGENENGINE5.png'
 import demandgen6 from '../assets/DEMANDGENENGINE6.png'
-
+import clientimpect from '../assets/clientimpect.png'
 export const clients = [
   client1,
   client2,
@@ -165,6 +165,7 @@ export {
   Star8,
   Star9,
   Testimonials,
+  clientimpect,
   contectpic,
   demandgen1,
   demandgen2,

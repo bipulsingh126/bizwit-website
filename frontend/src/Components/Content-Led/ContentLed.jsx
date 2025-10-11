@@ -10,6 +10,7 @@ import {
   demandgen6,
   lead,
 } from '../../assets/assets';
+import clientImpactImage from '../../assets/clientimpect.png';
 
 /**
  * ContentLed Section
@@ -167,34 +168,97 @@ const ContentLed = ({
         </div>
       </div>
       {/* OUR 6-STEP DEMAND GEN ENGINE */}
+      
+
       <div className="demand-gen-engine">
         <div className="gen-title">
           <p className="gen-title1">OUR 6-STEP DEMAND GEN ENGINE</p>
         </div>
-        <div className="gen-image3">
-          <div className="gen-images">
-            <div className="gen-images-container">
-              <div className="gen-image2">
-                <img src={demandgen1} alt="" className="gen-image1" />
-              </div>
-              <div className="gen-image2">
-                <img src={demandgen2} alt="" className="gen-image1" />
-              </div>
-              <div className="gen-image2">
-                <img src={demandgen3} alt="" className="gen-image1" />
-              </div>
-
-              <div className="gen-image2">
-                <img src={demandgen4} alt="" className="gen-image1" />
-              </div>
-
-              <div className="gen-image2">
-                <img src={demandgen6} alt="" className="gen-image1" />
-              </div>
-              <div className="gen-image2">
-                <img src={demandgen5} alt="" className="gen-image1" />
+        <div className="timeline-container">
+          <div className="timeline-step">
+            <div className="timeline-icon-container timeline-icon-bottom">
+              <div className="timeline-icon">
+                <img src={demandgen1} alt="" />
               </div>
             </div>
+            <div className="timeline-label timeline-label-bottom">CONTENT IDEATION</div>
+          </div>
+          <div className="timeline-step">
+            <div className="timeline-label timeline-label-top">PERSONA MAPPING</div>
+            <div className="timeline-icon-container timeline-icon-top">
+              <div className="timeline-icon">
+                <img src={demandgen2} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="timeline-step">
+            <div className="timeline-icon-container timeline-icon-bottom">
+              <div className="timeline-icon">
+                <img src={demandgen3} alt="" />
+              </div>
+            </div>
+            <div className="timeline-label timeline-label-bottom">ASSERT CREATION</div>
+          </div>
+          <div className="timeline-step">
+            <div className="timeline-label timeline-label-top">CHANNEL DISTRIBUTION</div>
+            <div className="timeline-icon-container timeline-icon-top">
+              <div className="timeline-icon">
+                <img src={demandgen4} alt="" />
+              </div>
+            </div>
+          </div>
+          <div className="timeline-step">
+            <div className="timeline-icon-container timeline-icon-bottom">
+              <div className="timeline-icon">
+                <img src={demandgen5} alt="" />
+              </div>
+            </div>
+            <div className="timeline-label timeline-label-bottom">LEAD QUALIFICATION</div>
+          </div>
+          <div className="timeline-step">
+            <div className="timeline-label timeline-label-top">ROI REPORTING</div>
+            <div className="timeline-icon-container timeline-icon-top">
+              <div className="timeline-icon">
+                <img src={demandgen6} alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Client Impact Section */}
+      <div className="client-impact-section">
+        <div className="client-impact-title-container">
+          <h2 className="client-impact-title">CLIENT IMPACT</h2>
+        </div>
+        <div className="client-impact-grid">
+          <div className="impact-card impact-card-large">
+            <p>Faster project delivery</p>
+            <div className="impact-content">
+              <span className="impact-value">↑60%</span>
+              <div className="client-impact-image-wrapper">
+                <img src={clientImpactImage} className='clientImpactImage' alt="Client Impact Chart" />
+              </div>
+            </div>
+          </div>
+          <div className="impact-card">
+            <p>FTEs deployed across 7 countries</p>
+            <span className="impact-value large-text">60+</span>
+          </div>
+          <div className="impact-card impact-card-large">
+            <p>Client retention rate</p>
+            <div className="impact-content">
+              <span className="impact-value">↑60%</span>
+              <div className="bar-chart-container">
+                <div className="bar-chart-bar bar-1"></div>
+                <div className="bar-chart-bar bar-2"></div>
+                <div className="bar-chart-bar bar-3"></div>
+              </div>
+            </div>
+          </div>
+          <div className="impact-card">
+            <p>Output improvement in long-term support</p>
+            <span className="impact-value large-text">2x</span>
           </div>
         </div>
       </div>
