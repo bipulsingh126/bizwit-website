@@ -101,6 +101,13 @@ import contectpic from '../assets/contectpic.png'
 import contentled from '../assets/contentled.png'
 import lead from '../assets/lead.png'
 import billon from '../assets/billon.png'
+import demandgen1 from '../assets/DEMANDGENENGINE1.png'
+import demandgen2 from '../assets/DEMANDGENENGINE2.png'
+import demandgen3 from '../assets/DEMANDGENENGINE3.png'
+import demandgen4 from '../assets/DEMANDGENENGINE4.png'
+import demandgen5 from '../assets/DEMANDGENENGINE5.png'
+import demandgen6 from '../assets/DEMANDGENENGINE6.png'
+import clientimpect from '../assets/clientimpect.png'
 export const clients = [
   client1,
   client2,
@@ -158,7 +165,14 @@ export {
   Star8,
   Star9,
   Testimonials,
+  clientimpect,
   contectpic,
+  demandgen1,
+  demandgen2,
+  demandgen3,
+  demandgen4,
+  demandgen5,
+  demandgen6,
   card1,
   card2,
   card3,
