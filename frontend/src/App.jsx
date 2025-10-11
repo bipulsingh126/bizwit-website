@@ -13,6 +13,8 @@ import BizChronicle from "./Pages/BizChronicles/BizChronicle";
 import Contect from "./Pages/ContectUs/Contect";
 import TestAll from "./Components/Testimonials/TestAll";
 import ContentLed from "./Components/Content-Led/ContentLed";
+import Fte from "./Pages/Fte";
+import MarketShareGainSolutions from "./Pages/MarketShareGainSolutions";
 
 
 
@@ -59,6 +61,8 @@ const App = () => {
         <Route path="/contact" element={<Contect/>}/>
         <Route path="/testall" element={<TestAll/>} />
         <Route path="/contentled" element={<ContentLed/>} />
+        <Route path="/fte" element={<Fte />} />
+        <Route path="/marketshare" element={<MarketShareGainSolutions/>}/>
       </Routes>
       <Footer />
       <Copyright />

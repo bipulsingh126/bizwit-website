@@ -1,0 +1,126 @@
+:root{
+  --border:#e8ebf0;
+  --accent:#FF4040;
+  --teal:#0b7a8b;
+  --bg:#fff;
+}
+
+.frame{
+  width: 1350px;
+  height: 508px;
+  top: 50px;
+  margin: 0 auto;
+  position: relative;
+  background: var(--bg);
+  overflow: hidden;
+  padding-top: 12px;
+  margin-bottom: 100px;
+}
+
+.frame-pill{
+  display: block;
+  width: max-content;
+  margin: 0 auto 16px;       
+  padding: 10px 16px;
+  border: 1px solid #f0d9d9;
+  color: var(--accent);
+  background: #fff;
+  border-radius: 999px;
+  font-size: 20px;
+  font-weight: 400;
+  letter-spacing: .4px;
+  text-transform: uppercase;
+}
+
+/* GRID: 3 cards of 420px with exact gaps that fit 1350px */
+.cards{
+  /* 3 * 420 = 1260; remaining = 90; split into two 45px gaps */
+  width: 1350px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 420px);
+  column-gap: 45px;
+  row-gap: 0;
+  justify-content: center;   /* keep centered if frame width changes later */
+}
+
+/* CARD: fixed 420x420, centered content */
+.card{
+  width: 420px;
+  height: 420px;
+  position: relative;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;   /* vertically center image and title block */
+  text-align: center;
+}
+
+/* Notches (top & bottom) */
+.card .notch{
+  position: absolute;
+  left: 50%;
+  width: 44px;
+  height: 22px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  pointer-events: none;
+}
+.card .notch-top{ top: -1px; }
+.card .notch-bottom{ bottom: -1px; }
+
+.card .notch::before{
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  width: 44px; height: 44px;
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  box-shadow: 0 0 0 100vmax #fff;
+  clip-path: inset(0 0 50% 0);
+}
+.card .notch-bottom::before{ clip-path: inset(50% 0 0 0); }
+
+/* IMAGE: fixed 100x100, spaced from title */
+.card-img{
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  display: block;
+  margin-bottom: 22px;       /* space between image and title */
+}
+
+/* TITLE: fixed visual style; center in card */
+.card-title{
+  width: 260px;              /* wider than 157 to allow two-line titles */
+  max-width: 90%;
+  margin: 0;
+  font-family: "Work Sans", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 1.1;
+  letter-spacing: 0;
+  text-align: center;
+  color: #0B7492;
+}
+
+/* Responsive: stack cards under 960px while keeping fixed card size */
+@media (max-width: 960px){
+  .frame{
+    width: 100%;
+    height: auto;            /* allow growth on small screens */
+    padding: 12px 12px 24px;
+  }
+  .cards{
+    width: 100%;
+    grid-template-columns: 420px;
+    justify-content: center;
+    row-gap: 20px;
+    column-gap: 0;
+  }
+}

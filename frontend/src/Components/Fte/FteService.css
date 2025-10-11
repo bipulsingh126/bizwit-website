@@ -1,0 +1,177 @@
+.fte-services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+}
+
+.services-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.services-title {
+    font-size: 20px;
+    font-weight: 500;
+    color: #FF4040;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 12px 40px;
+    border: 2px solid #E5E5E5;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.service-card {
+    background: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 40px 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.service-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.service-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #0d7a8a;
+    margin: 0 0 15px 0;
+    line-height: 1.3;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-description {
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0;
+    text-align: center;
+    color: #555;
+    margin: 0;
+}
+
+.services-action {
+    text-align: left;
+    padding-left: 0;
+}
+
+.request-proposal-btn {
+    background-color: #FF4040;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 40px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(255, 82, 82, 0.3);
+}
+
+.request-proposal-btn:hover {
+    background-color: #e04848;
+    box-shadow: 0 6px 16px rgba(255, 82, 82, 0.4);
+    transform: translateY(-2px);
+}
+
+.request-proposal-btn:active {
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+}
+
+@media (max-width: 768px) {
+    .fte-services-container {
+        padding: 40px 20px;
+    }
+
+    .services-title {
+        font-size: 16px;
+        padding: 10px 30px;
+    }
+
+    .services-grid {
+        gap: 20px;
+    }
+
+    .service-card {
+        padding: 30px 20px;
+    }
+
+    .service-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .service-title {
+        font-size: 16px;
+        min-height: 44px;
+    }
+
+    .service-description {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .services-action {
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .services-title {
+        font-size: 14px;
+        padding: 10px 25px;
+    }
+
+    .request-proposal-btn {
+        padding: 12px 35px;
+        font-size: 13px;
+    }
+}
