@@ -1,5 +1,5 @@
 :root{
-  --pill:#ff6a6a;
+  --pill:#FF4040;
   --left-bg:#f0f4f5;
   --bar1:#0b6e82;
   --bar2:#1f8192;
@@ -18,16 +18,18 @@
 
 /* Centered pill */
 .sf-pill{
-  display:inline-block;
-  margin: 0 auto 18px;
-  padding: 8px 16px;
+ display: block;
+  width: max-content;
+  margin: 0 auto 16px;       
+  padding: 10px 16px;
   border: 1px solid #f0d9d9;
   color: var(--pill);
   background: #fff;
   border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: .4px;
+  text-transform: uppercase;
 }
 
 /* Two-column row */

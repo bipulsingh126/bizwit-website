@@ -1,5 +1,5 @@
 :root{
-  --pill:#ff6a6a;
+  --pill:#FF4040;
   --teal:#0B7492;
   --ring:#0B7492;
   --line:#cbd5db;
@@ -16,16 +16,18 @@
 
 /* Pill heading */
 .wc-pill{
-  display:inline-block;
-  padding: 8px 16px;
+ display: block;
+  width: max-content;
+  margin: 0 auto 16px;       
+  padding: 10px 16px;
   border: 1px solid #f0d9d9;
   color: var(--pill);
   background: #fff;
   border-radius: 999px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 20px;
+  font-weight: 400;
   letter-spacing: .4px;
-  margin: 0 auto 18px;
+  text-transform: uppercase;
 }
 
 .wc-grid{
