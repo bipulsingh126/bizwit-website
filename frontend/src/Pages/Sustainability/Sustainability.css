@@ -1,0 +1,474 @@
+/* Container + spacing */
+.why-sustainability-container{
+  padding: 32px 16px 24px;
+}
+
+.common-tag-container{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Two-column layout */
+.why-grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 480px 1fr;    /* image | copy */
+  gap: 28px;
+  align-items: start;
+}
+
+/* Media */
+.why-media{
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.why-img{
+  width: 584px;
+height: 313px;
+    object-fit: cover;
+border-radius: 10px;
+  display: block;
+}
+
+/* Copy */
+.why-copy p{
+  margin: 0 0 12px 0;
+  color: #4b5563;
+  font: 400 16px/1.6 "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+.why-copy p:last-child{
+  margin-bottom: 0;
+}
+
+/* Responsive */
+@media (max-width: 960px){
+  .why-grid{
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+
+/* Container */
+.svc{
+  padding: 32px 16px 56px;
+}
+
+/* Tag pill */
+.svc__tag-wrap{
+  max-width: 1200px;
+  margin: 0 auto 24px;
+  display: flex;
+  justify-content: center;
+}
+.svc__tag{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #f8f9fb;
+  border: 1px solid #f1f1f3;
+  color: #ef4444;
+  font: 600 12px/1.1 "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: .02em;
+  text-transform: uppercase;
+}
+
+/* Grid */
+.svc__grid{
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Card container */
+.svc-card{
+  position: relative;
+  display: grid;
+  place-items: center;
+  padding: 28px 0;
+}
+
+/* Teal background skate */
+.svc-card__skate{
+  position: absolute;
+  inset: 22px 18px 22px 18px;
+  background: #2aa5a1;
+  border-radius: 24px 60px 24px 60px;
+  transform: rotate(10deg);
+  z-index: 0;
+  filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
+}
+
+/* White card */
+.svc-card__inner{
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #eef1f4;
+  width: 100%;
+  max-width: 360px;
+  min-height: 300px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Title */
+.svc-card__title{
+  margin: 0 0 12px 0;
+  color: #0B7492;
+  font: 800 22px/1.15 "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Icon */
+.svc-card__icon{
+  width: 56px;
+  height: 56px;
+  margin: 6px 0 12px;
+  display: grid;
+  place-items: center;
+}
+.svc-card__icon img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Description */
+.svc-card__desc{
+  margin: 0;
+  color: #4b5563;
+  font: 400 14px/1.6 "Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  max-width: 30ch;
+}
+
+/* Responsive */
+@media (max-width: 1100px){
+  .svc__grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 720px){
+  .svc__grid{
+    grid-template-columns: 1fr;
+  }
+  .svc-card__inner{
+    max-width: 520px;
+  }
+  .svc-card__skate{
+    inset: 18px 14px 18px 14px;
+    transform: rotate(-4deg);
+  }
+}
+
+
+/* ESG Section */
+.esg-section{
+  max-width: 1190.222px;      
+  min-height: 704px;         
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:48px;
+  padding:48px 16px;
+  margin:0 auto;               
+  position: relative;
+}
+
+/* Left column acts as host for the figure */
+.esg-left{
+  display:flex;
+  position: relative;       
+  gap:24px;
+  flex:1 1 50%;
+}
+
+.esg-figure{
+  position: relative;          
+  width: 333.258px;            
+  height: 333.258px; 
+top: -50px;
+left: 10px;
+         }
+
+/* Circle image fills the figure box */
+.esg-circle{
+  position:absolute;
+  inset:0;                    
+  width:100%;
+  height:100%;
+  object-fit:contain;          
+  display:block;
+  z-index:1;                   
+}
+
+/* Text on top of the circle */
+.esg-copy{
+  position:absolute;
+  inset:0;
+  top: 175px;
+  left: 95px;                     
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding:24px 24px 24px 40px; 
+  z-index:2;                  
+  text-align:left;
+}
+
+/* Heading and paragraph styling */
+.esg-copy h2{
+  position: relative;
+  width: 486px;
+height: 112px;
+top: -15px;
+ font-family: Work Sans;
+font-weight: 700;
+font-style: Bold;
+font-size: 48px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #0B7492;
+margin:0 0 25px 0;               
+}
+
+.esg-copy p{
+  width: 448px;
+height: 92px;
+top: 382px;
+font-family: Work Sans;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color:#383838;
+}
+
+/* Right column and funnel image */
+.esg-right{
+  flex:1 1 50%;
+  display:flex;
+  justify-content:center;
+}
+.esg-funnel{
+  width:100%;
+  max-width:520px;
+  height:auto;
+  display:block;
+}
+
+/* Responsive: stack and scale down while keeping intent */
+@media (max-width: 960px){
+  .esg-section{
+    flex-direction:column;
+    text-align:center;
+    min-height:auto;           /* allow height to grow with content */
+  }
+
+  .esg-left{
+    justify-content:center;
+  }
+
+  .esg-figure{
+    width:220px;               /* mobile circle size */
+    height:220px;
+    transform: translate(0,0); /* center the figure on mobile [web:74] */
+    margin-bottom:16px;
+  }
+
+  .esg-copy{
+    align-items:center;
+    padding:12px;
+  }
+
+  .esg-copy h2{ font-size:32px; }
+}
+
+
+/* WHY CHOOSE BIZWIT Section */
+
+.why-section {
+ max-width: 1208px;          
+  margin: 0 auto;             
+  min-height: 358px;         
+  padding: 60px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.why-container {
+  height: 272px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.why-box {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  padding: 60px 40px;
+  color: #fff;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.feature-box {
+  border-radius: 25px;
+}
+
+.benefit-box {
+  border-radius: 25px;
+  right: 20px;
+}
+
+/* Background image styling */
+.bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  border-radius: inherit;
+}
+
+/* Overlay for readability */
+.why-box::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+
+/* Text container */
+.content {
+  position: relative;
+  z-index: 2;
+  text-align: left;
+  font-family: Work Sans;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+line-height: 35px;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+}
+
+/* Make benefit text right-aligned */
+.benefit-box .content {
+  text-align: left;
+  padding-right: 60px;
+  left: 100px;
+}
+
+.content h3 {
+  font-family: Work Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+color: #FFFFFF;
+  margin: 0 0 16px 0;
+}
+
+.content ul {
+  list-style-type: none;
+  padding-left: 0;
+  line-height: 2;
+  font-size: 16px;
+}
+
+.content ul li::before {
+  content: "• ";
+  color: #fff;
+}
+
+/* Icon styling */
+.icon-box {
+  position: absolute;
+   width: 84px;
+height: 84px;
+  top: 30px;
+  right: 30px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+}
+
+.icon-box.light {
+  width: 84px;
+height: 84px;
+opacity: 1;
+top: 180px;
+left: 20px;
+
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.benefit-box .icon {
+  width: 21.591402053833008px;
+height: 40.45782470703125px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .why-section {
+    width: 100%;
+    height: auto;
+  }
+
+  .why-box {
+    width: 100%;
+    border-radius: 20px !important;
+    text-align: center;
+  }
+
+  .why-container {
+    flex-direction: column;
+  }
+
+  .benefit-box .content {
+    text-align: center;
+    padding-right: 0;
+  }
+
+  .icon-box {
+    position: static;
+    margin: 20px auto 0;
+  }
+
+  .content h3,
+  .content ul {
+    text-align: center;
+  }
+}
+

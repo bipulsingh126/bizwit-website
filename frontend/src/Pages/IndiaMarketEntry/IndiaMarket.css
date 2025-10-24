@@ -1,0 +1,86 @@
+.hsh_indiaMarket .hsh__accent{
+  display: none;
+}
+
+.hsh_indiaMarket .hsh__title{
+    width: 677px;
+    color: #0B7492;
+}
+
+.hsh_indiaMarket .hsh__subtitle{
+    width: 700px;
+}
+
+.hsh_indiaMarket .hsh__actions {
+  display: flex;   
+  flex-direction: row;
+  gap: 16px;
+  width: max-content;             
+}
+
+.hsh_indiaMarket .hsh__img {
+ width: 430px;
+height: 430px;
+  left: 60px;
+  top: 30px;
+  object-fit: cover;
+  display: block;
+  position: relative; 
+ border-radius: 0;
+}
+
+.invest-india img{
+    width: 1280px;
+height: 744px;
+margin: 0 auto;
+}
+
+/* Teal background skate */
+.svc-card__skate1{
+  position: absolute;
+  inset: 22px 18px 22px 18px;
+  background: #FF752A;
+  border-radius: 24px 60px 24px 60px;
+  transform: rotate(10deg);
+  z-index: 0;
+  filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
+}
+
+.svc-card__skate2{
+  position: absolute;
+  inset: 22px 18px 22px 18px;
+  background: #224ADA;
+  border-radius: 24px 60px 24px 60px;
+  transform: rotate(10deg);
+  z-index: 0;
+  filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
+}
+.svc-card__skate3{
+  position: absolute;
+  inset: 22px 18px 22px 18px;
+  background: #28CC57;
+  border-radius: 24px 60px 24px 60px;
+  transform: rotate(10deg);
+  z-index: 0;
+  filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
+}
+
+.ind-market .svc-card__title{
+    position: relative;
+    top: 50px;
+}
+
+.ind-market .svc-card__desc{
+    position: relative;
+    top: 80px;
+}
+
+.market-entry-blueprint{
+    margin-top: 150px;
+}
+
+.roadmapImg{
+    width: 1280px;
+height: 764px;
+margin: 0 auto;
+}

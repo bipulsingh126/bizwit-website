@@ -15,6 +15,25 @@ import TestAll from "./Components/Testimonials/TestAll";
 import ContentLed from "./Components/Content-Led/ContentLed";
 import Fte from "./Pages/Fte";
 import MarketShareGainSolutions from "./Pages/MarketShareGainSolutions";
+import Voc from "./Pages/Voc";
+import Sustainability from "./Pages/Sustainability/Sustainability";
+import Strategic from "./Pages/Intelligence&Strategic/Strategic";
+import MarketIntelligence from "./Pages/MarketIntelligence/MarketIntelligence";
+import IndiaMarket from "./Pages/IndiaMarketEntry/IndiaMarket";
+import AboutUs from "./Pages/AboutUs/AboutUs";
+import Career from "./Pages/Career/Career";
+import GeneralData from "./Pages/GeneralData/GeneralData";
+import ReportActionPanel from "./Components/ReportActionPanel/ReportActionPanel";
+import cover from './assets/downloadHeader.png'
+import supportImg from './assets/support.png'
+import ppt from './assets/ppt.png'
+import pdf from './assets/pdf.png'
+import xls from './assets/xls.png'
+import DetailCaseStudy from "./Pages/DetailCaseStudy/DetailCaseStudy";
+import MegaTrendDetails from "./Pages/MegaTrendsDetail/MegaTrendDetails";
+import BizwitCronicles from "./Pages/BizwitCronicles";
+
+
 
 
 
@@ -63,6 +82,36 @@ const App = () => {
         <Route path="/contentled" element={<ContentLed/>} />
         <Route path="/fte" element={<Fte />} />
         <Route path="/marketshare" element={<MarketShareGainSolutions/>}/>
+        <Route path="/voc" element={<Voc/>}/>
+         <Route path="/sustainability" element={<Sustainability/>}/>
+         <Route path="/strategic" element={<Strategic />} />
+         <Route path="/market-intelligence" element = {<MarketIntelligence/>}/>
+         <Route path="/india-market" element = {<IndiaMarket/>}/>
+         <Route path="/about" element={<AboutUs/>}/>
+         <Route path="/career" element={<Career/>}/>
+         <Route path="/general-data" element={<GeneralData/>}/>
+         <Route path="/download-sample"  element={<ReportActionPanel
+   coverSrc={cover}
+  title="Global 3D Animation Software Market Size Study & Forecast, by Component, Deployment, Technique, End-User Verticals, and Regional Forecasts 2022–2032"
+  subtitle="Healthcare, Healthcare IT"
+  onInquiry={()=>console.log("inquiry")}
+  onBuy={()=>console.log("buy")}
+  formats={[{alt:"PDF", src:pdf}, {alt:"PPT", src:ppt}, {alt:"XLS", src:xls}]}
+  meta={{ code:"12345", pages:"200", published:"16 JUN, 2025", author:"Anmol Meshram" }}
+  enableSampleForm
+  onSampleSubmit={(payload)=>fetch("/api/leads/sample",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(payload)})}
+  sidebar={{
+    imageSrc:supportImg,
+    titleTop: "Get the Sample",
+    titleBottom: "Within 24 hours.",
+    email: "Sales@bizwitresearch.com",
+    phone: "+916 267 101417",
+    address: "303, Atulya IT Park, Indore, India (452001)",
+  }}/>
+}/>
+<Route path="/details-case-study" element={<DetailCaseStudy/> }/>
+<Route path="/megatrends-details" element={<MegaTrendDetails/>}/>
+<Route path="/bizwit-cronicles-details"  element={<BizwitCronicles/>}/>
       </Routes>
       <Footer />
       <Copyright />

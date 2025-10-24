@@ -1,0 +1,207 @@
+/* Root container */
+.cs-root {
+  width: 1064px;
+  margin: 0 auto;
+  background: #ffffff;
+  color: #0f172a; /* slate-900-ish */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: Inter, "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+/* Hero container */
+.dcs_hero {
+  width: 1064px;
+  height: 400px;
+  margin: 150px auto 0;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Hero section */
+.cs-hero {
+  max-width: 1064px;
+  margin: 0 auto;
+  padding: 2.5rem 1.25rem 1.25rem;
+}
+
+/* Hero title */
+.cs-hero__title {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 40px;
+  line-height: 1; /* 100% */
+  color: #0b7492;
+  margin: 0;
+}
+
+/* Hero subtitle */
+.cs-hero__subtitle {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600; /* SemiBold */
+  font-size: 32px;
+  line-height: 1;
+  color: #0b7492;
+  margin-top: 2rem;
+}
+
+/* Prose content wrapper */
+.cs-prose {
+  max-width: 1064px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Headings */
+.cs-prose h2,
+.cs-prose h3,
+.cs-prose h4 {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600; /* SemiBold */
+  line-height: 1;
+  letter-spacing: 0;
+  color: #303030;
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.cs-prose h2 {
+  font-size: 24px;
+}
+
+.cs-prose h3 {
+  font-size: 20px;
+}
+
+.cs-prose h4 {
+  font-size: 20px;
+}
+
+/* Paragraphs */
+.cs-prose p {
+  margin: 0.75rem 0 1.75rem;
+  color: #303030;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* Lists */
+.cs-prose ul,
+.cs-prose ol {
+  padding-left: 1.25rem;
+  margin: 1.2rem 0 1rem;
+}
+
+.cs-prose ul {
+  list-style: disc;
+}
+
+.cs-prose ol {
+  list-style: decimal;
+}
+
+/* List items */
+.cs-prose li {
+  margin: 1.375rem 0;
+  color: #303030;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+.cs-prose li::marker {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.cs-prose li span {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1;
+}
+
+/* Inline span emphasis */
+.cs-prose span {
+  font-family: "Work Sans", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Phase section margin reset */
+.phase-section h4,
+.phase-section li {
+  margin: 0;
+}
+
+.phase-section ul {
+  padding-left: 1.25rem; /* keep bullet indent */
+}
+
+
+/* Links */
+.cs-prose a {
+  color: #0ea5e9; /* sky-500 */
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.cs-prose a:hover {
+  color: #0284c7; /* sky-600 */
+}
+
+/* Responsive layout */
+@media (min-width: 1024px) {
+  .cs-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 1.5rem;
+  }
+  .cs-prose {
+    padding-bottom: 4rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-root,
+  .dcs_hero,
+  .cs-hero,
+  .cs-prose {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .cs-hero {
+    padding-top: 1.5rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .cs-prose {
+    font-size: 1rem;
+    line-height: 1.75;
+    padding: 0 1rem;
+  }
+
+  .cs-prose ul,
+  .cs-prose ol {
+    padding-left: 1rem;
+  }
+}
+
+/* Print-friendly tweaks */
+@media print {
+  .cs-root {
+    color: #000;
+    background: #fff;
+  }
+  .cs-hero__title {
+    color: #000;
+  }
+  .cs-hero__subtitle {
+    color: #222;
+  }
+}

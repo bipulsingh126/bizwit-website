@@ -1,0 +1,132 @@
+/* Container */
+.gdpr{
+  padding:32px 16px 56px;
+  margin-top: 100px;
+}
+
+.gdpr__wrap{
+  max-width: 1280px;
+  margin:0 auto;
+  font-family:"Work Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color:#222;
+}
+
+/* Banner header */
+.gdpr__banner{
+  height: 100px;
+  border-radius:20px;
+  padding:16px 20px;
+  color:#fff;
+  display:flex;
+  align-items:center;
+}
+
+.gdpr__title{
+  margin:0;
+  font-size:40px;
+  line-height:1.2;
+  font-weight:600;
+  font-style: Semibold;
+  letter-spacing:.5px;
+  text-transform:uppercase;
+}
+
+/* Effective date */
+.gdpr__date{
+  margin:14px 0 18px;
+  font-size:14px;
+}
+
+/* Headings and body */
+.gdpr__h2{
+  margin:22px 0 10px;
+  font-size:20px;
+  font-weight:600;
+  font-style: Semibold;
+}
+
+.gdpr__h3{
+  margin:18px 0 8px;
+  font-size:16px;
+  font-weight:700;
+}
+
+.gdpr__p{
+  margin:8px 0;
+  font-size:15px;
+  line-height:1.6;
+  color:#383838;
+}
+
+/* Lists */
+.gdpr__list{
+  margin:8px 0 12px 18px;
+  padding:0;
+  color:#383838;
+  font-size:15px;
+  line-height:1.6;
+}
+
+.gdpr__list li{
+  margin:4px 0;
+}
+
+/* Section divider */
+.gdpr__rule{
+  border:0;
+  border-top:2px solid #83B5B4;
+  margin:18px 0;
+}
+.gdpr__link{
+  font-family: Work Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+text-decoration: underline;
+text-decoration-style: solid;
+text-decoration-thickness: 0%;
+text-decoration-skip-ink: auto;
+color: #0077FF;
+}
+.gdpr__link:hover{
+  text-decoration:none;
+}
+
+.gdpr_email{
+    font-family: Work Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+
+.gdpr__consult{
+    font-family: Work Sans;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+
+.gdpr__consult_p{
+    font-family: Work Sans;
+font-weight: 400;
+font-style: Italic;
+font-size: 16px;
+line-height: 2.0;
+letter-spacing: 0%;
+vertical-align: middle;
+}
+
+
+/* Responsive tweaks */
+@media (max-width:540px){
+  .gdpr__title{ font-size:18px; }
+  .gdpr__wrap{ padding:0 2px; }
+}
