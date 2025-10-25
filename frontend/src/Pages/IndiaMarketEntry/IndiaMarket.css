@@ -1,86 +1,152 @@
-.hsh_indiaMarket .hsh__accent{
-  display: none;
-}
+/* Base: keep fixed sizes/colors; only constrain outer widths */
+.hsh_indiaMarket,
+.invest-india,
+.ind-market,
+.market-entry-blueprint,
+.wc,
+.strategic-client-say,
+.market-section,
+.demo-container{
+  width: 100%;
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  padding-left: 16px;
+  padding-right: 16px;
+} /* responsive container caps [web:27][web:30] */
+
+
+/* =========================
+   Hero adjustments
+   ========================= */
+.hsh_indiaMarket .hsh__accent{ display: none; }
 
 .hsh_indiaMarket .hsh__title{
-    width: 677px;
-    color: #0B7492;
+  width: 677px;
+  color: #0B7492;
 }
+.hsh_indiaMarket .hsh__subtitle{ width: 700px; }
 
-.hsh_indiaMarket .hsh__subtitle{
-    width: 700px;
-}
-
-.hsh_indiaMarket .hsh__actions {
-  display: flex;   
+.hsh_indiaMarket .hsh__actions{
+  display: flex;
   flex-direction: row;
   gap: 16px;
-  width: max-content;             
+  width: max-content;
 }
 
-.hsh_indiaMarket .hsh__img {
- width: 430px;
-height: 430px;
+.hsh_indiaMarket .hsh__img{
+  width: 430px;
+  height: 430px;
   left: 60px;
   top: 30px;
   object-fit: cover;
   display: block;
-  position: relative; 
- border-radius: 0;
+  position: relative;
+  border-radius: 0;
 }
 
+@media (max-width: 900px){
+  .hsh_indiaMarket .hsh__title,
+  .hsh_indiaMarket .hsh__subtitle{
+    width: 100%; /* wrap text on small screens */
+  }
+  .hsh_indiaMarket .hsh__img{
+    left: 0;
+    top: 0;
+    margin: 0 auto; /* center image within constrained container */
+  }
+}
+
+
+/* =========================
+   Invest India banner
+   ========================= */
 .invest-india img{
-    width: 1280px;
-height: 744px;
-margin: 0 auto;
+  width: 1280px;
+  height: 744px;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 1280px){
+  .invest-india img{
+    width: 100%;  /* scale container only, intrinsic height remains per Figma */
+  }
 }
 
-/* Teal background skate */
-.svc-card__skate1{
-  position: absolute;
-  inset: 22px 18px 22px 18px;
-  background: #FF752A;
-  border-radius: 24px 60px 24px 60px;
-  transform: rotate(10deg);
-  z-index: 0;
-  filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
+
+/* =========================
+   Research-led approach cards
+   ========================= */
+.ind-market{
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 
-.svc-card__skate2{
-  position: absolute;
-  inset: 22px 18px 22px 18px;
-  background: #224ADA;
-  border-radius: 24px 60px 24px 60px;
-  transform: rotate(10deg);
-  z-index: 0;
-  filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
+/* 3-up grid that collapses */
+.svc__grid{
+  display: grid;
+  gap: 28px;
+  grid-template-columns: repeat(3, 1fr);
 }
+@media (max-width: 1024px){
+  .svc__grid{ grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px){
+  .svc__grid{ grid-template-columns: 1fr; }
+}
+
+/* card visuals kept; only positioning */
+.svc-card{ position: relative; }
+
+.svc-card__skate1,
+.svc-card__skate2,
 .svc-card__skate3{
   position: absolute;
   inset: 22px 18px 22px 18px;
-  background: #28CC57;
   border-radius: 24px 60px 24px 60px;
   transform: rotate(10deg);
   z-index: 0;
   filter: drop-shadow(0 8px 24px rgba(16,24,40,.12));
 }
+.svc-card__skate1{ background: #FF752A; }
+.svc-card__skate2{ background: #224ADA; }
+.svc-card__skate3{ background: #28CC57; }
 
-.ind-market .svc-card__title{
-    position: relative;
-    top: 50px;
-}
+.ind-market .svc-card__title{ position: relative; top: 50px; }
+.ind-market .svc-card__desc{ position: relative; top: 80px; }
 
-.ind-market .svc-card__desc{
-    position: relative;
-    top: 80px;
-}
 
-.market-entry-blueprint{
-    margin-top: 150px;
-}
-
+/* =========================
+   Roadmap image section
+   ========================= */
+.market-entry-blueprint{ margin-top: 150px; }
 .roadmapImg{
-    width: 1280px;
-height: 764px;
-margin: 0 auto;
+  width: 1280px;
+  height: 764px;
+  margin: 0 auto;
+  display: block;
 }
+@media (max-width: 1280px){
+  .roadmapImg{ width: 100%; }
+}
+
+
+/* =========================
+   Megatrends and "Why Choose"
+   ========================= */
+.wc{
+  padding-top: 24px;
+  padding-bottom: 24px;
+}
+
+
+
+
+/* =========================
+   Utility: keep images fluid in constrained containers
+   ========================= */
+img.roadmapImg,
+.invest-india img{
+  height: auto; /* allow proportional scaling when container width shrinks */
+} /* fluid images within capped containers [web:36][web:53] */

@@ -65,7 +65,7 @@
 .test-container {
   margin-top: 50px;
   width: 1150px;
-  height: 1051.634765625px;
+  height: auto;
   top: 30px;
   left: 5px;
   transform: rotate(0deg);

@@ -37,18 +37,6 @@ const Strategic = () => {
       quote: "What sets Bizwit apart is their ability to simplify complexity. From sector-specific reports to strategic consulting, they are our go-to research partner.",
       author: "Arun Bansal",
       company: "CellularVista - Managing Director"
-    },
-     {
-      id: 3,
-      quote: "What sets Bizwit apart is their ability to simplify complexity. From sector-specific reports to strategic consulting, they are our go-to research partner.",
-      author: "Arun Bansal",
-      company: "CellularVista - Managing Director"
-    },
-     {
-      id: 4,
-      quote: "What sets Bizwit apart is their ability to simplify complexity. From sector-specific reports to strategic consulting, they are our go-to research partner.",
-      author: "Arun Bansal",
-      company: "CellularVista - Managing Director"
     }
   ];
 
@@ -314,8 +302,8 @@ const ITEMS = [
         </section>
 
          {/* CLIENT REVIEW */}
-      <section className='client-say'>
-            <div className="test-container">
+      <section className='strategic-client-say'>
+            <div className="strategic-client-say test-container">
         <div className="test-title-container1">   
           <div className='common-tag-container'>
             <p className="tag">WHAT OUR CLIENTS SAY</p>

@@ -1,36 +1,48 @@
-/* hero-second-header.css */
+/* ================================
+   CSS Variables
+================================ */
 :root {
-  --hsh-accent: #b9e28c;          
-  --hsh-max: 1280px;              
-  --hsh-gap: 40px;                
-  --hsh-radius: 24px;             
-  --hsh-outline: 2px;             /* accent stroke width */
-  --hsh-title: #144a5c;           /* heading color (teal-ish) */
-  --hsh-text: #344054;            /* body color */
-  --hsh-primary: #FF4040;         /* red button */
+  --hsh-accent: #b9e28c;
+  --hsh-max: 1280px;
+  --hsh-gap: 40px;
+  --hsh-radius: 24px;
+  --hsh-outline: 2px;
+  --hsh-title: #144a5c;
+  --hsh-text: #344054;
+  --hsh-primary: #FF4040;
   --hsh-primary-text: #ffffff;
-  --hsh-secondary: #104D72;       /* blue button */
+  --hsh-secondary: #104D72;
   --hsh-secondary-text: #ffffff;
   --hsh-shadow: 0 8px 28px rgba(16, 24, 40, 0.12);
-  --hsh-btn-radius: 27px;         /* pill buttons */
+  --hsh-shadow-lg: 0 10px 32px rgba(16, 24, 40, 0.16);
+  --hsh-btn-radius: 27px;
 }
 
-/* SECTION */
+/* ================================
+   Section Container
+================================ */
 .hsh {
   display: block;
   margin-top: 100px;
   padding: 48px 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-/* GRID */
+/* ================================
+   Grid Layout
+================================ */
 .hsh__inner {
+  width: 100%;
   max-width: var(--hsh-max);
-  height: 645px;
+  height: auto;               /* allow flexible height */
+  min-height: 645px;         /* preserve target height on desktop */
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1.1fr 1fr;   
+  grid-template-columns: 1.1fr 1fr;
   align-items: center;
   gap: var(--hsh-gap);
+  box-sizing: border-box;
 }
 
 .hsh__inner--center .hsh__content {
@@ -40,12 +52,17 @@
 
 .hsh__content {
   min-width: 0;
+  width: 100%;
 }
 
-/* HEADINGS */
+/* ================================
+   Typography
+================================ */
 .hsh__title {
-  width: 644px;
-  height: 112px;
+  width: 100%;
+  max-width: 644px;          /* preserve Figma width, allow shrinking */
+  height: auto;              /* allow wrapping */
+  min-height: 112px;         /* preserve target height */
   margin: 0 0 16px 0;
   color: var(--hsh-title);
   font-family: Work Sans, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -56,8 +73,10 @@
 }
 
 .hsh__subtitle {
-  width: 664px;
-  height: 112px;
+  width: 100%;
+  max-width: 664px;
+  height: auto;
+  min-height: 112px;
   margin: 0 0 24px 0;
   color: var(--hsh-text);
   font-family: Work Sans, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -67,37 +86,38 @@
   letter-spacing: 0%;
 }
 
-/* ACTIONS */
+/* ================================
+   Action Buttons
+================================ */
 .hsh__actions {
   display: flex;
-  flex-direction: column;   
-  align-items: flex-start;  
+  flex-direction: column;
+  align-items: flex-start;
   gap: 16px;
-  width: max-content;             
+  width: max-content;
 }
 
-/* BUTTONS */
 .hsh-btn {
   width: max-content;
   min-height: 43px;
-  padding: 10px 16px;       /* room for text while sizing to content */
+  padding: 10px 16px;
   border-radius: var(--hsh-btn-radius);
   font-family: Work Sans, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 600;
   font-size: 20px;
-  font-style: semibold;
+  font-style: normal;
   line-height: 100%;
   text-align: center;
   box-shadow: var(--hsh-shadow);
   transition: transform 0.08s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  cursor: pointer;
+  border: none;
+  white-space: nowrap;       /* prevent button text wrapping */
 }
-
-
-
 
 .hsh-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 32px rgba(16, 24, 40, 0.16);
+  box-shadow: var(--hsh-shadow-lg);
 }
 
 .hsh-btn:active {
@@ -110,11 +130,12 @@
   outline-offset: 2px;
 }
 
-/* VARIANTS */
+/* Button Variants */
 .hsh-btn--primary {
   background: var(--hsh-primary);
   color: var(--hsh-primary-text);
 }
+
 .hsh-btn--primary:hover {
   filter: brightness(0.97);
 }
@@ -123,64 +144,241 @@
   background: var(--hsh-secondary);
   color: var(--hsh-secondary-text);
 }
+
 .hsh-btn--secondary:hover {
   filter: brightness(0.97);
 }
 
-/* MEDIA */
+/* ================================
+   Media Container
+================================ */
 .hsh__media {
-  width: 542px;
+  width: 100%;
+  max-width: 542px;
   position: relative;
   min-height: 593px;
+  margin: 0 auto;            /* center in grid cell */
 }
 
 .hsh__img {
   width: 542px;
+  max-width: 100%;           /* scale down on smaller screens */
   height: 593px;
   left: 60px;
   top: 30px;
   border-radius: var(--hsh-radius);
   object-fit: cover;
   display: block;
-  position: relative; /* ensure above accent */
+  position: relative;
   z-index: 1;
 }
 
 .hsh__accent {
   position: absolute;
-  inset: -18px -18px 18px 18px;        
+  inset: -18px -18px 18px 18px;
   border-radius: 28px;
   pointer-events: none;
   border: var(--hsh-outline) solid var(--hsh-accent);
   z-index: 0;
 }
 
-/* Responsive */
-@media (max-width: 960px) {
-  .hsh__inner {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    height: auto;
+/* ================================
+   Responsive Breakpoints
+================================ */
+
+/* Large tablets and small desktops */
+@media (max-width: 1280px) {
+  .hsh {
+    margin-top: 80px;
+    padding: 40px 16px;
   }
+  
+  .hsh__inner {
+    gap: 32px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 960px) {
+  .hsh {
+    margin-top: 60px;
+    padding: 32px 16px;
+  }
+  
+  .hsh__inner {
+    grid-template-columns: 1fr;  /* stack vertically */
+    gap: 28px;
+    min-height: auto;
+  }
+  
   .hsh__inner--center .hsh__content {
     text-align: left;
   }
+  
+  .hsh__title {
+    font-size: 40px;
+    max-width: 100%;
+  }
+  
+  .hsh__subtitle {
+    font-size: 20px;
+    max-width: 100%;
+  }
+  
   .hsh__actions {
     width: 100%;
     max-width: 420px;
   }
+  
   .hsh-btn {
-    font-size: 16px;
-    min-height: 50px;
+    min-height: 48px;
+    font-size: 18px;
   }
+  
   .hsh__media {
     min-height: 0;
     width: 100%;
+    max-width: 100%;
   }
+  
   .hsh__img {
     width: 100%;
-    height: auto;
+    max-width: 542px;
+    height: auto;            /* maintain aspect ratio */
     left: 0;
     top: 0;
+    margin: 0 auto;
+  }
+  
+  .hsh__accent {
+    inset: -12px -12px 12px 12px; /* adjust accent spacing */
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+  .hsh {
+    margin-top: 100px;
+    padding: 24px 12px;
+  }
+  
+  .hsh__inner {
+    gap: 24px;
+  }
+  
+  .hsh__title {
+    font-size: 36px;
+    margin-bottom: 12px;
+  }
+  
+  .hsh__subtitle {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .hsh-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+    min-height: 46px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 640px) {
+  .hsh {
+    margin-top: 100px;
+    padding: 20px 12px;
+  }
+  
+  .hsh__inner {
+    gap: 20px;
+  }
+  
+  .hsh__title {
+    font-size: 32px;
+    line-height: 110%;       /* slightly increase for readability */
+    min-height: auto;
+  }
+  
+  .hsh__subtitle {
+    font-size: 16px;
+    line-height: 120%;
+    min-height: auto;
+  }
+  
+  .hsh__actions {
+    width: 100%;
+    max-width: 100%;
+    align-items: stretch;    /* full-width buttons on mobile */
+  }
+  
+  .hsh-btn {
+    width: 100%;             /* full-width on mobile */
+    font-size: 16px;
+    padding: 14px 20px;
+    min-height: 50px;
+  }
+  
+  .hsh__img {
+    border-radius: 16px;     /* reduce border radius slightly */
+  }
+  
+  .hsh__accent {
+    inset: -10px -10px 10px 10px;
+    border-radius: 20px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hsh {
+    margin-top: 100px;
+    padding: 16px 8px;
+  }
+  
+  .hsh__title {
+    font-size: 28px;
+    line-height: 115%;
+  }
+  
+  .hsh__subtitle {
+    font-size: 15px;
+    line-height: 125%;
+  }
+  
+  .hsh-btn {
+    font-size: 15px;
+    padding: 12px 16px;
+    min-height: 48px;
+  }
+  
+  .hsh__img {
+    border-radius: 12px;
+  }
+  
+  .hsh__accent {
+    border-radius: 16px;
+  }
+}
+
+/* ================================
+   Print Styles
+================================ */
+@media print {
+  .hsh {
+    margin-top: 0;
+    padding: 0;
+  }
+  
+  .hsh__inner {
+    grid-template-columns: 1fr;
+  }
+  
+  .hsh-btn {
+    display: none;           /* hide interactive elements */
+  }
+  
+  .hsh__accent {
+    display: none;
   }
 }

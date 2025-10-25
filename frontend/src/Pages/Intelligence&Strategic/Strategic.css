@@ -541,9 +541,47 @@ color: #383838;
 }
 
 /* CLIENT REVIEW SECTION */
-.client-say{
-   max-width: 1375px;
+.strategic-client-say{
+   max-width: 1280px;
   margin: 0 auto;
   padding: 32px 16px 56px;
+}
+
+.strategic-client-say .test-container{
+ margin-top: 50px;
+  width: 1150px;
+  left: 5px;
+  transform: rotate(0deg);
+  opacity: 1;
+  position: relative;
+}
+
+.strategic-client-say .testimonials-grid{
+  margin: 0 auto;
+}
+
+.strategic-client-say .arrows{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+  top: 220px;
+}
+
+.strategic-client-say .arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #F8F9FA;
+  border: 2px solid #E5E5E5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  margin-left: -100px;
+  margin-right: -100px;
 }
 

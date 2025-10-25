@@ -16,6 +16,7 @@
 /* VOC Section */
 .voc-service{
   padding: 80px 16px;
+  margin-top: 50px;
 }
 
 .voc-container{
@@ -125,16 +126,16 @@
 }
 
 /* Impact section */
-.impact-client{
+.impact-client {
   padding: 48px 16px;
 }
 
-.impact-client-title{
+.impact-client-title {
   text-align: center;
   margin-bottom: 30px;
 }
 
-.impact-client-pill{
+.impact-client-pill {
   font-size: 20px;
   font-weight: 500;
   color: var(--cta);
@@ -147,114 +148,171 @@
   background-color: transparent;
 }
 
-.impact-client-grid{
+/* Layout container */
+.impact-client-grid {
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center; /* vertical centering */
+  align-items: center;
   gap: 40px;
-  padding-left: var(--voc-pad);
-  padding-right: var(--voc-pad);
+  padding: 0 var(--voc-pad);
+  flex-wrap: wrap; /* allows stacking when needed */
 }
 
-/* Chart image sizing scoped to impact section */
-.impact-client-chart img{
+/* Image section */
+.impact-client-chart img,
+.impact-client-chart-img {
   width: 100%;
   max-width: 560px;
   height: auto;
   object-fit: contain;
+  border-radius: 10px;
 }
 
-/* Optional standalone class if the img tag has this class applied */
-.impact-client-chart-img{
-  width: 521px;
-  height: auto; /* keep aspect ratio */
-  max-height: 435px;
-  object-fit: contain;
-}
-
-/* Card and content */
-.impact-client-card{
-  width: 662px;
-  min-height: 342px;
+/* Card */
+.impact-client-card {
+  flex: 1 1 500px;
   background-color: var(--brand-primary);
   color: var(--white);
   border-radius: 20px;
-  padding: 28px; /* ensure inner spacing */
-  position: relative; /* context for any absolutely positioned children */
+  padding: 28px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
-/* Prefer flow layout with padding/gap; only use absolute if you need overlay */
-.impact-client-card-content{
+/* Content inside the card */
+.impact-client-card-content {
   width: 100%;
   max-width: 564px;
   display: flex;
   flex-direction: column;
   gap: 12px;
+  position: relative;
+  z-index: 1;
 }
 
-/* If overlay positioning is truly required, uncomment: */
-.impact-client-card{ position: relative; }
-.impact-client-card-content{
-  position: absolute;
-  top: 18px;
-  left: 28px;
+.impact-client-card-title {
+  color: var(--white);
+  font-family: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.2;
+  letter-spacing: 0.01em;
+  margin-bottom: 8px;
 }
 
-
-
-.impact-client-card-body-description{
+.impact-client-card-body-description {
   max-width: 522px;
   font-family: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
   font-weight: 400;
-  font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
 }
 
-.impact-client-card-title{
-  color: var(--white);
-  font-family: 'Work Sans', system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-  font-weight: 700;
-  font-style: normal;
-  font-size: 28px;
-  line-height: 1.2;
-  letter-spacing: 0.01em;
-  margin: 0 0 8px 0;
+/* ========================= */
+/* RESPONSIVENESS */
+/* ========================= */
+
+/* Large tablets / smaller desktops */
+@media (max-width: 1200px) {
+  .impact-client-grid {
+    gap: 32px;
+    flex-wrap: wrap;
+  }
+  .impact-client-card {
+    flex: 1 1 100%;
+  }
+  .impact-client-chart img {
+    max-width: 480px;
+  }
 }
 
-/* Responsive tweaks for impact section */
-@media (max-width: 1024px){
-  .impact-client-grid{
-    flex-direction: column;
-    gap: 24px;
+/* Tablets */
+@media (max-width: 992px) {
+  .impact-client {
+    padding: 40px 20px;
   }
-  .impact-client-card{
+  .impact-client-grid {
+    flex-direction: column;
+    gap: 28px;
+    align-items: center;
+    text-align: center;
+  }
+  .impact-client-card {
     width: 100%;
     padding: 24px;
+    align-items: center;
   }
-  .impact-client-card-content{
+  .impact-client-card-content {
     max-width: 100%;
+    text-align: center;
+  }
+  .impact-client-card-title {
+    font-size: 26px;
+  }
+  .impact-client-card-body-description {
+    font-size: 15px;
+  }
+  .impact-client-chart img {
+    max-width: 420px;
   }
 }
 
-@media (max-width: 640px){
-  .impact-client-pill{
+/* Small tablets and large phones */
+@media (max-width: 768px) {
+  .impact-client-pill {
     font-size: 16px;
     padding: 10px 28px;
   }
-  .impact-client-card-title{
+  .impact-client-card-title {
     font-size: 24px;
   }
-  .impact-client-card-content p{
+  .impact-client-card-body-description {
     font-size: 15px;
   }
+  .impact-client-card {
+    padding: 20px;
+  }
+  .impact-client-chart img {
+    max-width: 360px;
+  }
 }
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .impact-client {
+    padding: 32px 12px;
+  }
+  .impact-client-pill {
+    font-size: 14px;
+    padding: 8px 20px;
+  }
+  .impact-client-card {
+    padding: 16px;
+    border-radius: 15px;
+  }
+  .impact-client-card-title {
+    font-size: 20px;
+    line-height: 1.3;
+  }
+  .impact-client-card-body-description {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .impact-client-chart img {
+    max-width: 280px;
+  }
+}
+
+
+
+/* INVESTMENT SECTION */
 
 .investment-section {
  display: flex;
@@ -375,7 +433,8 @@ vertical-align: middle;
 
 .step-content .icon {
     margin-top: 75px;
-  font-size: 20px;
+   width: 45px;
+   height: 45px;
 }
 
 /* ====== POSITIONING FOR STAIR EFFECT ====== */

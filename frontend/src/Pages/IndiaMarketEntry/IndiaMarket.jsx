@@ -26,18 +26,6 @@ const IndiaMarket = () => {
       quote: "What sets Bizwit apart is their ability to simplify complexity. From sector-specific reports to strategic consulting, they are our go-to research partner.",
       author: "Arun Bansal",
       company: "CellularVista - Managing Director"
-    },
-     {
-      id: 3,
-      quote: "What sets Bizwit apart is their ability to simplify complexity. From sector-specific reports to strategic consulting, they are our go-to research partner.",
-      author: "Arun Bansal",
-      company: "CellularVista - Managing Director"
-    },
-     {
-      id: 4,
-      quote: "What sets Bizwit apart is their ability to simplify complexity. From sector-specific reports to strategic consulting, they are our go-to research partner.",
-      author: "Arun Bansal",
-      company: "CellularVista - Managing Director"
     }
   ];
 
@@ -174,34 +162,34 @@ const IndiaMarket = () => {
     </section>
 
      {/* CLIENT REVIEW */}
-          <section className='client-say'>
-                <div className="test-container">
-            <div className="test-title-container1">   
-              <div className='common-tag-container'>
-                <p className="tag">WHAT OUR CLIENTS SAY</p>
-              </div> 
-            </div>      
-            <div className="testimonials-grid">
-              {testimonials.map((testimonial) => (
-                <div key={testimonial.id} className="quote-card">
-                  <img className="quote-mark" src={testi} alt="" />
-                  <p className="quote-text">"{testimonial.quote}"</p>
-                  <div className="quote-author">
-                    <div className="author-image"></div>
-                    <div className="author-info">
-                      <h4>{testimonial.author}</h4>
-                      <p>{testimonial.company}</p>
-                    </div>
-                  </div>
+         <section className='strategic-client-say'>
+            <div className="test-container">
+        <div className="test-title-container1">   
+          <div className='common-tag-container'>
+            <p className="tag">WHAT OUR CLIENTS SAY</p>
+          </div> 
+        </div>      
+        <div className="testimonials-grid">
+          {testimonials.map((testimonial) => (
+            <div key={testimonial.id} className="quote-card">
+              <img className="quote-mark" src={testi} alt="" />
+              <p className="quote-text">"{testimonial.quote}"</p>
+              <div className="quote-author">
+                <div className="author-image"></div>
+                <div className="author-info">
+                  <h4>{testimonial.author}</h4>
+                  <p>{testimonial.company}</p>
                 </div>
-              ))}
+              </div>
             </div>
-            <div className="arrows">
-              <div className="arrow arrow-left"></div>
-              <div className="arrow arrow-right"></div>
-            </div>
-          </div>
-          </section>
+          ))}
+        </div>
+        <div className="arrows">
+          <div className="arrow arrow-left"></div>
+          <div className="arrow arrow-right"></div>
+        </div>
+      </div>
+      </section>
 
           <Connect/>
     </>

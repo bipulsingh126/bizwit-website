@@ -4,7 +4,7 @@ import Pillars from '../Components/MarketShareSolutions/Pillars'
 import CaseStudy from '../Components/Industry/CaseStudy'
 import StrategicFramework from '../Components/MarketShareSolutions/StrategicFramework'
 import WhyChoose from '../Components/MarketShareSolutions/WhyChoose'
-import Contect from './ContectUs/Contect'
+import Connect from '../Components/Connect/Connect'
 
 const MarketShareGainSolutions = () => {
   return (
@@ -14,7 +14,7 @@ const MarketShareGainSolutions = () => {
         <CaseStudy/>
         <StrategicFramework/>
         <WhyChoose/>
-        <Contect/>
+        <Connect/>
     </div>
   )
 }

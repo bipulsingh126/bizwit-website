@@ -1,17 +1,25 @@
-/* Root container */
+/* ================================
+   Root container
+================================ */
 .cs-root {
-  width: 1064px;
+  width: 100%;
+  max-width: 1064px;        /* cap to Figma width */
   margin: 0 auto;
+  padding: 0 16px;          /* safe gutters */
   background: #ffffff;
-  color: #0f172a; /* slate-900-ish */
+  color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Inter, "Work Sans", system-ui, -apple-system, "Segoe UI", Roboto, Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  box-sizing: border-box;
 }
 
-/* Hero container */
+/* ================================
+   Hero container
+================================ */
 .dcs_hero {
-  width: 1064px;
+  width: 100%;
+  max-width: 1064px;        /* preserve Figma width on desktop */
   height: 400px;
   margin: 150px auto 0;
   border-radius: 30px;
@@ -20,17 +28,19 @@
 
 /* Hero section */
 .cs-hero {
+  width: 100%;
   max-width: 1064px;
   margin: 0 auto;
   padding: 2.5rem 1.25rem 1.25rem;
+  box-sizing: border-box;
 }
 
 /* Hero title */
 .cs-hero__title {
   font-family: "Work Sans", sans-serif;
-  font-weight: 600; /* SemiBold */
+  font-weight: 600;
   font-size: 40px;
-  line-height: 1; /* 100% */
+  line-height: 1;
   color: #0b7492;
   margin: 0;
 }
@@ -38,18 +48,23 @@
 /* Hero subtitle */
 .cs-hero__subtitle {
   font-family: "Work Sans", sans-serif;
-  font-weight: 600; /* SemiBold */
+  font-weight: 600;
   font-size: 32px;
   line-height: 1;
   color: #0b7492;
   margin-top: 2rem;
 }
 
-/* Prose content wrapper */
+/* ================================
+   Prose content wrapper
+================================ */
 .cs-prose {
+  width: 100%;
   max-width: 1064px;
   margin: 0 auto;
+  padding: 0 1.25rem;
   line-height: 1.7;
+  box-sizing: border-box;
 }
 
 /* Headings */
@@ -57,7 +72,7 @@
 .cs-prose h3,
 .cs-prose h4 {
   font-family: "Work Sans", sans-serif;
-  font-weight: 600; /* SemiBold */
+  font-weight: 600;
   line-height: 1;
   letter-spacing: 0;
   color: #303030;
@@ -140,22 +155,25 @@
 }
 
 .phase-section ul {
-  padding-left: 1.25rem; /* keep bullet indent */
+  padding-left: 1.25rem;
 }
-
 
 /* Links */
 .cs-prose a {
-  color: #0ea5e9; /* sky-500 */
+  color: #0ea5e9;
   text-decoration: underline;
   text-underline-offset: 2px;
 }
 
 .cs-prose a:hover {
-  color: #0284c7; /* sky-600 */
+  color: #0284c7;
 }
 
-/* Responsive layout */
+/* ================================
+   Responsive Breakpoints
+================================ */
+
+/* Desktop enhancements */
 @media (min-width: 1024px) {
   .cs-hero {
     padding-top: 3.5rem;
@@ -166,42 +184,192 @@
   }
 }
 
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .dcs_hero {
+    margin-top: 80px;       /* reduce top margin */
+    height: 350px;          /* slightly reduce height */
+  }
+  
+  .cs-hero__title {
+    font-size: 36px;        /* scale down title */
+  }
+  
+  .cs-hero__subtitle {
+    font-size: 28px;        /* scale down subtitle */
+  }
+}
+
+/* Mobile landscape */
+@media (max-width: 768px) {
+  .dcs_hero {
+    margin-top: 60px;
+    height: 300px;
+    border-radius: 20px;    /* reduce border radius */
+  }
+  
+  .cs-hero {
+    padding: 2rem 1rem 1rem;
+  }
+  
+  .cs-hero__title {
+    font-size: 32px;
+  }
+  
+  .cs-hero__subtitle {
+    font-size: 24px;
+    margin-top: 1.5rem;
+  }
+  
+  .cs-prose h2 {
+    font-size: 22px;
+  }
+  
+  .cs-prose h3,
+  .cs-prose h4 {
+    font-size: 18px;
+  }
+}
+
+/* Mobile portrait */
 @media (max-width: 640px) {
-  .cs-root,
-  .dcs_hero,
-  .cs-hero,
-  .cs-prose {
+  .cs-root {
+    padding: 0 12px;        /* tighter gutters */
+  }
+  
+  .dcs_hero {
     width: 100%;
-    max-width: 100%;
+    height: 250px;          /* reduce height for mobile */
+    margin-top: 40px;
+    border-radius: 16px;
   }
 
   .cs-hero {
-    padding-top: 1.5rem;
-    padding-bottom: 0.75rem;
+    width: 100%;
+    padding: 1.5rem 1rem 0.75rem;
+  }
+  
+  .cs-hero__title {
+    font-size: 28px;        /* mobile-friendly title */
+  }
+  
+  .cs-hero__subtitle {
+    font-size: 22px;        /* mobile-friendly subtitle */
+    margin-top: 1rem;
   }
 
   .cs-prose {
+    width: 100%;
+    padding: 0 1rem;
     font-size: 1rem;
     line-height: 1.75;
-    padding: 0 1rem;
+  }
+  
+  .cs-prose h2 {
+    font-size: 20px;
+  }
+  
+  .cs-prose h3,
+  .cs-prose h4 {
+    font-size: 18px;
+  }
+  
+  .cs-prose p {
+    font-size: 15px;
+    margin: 0.5rem 0 1.25rem;
+  }
+  
+  .cs-prose li {
+    font-size: 15px;
+    margin: 1rem 0;
+  }
+  
+  .cs-prose li span {
+    font-size: 18px;
   }
 
   .cs-prose ul,
   .cs-prose ol {
     padding-left: 1rem;
+    margin: 1rem 0;
   }
 }
 
-/* Print-friendly tweaks */
+/* Extra small devices */
+@media (max-width: 480px) {
+  .cs-root {
+    padding: 0 8px;
+  }
+  
+  .dcs_hero {
+    height: 200px;
+    margin-top: 30px;
+    border-radius: 12px;
+  }
+  
+  .cs-hero {
+    padding: 1.25rem 0.75rem 0.5rem;
+  }
+  
+  .cs-hero__title {
+    font-size: 24px;
+  }
+  
+  .cs-hero__subtitle {
+    font-size: 20px;
+  }
+  
+  .cs-prose {
+    padding: 0 0.75rem;
+  }
+  
+  .cs-prose h2 {
+    font-size: 18px;
+  }
+  
+  .cs-prose h3,
+  .cs-prose h4 {
+    font-size: 16px;
+  }
+  
+  .cs-prose p,
+  .cs-prose li {
+    font-size: 14px;
+  }
+}
+
+/* ================================
+   Print-friendly tweaks
+================================ */
 @media print {
   .cs-root {
     color: #000;
     background: #fff;
+    max-width: 100%;
+    padding: 0;
   }
+  
+  .dcs_hero {
+    height: auto;
+    margin-top: 0;
+  }
+  
   .cs-hero__title {
     color: #000;
+    font-size: 32px;
   }
+  
   .cs-hero__subtitle {
     color: #222;
+    font-size: 24px;
+  }
+  
+  .cs-prose {
+    max-width: 100%;
+  }
+  
+  .cs-prose a {
+    color: #000;
+    text-decoration: none;
   }
 }

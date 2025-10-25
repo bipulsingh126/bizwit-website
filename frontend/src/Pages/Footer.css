@@ -42,9 +42,9 @@
 .footer-logo1 {
     width: 163px;
     height: 43.0040779114px; /* as specified */
-    position: absolute;
-    top: -35px;
-    left: 30px;
+    /* position: absolute; */
+    /* top: -35px; */
+    /* left: 30px; */
     transform: rotate(0deg);
     opacity: 1;
 }

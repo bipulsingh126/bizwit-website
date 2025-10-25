@@ -1,142 +1,232 @@
-:root{
-  --pill:#FF4040;
-  --left-bg:#f0f4f5;
-  --bar1:#0b6e82;
-  --bar2:#1f8192;
-  --bar3:#2e90a1;
-  --bar4:#5aa9b1;
-  --bar5:#85bcc0;
-  --divider:#dbe6ea;
+:root {
+  --pill: #FF4040;
+  --left-bg: #f0f4f5;
+  --bar1: #0b6e82;
+  --bar2: #1f8192;
+  --bar3: #2e90a1;
+  --bar4: #5aa9b1;
+  --bar5: #85bcc0;
+  --divider: #dbe6ea;
 }
 
 /* Section wrapper */
-.sf{
+.sf {
   max-width: 1152px;
   margin: 0 auto;
   padding: 20px 16px 8px;
 }
 
 /* Centered pill */
-.sf-pill{
- display: block;
+.sf-pill {
+  display: block;
   width: max-content;
-  margin: 0 auto 16px;       
+  margin: 0 auto 16px;
   padding: 10px 16px;
   border: 1px solid #f0d9d9;
   color: var(--pill);
   background: #fff;
   border-radius: 999px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
-/* Two-column row */
-.sf-row{
-  display:grid;
+/* Two-column layout */
+.sf-row {
+  display: grid;
   grid-template-columns: 420px 1fr;
   align-items: stretch;
   gap: 0;
 }
 
 /* Left curved block */
-.sf-left{
+.sf-left {
   background: var(--left-bg);
   border-radius: 24px 0 0 24px;
   position: relative;
-  padding: 28px 28px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:left;
+  padding: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
   min-height: 360px;
   overflow: hidden;
 }
 
-/* Curved right edge using a pseudo “lens” */
-.sf-left::after{
-  content:"";
-  position:absolute;
-  right:-120px;
-  top:50%;
+/* Curved right edge using pseudo lens */
+.sf-left::after {
+  content: "";
+  position: absolute;
+  right: -120px;
+  top: 50%;
   transform: translateY(-50%);
   width: 280px;
   height: 120%;
   background: var(--left-bg);
   border-radius: 50%;
-  box-shadow: 0 0 0 12px #fff inset; /* thin white seam like screenshot */
+  box-shadow: 0 0 0 12px #fff inset; /* thin white seam */
 }
 
 /* Left text */
-.sf-left p{
+.sf-left p {
   position: relative;
   z-index: 1;
-  color:#4a4f54;
-  line-height:1.5;
-  font-size:14.5px;
-  margin:0;
+  color: #4a4f54;
+  line-height: 1.5;
+  font-size: 1rem;
+  margin: 0;
 }
 
 /* Right stack container */
-.sf-right{
-  display:flex;
+.sf-right {
+  display: flex;
   flex-direction: column;
   gap: 12px;
   padding-left: 16px;
 }
 
 /* Each bar */
-.sf-item{
+.sf-item {
   min-height: 64px;
   border-radius: 16px;
   padding: 0 24px;
-  display:flex;
-  align-items:center;
-  color:#fff;
+  display: flex;
+  align-items: center;
+  color: #fff;
   font-weight: 700;
-  letter-spacing: .3px;
+  letter-spacing: 0.3px;
   text-transform: uppercase;
   position: relative;
 }
 
-/* Thin white divider lines between inner segments (optional accent) */
-.sf-item::after{
-  content:"";
-  position:absolute;
-  left:16px;
-  right:16px;
-  bottom:-6px;
+/* Divider lines between bars */
+.sf-item::after {
+  content: "";
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: -6px;
   height: 2px;
   background: #ffffff80;
-  border-radius:2px;
+  border-radius: 2px;
 }
-.sf-item:last-child::after{ display:none; }
+.sf-item:last-child::after {
+  display: none;
+}
 
-/* Bars with slight gradient and rounded ends */
-.sf-i1{ background: linear-gradient(90deg, var(--bar1), #0a7387); border-radius: 24px; }
-.sf-i2{ background: linear-gradient(90deg, var(--bar2), #1e8799); border-radius: 20px; }
-.sf-i3{ background: linear-gradient(90deg, var(--bar3), #3497a7); border-radius: 20px; }
-.sf-i4{ background: linear-gradient(90deg, var(--bar4), #67b1b7); border-radius: 20px; }
-.sf-i5{ background: linear-gradient(90deg, var(--bar5), #93c5c7); border-radius: 24px; }
+/* Gradient bars */
+.sf-i1 { background: linear-gradient(90deg, var(--bar1), #0a7387); border-radius: 24px; }
+.sf-i2 { background: linear-gradient(90deg, var(--bar2), #1e8799); border-radius: 20px; }
+.sf-i3 { background: linear-gradient(90deg, var(--bar3), #3497a7); border-radius: 20px; }
+.sf-i4 { background: linear-gradient(90deg, var(--bar4), #67b1b7); border-radius: 20px; }
+.sf-i5 { background: linear-gradient(90deg, var(--bar5), #93c5c7); border-radius: 24px; }
 
 /* Text inside bars */
-.sf-item span{
-  display:block;
-  width:100%;
-  text-align:left;
-  font-size:16px;
-  line-height:1.2;
+.sf-item span {
+  display: block;
+  width: 100%;
+  text-align: left;
+  font-size: 1rem;
+  line-height: 1.2;
 }
 
-/* Responsiveness */
-@media (max-width: 960px){
-  .sf-row{
+/* ======================= */
+/* ✅ RESPONSIVE DESIGN */
+/* ======================= */
+
+/* Medium screens (Tablets / Small laptops) */
+@media (max-width: 1024px) {
+  .sf-row {
+    grid-template-columns: 360px 1fr;
+  }
+  .sf-left {
+    padding: 24px;
+    min-height: 320px;
+  }
+  .sf-left::after {
+    right: -100px;
+    width: 240px;
+  }
+  .sf-item {
+    min-height: 56px;
+    padding: 0 20px;
+  }
+  .sf-item span {
+    font-size: 0.95rem;
+  }
+}
+
+/* Stack layout on smaller screens */
+@media (max-width: 960px) {
+  .sf-row {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 24px;
   }
-  .sf-left{
+  .sf-left {
     border-radius: 24px;
+    min-height: auto;
+    text-align: center;
   }
-  .sf-left::after{ display:none; }
+  .sf-left::after {
+    display: none;
+  }
+  .sf-right {
+    padding-left: 0;
+  }
+  .sf-left p {
+    font-size: 0.95rem;
+  }
+}
+
+/* Tablets (portrait) and small devices */
+@media (max-width: 768px) {
+  .sf {
+    padding: 16px 12px;
+  }
+  .sf-pill {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+  .sf-left {
+    padding: 20px;
+  }
+  .sf-left p {
+    font-size: 0.9rem;
+  }
+  .sf-item {
+    min-height: 52px;
+    font-size: 0.9rem;
+  }
+  .sf-item span {
+    font-size: 0.9rem;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 480px) {
+  .sf {
+    padding: 12px 8px;
+  }
+  .sf-pill {
+    font-size: 0.85rem;
+    padding: 6px 12px;
+  }
+  .sf-left {
+    padding: 16px;
+  }
+  .sf-left p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .sf-right {
+    gap: 10px;
+  }
+  .sf-item {
+    min-height: 48px;
+    padding: 0 16px;
+  }
+  .sf-item span {
+    font-size: 0.85rem;
+  }
 }

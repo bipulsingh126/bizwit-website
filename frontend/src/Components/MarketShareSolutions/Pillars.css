@@ -6,8 +6,9 @@
 }
 
 .frame{
-  width: 1350px;
-  height: 508px;
+  width: 100%;
+  max-width: 1350px; /* Keep it limited to the maximum width of 1350px */
+  height: auto;      /* Allow height to adjust depending on content */
   top: 50px;
   margin: 0 auto;
   position: relative;
@@ -20,13 +21,13 @@
 .frame-pill{
   display: block;
   width: max-content;
-  margin: 0 auto 16px;       
+  margin: 0 auto 16px;
   padding: 10px 16px;
   border: 1px solid #f0d9d9;
   color: var(--accent);
   background: #fff;
   border-radius: 999px;
-  font-size: 20px;
+  font-size: 1.2rem; /* Scalable font size */
   font-weight: 400;
   letter-spacing: .4px;
   text-transform: uppercase;
@@ -34,19 +35,19 @@
 
 /* GRID: 3 cards of 420px with exact gaps that fit 1350px */
 .cards{
-  /* 3 * 420 = 1260; remaining = 90; split into two 45px gaps */
-  width: 1350px;
+  width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(3, 420px);
+  grid-template-columns: repeat(3, 420px); /* Default to 3 cards */
   column-gap: 45px;
   row-gap: 0;
-  justify-content: center;   /* keep centered if frame width changes later */
+  justify-content: center; /* keep centered if frame width changes later */
 }
 
 /* CARD: fixed 420x420, centered content */
 .card{
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
   height: 420px;
   position: relative;
   background: #fff;
@@ -55,8 +56,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;   /* vertically center image and title block */
+  justify-content: center; /* vertically center image and title block */
   text-align: center;
+  margin: 0 auto; /* Center cards inside the grid */
 }
 
 /* Notches (top & bottom) */
@@ -92,35 +94,75 @@
   height: 100px;
   object-fit: contain;
   display: block;
-  margin-bottom: 22px;       /* space between image and title */
+  margin-bottom: 22px; /* space between image and title */
 }
 
 /* TITLE: fixed visual style; center in card */
 .card-title{
-  width: 260px;              /* wider than 157 to allow two-line titles */
+  width: 260px; /* wider than 157 to allow two-line titles */
   max-width: 90%;
   margin: 0;
   font-family: "Work Sans", Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   font-weight: 600;
-  font-size: 28px;
+  font-size: 1.6rem; /* Scalable font size */
   line-height: 1.1;
   letter-spacing: 0;
   text-align: center;
   color: #0B7492;
 }
 
-/* Responsive: stack cards under 960px while keeping fixed card size */
+/* Responsive Design: Stack cards and adjust layout on smaller screens */
 @media (max-width: 960px){
   .frame{
-    width: 100%;
-    height: auto;            /* allow growth on small screens */
     padding: 12px 12px 24px;
   }
   .cards{
-    width: 100%;
-    grid-template-columns: 420px;
+    grid-template-columns: 1fr; /* Stack cards in one column */
     justify-content: center;
     row-gap: 20px;
     column-gap: 0;
+  }
+  .card{
+    width: 100%; /* Make cards full width on small screens */
+    max-width: 100%;
+    height: auto; /* Allow the height to be flexible */
+  }
+  .frame-pill{
+    font-size: 1rem; /* Smaller font size for small screens */
+  }
+  .card-title{
+    font-size: 1.4rem; /* Adjust title size for better readability */
+  }
+}
+
+@media (max-width: 768px){
+  .frame{
+    padding: 10px 10px 20px; /* Adjust padding for small screens */
+  }
+  .frame-pill{
+    font-size: 0.9rem; /* Smaller font size */
+  }
+  .card-title{
+    font-size: 1.2rem; /* Even smaller title font for very small screens */
+  }
+  .card-img{
+    width: 80px; /* Scale down images on small screens */
+    height: 80px;
+  }
+}
+
+@media (max-width: 480px){
+  .frame{
+    padding: 8px 8px 16px;
+  }
+  .frame-pill{
+    font-size: 0.85rem; /* Further decrease font size */
+  }
+  .card-title{
+    font-size: 1rem; /* Make title size even smaller */
+  }
+  .card-img{
+    width: 70px; /* Further scale down images */
+    height: 70px;
   }
 }

@@ -4,8 +4,8 @@ import FteService from '../Components/Fte/FteService'
 import WhyFte from '../Components/Fte/WhyFte'
 import HowItWorks from '../Components/Fte/HowItWorks'
 import SuccessMetrics from '../Components/Fte/SuccessMetrics'
-import Contect from './ContectUs/Contect'
 import CaseStudy from '../Components/Industry/CaseStudy'
+import Connect from '../Components/Connect/Connect'
 
 const Fte = () => {
   return (
@@ -16,7 +16,7 @@ const Fte = () => {
         <HowItWorks/>
         <SuccessMetrics/>
         <CaseStudy/>
-        <Contect/>
+        <Connect/>
     </>
   )
 }

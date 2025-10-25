@@ -1,69 +1,70 @@
-:root{
-  --pill:#FF4040;
-  --teal:#0B7492;
-  --ring:#0B7492;
-  --line:#cbd5db;
-  --text:#101418;
-  --muted:#5a6067;
+:root {
+  --pill: #FF4040;
+  --teal: #0B7492;
+  --ring: #0B7492;
+  --line: #cbd5db;
+  --text: #101418;
+  --muted: #5a6067;
 }
 
-/* Section */
-.wc{
+/* Section wrapper */
+.wc {
   max-width: 1152px;
   margin: 0 auto;
   padding: 20px 16px 8px;
 }
 
 /* Pill heading */
-.wc-pill{
- display: block;
+.wc-pill {
+  display: block;
   width: max-content;
-  margin: 0 auto 16px;       
+  margin: 0 auto 16px;
   padding: 10px 16px;
   border: 1px solid #f0d9d9;
   color: var(--pill);
   background: #fff;
   border-radius: 999px;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 400;
-  letter-spacing: .4px;
+  letter-spacing: 0.4px;
   text-transform: uppercase;
 }
 
-.wc-grid{
+/* Grid layout */
+.wc-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 36px 56px;
 }
 
 /* Item row */
-.wc-item{
+.wc-item {
   position: relative;
   display: grid;
-  grid-template-columns: 140px 1fr; 
+  grid-template-columns: 140px 1fr;
   align-items: center;
   column-gap: 15px;
   min-height: 140px;
 }
 
-/* Outer dotted ring with gap */
-.wc-badge-wrap{
+/* Badge wrapper */
+.wc-badge-wrap {
   position: relative;
-  width: 140px;       
+  width: 140px;
   height: 140px;
   display: grid;
   place-items: center;
 }
-.wc-badge-wrap::before{
+.wc-badge-wrap::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px dotted var(--ring); 
+  border: 2px dotted var(--ring);
 }
 
-/* Inner solid badge: 120 => 10px gap around */
-.wc-badge{
+/* Inner badge */
+.wc-badge {
   width: 120px;
   height: 120px;
   border-radius: 50%;
@@ -72,31 +73,31 @@
   place-items: center;
   overflow: hidden;
 }
-.wc-badge img{
+.wc-badge img {
   width: 64px;
   height: 64px;
   object-fit: contain;
 }
 
-/* Copy */
-.wc-copy h3{
+/* Copy content */
+.wc-copy h3 {
   margin: 0 0 6px;
-  font-size: 22px;
+  font-size: 1.4rem;
   line-height: 1.25;
   color: var(--text);
   font-weight: 700;
 }
-.wc-copy p{
+.wc-copy p {
   margin: 0;
-  color: #000000;
+  color: var(--muted);
   line-height: 1.5;
-  font-size: 14.5px;
+  font-size: 0.95rem;
 }
 
-/* Dotted connector line with terminal dot */
-.wc-dots{
+/* Dotted connector line */
+.wc-dots {
   position: absolute;
-  left: 140px;      /* align to outside ring edge */
+  left: 140px;
   right: 0;
   bottom: 14px;
   height: 1px;
@@ -106,7 +107,7 @@
     transparent 6px 12px
   );
 }
-.wc-dot{
+.wc-dot {
   position: absolute;
   right: 0;
   top: -4px;
@@ -116,27 +117,124 @@
   border-radius: 50%;
 }
 
-/* Responsive: single column */
-@media (max-width: 960px){
-  .wc-grid{
-    grid-template-columns: 1fr;
-    gap: 28px;
+/* ======================= */
+/* ✅ RESPONSIVE DESIGN */
+/* ======================= */
+
+/* --- Medium screens (Tablets / small laptops) --- */
+@media (max-width: 1024px) {
+  .wc-grid {
+    gap: 28px 40px;
   }
-  .wc-item{
-    grid-template-columns: 120px 1fr; /* shrink */
+  .wc-item {
+    grid-template-columns: 120px 1fr;
     min-height: 120px;
   }
-  .wc-badge-wrap{
+  .wc-badge-wrap {
     width: 120px;
     height: 120px;
   }
-  .wc-badge{
+  .wc-badge {
     width: 100px;
-    height: 100px;   /* maintains ~10px gap at mobile */
+    height: 100px;
   }
-  .wc-badge img{
+  .wc-badge img {
     width: 56px;
     height: 56px;
   }
-  .wc-dots{ left: 120px; }
+  .wc-copy h3 {
+    font-size: 1.25rem;
+  }
+  .wc-copy p {
+    font-size: 0.9rem;
+  }
+  .wc-dots {
+    left: 120px;
+  }
+}
+
+/* --- Small tablets / large phones --- */
+@media (max-width: 768px) {
+  .wc {
+    padding: 16px 12px;
+  }
+  .wc-pill {
+    font-size: 1rem;
+    padding: 8px 14px;
+  }
+  .wc-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .wc-item {
+    grid-template-columns: 100px 1fr;
+    min-height: 110px;
+  }
+  .wc-badge-wrap {
+    width: 100px;
+    height: 100px;
+  }
+  .wc-badge {
+    width: 84px;
+    height: 84px;
+  }
+  .wc-badge img {
+    width: 48px;
+    height: 48px;
+  }
+  .wc-copy h3 {
+    font-size: 1.15rem;
+  }
+  .wc-copy p {
+    font-size: 0.88rem;
+  }
+  .wc-dots {
+    left: 100px;
+  }
+}
+
+/* --- Mobile phones (portrait) --- */
+@media (max-width: 480px) {
+  .wc {
+    padding: 12px 8px;
+  }
+  .wc-pill {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .wc-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .wc-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    row-gap: 12px;
+    min-height: auto;
+  }
+  .wc-badge-wrap {
+    width: 90px;
+    height: 90px;
+  }
+  .wc-badge {
+    width: 76px;
+    height: 76px;
+  }
+  .wc-badge img {
+    width: 42px;
+    height: 42px;
+  }
+  .wc-copy h3 {
+    font-size: 1rem;
+  }
+  .wc-copy p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+  }
+  .wc-dots,
+  .wc-dot {
+    display: none; /* Hide connector lines on stacked layout */
+  }
 }

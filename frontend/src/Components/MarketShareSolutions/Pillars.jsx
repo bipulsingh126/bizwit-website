@@ -3,8 +3,8 @@ import "./Pillars.css";
 
 // Use public/ paths or import from src/assets
 import img1  from "../../assets/analysis.png";
-import img2 from "../../assets/analysis.png";
-import img3 from "../../assets/analysis.png";
+import img2 from "../../assets/market.png";
+import img3 from "../../assets/branding.png";
 
 export default function Pillars() {
   const cards = [

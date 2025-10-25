@@ -16,6 +16,10 @@ import step3 from "../assets/step3.png";
 import step4 from "../assets/step4.png";
 import step5 from "../assets/step5.png";
 import Connect from '../Components/Connect/Connect';
+import analysis from "../assets/analysis.png";
+import group from "../assets/group.png";
+import requirement from "../assets/requirement.png";
+import chhanel from "../assets/chhanel.png";
 
 const Voc = () => {
 
@@ -52,31 +56,31 @@ const Voc = () => {
     num: "1",
     title: "Requirement Understanding",
     img: step1,
-    icon: "📝",
+    icon: requirement,
   },
   {
     num: "2",
     title: "Tool/Channel Selection",
     img: step2,
-    icon: "💻",
+    icon: chhanel,
   },
   {
     num: "3",
     title: "Survey/Interview Execution",
     img: step3,
-    icon: "📋",
+    icon: doc,
   },
   {
     num: "4",
     title: "Analysis & Insights Mapping",
     img: step4,
-    icon: "📈",
+    icon: analysis,
   },
   {
     num: "5",
     title: "Strategy Recommendation",
     img: step5,
-    icon: "🔍",
+    icon: group,
   },
 ];
 
@@ -206,7 +210,7 @@ const Voc = () => {
           >
             <div className="step-content">
               <p>{step.title}</p>
-              <i className="icon">{step.icon}</i>
+              <img src={step.icon} alt="step-icon" className='icon' />
             </div>
           </div>
         ))}
